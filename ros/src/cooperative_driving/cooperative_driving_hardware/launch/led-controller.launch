@@ -1,0 +1,4 @@
+<launch>
+  <rosparam file="$(find cooperative_driving_hardware)/config/led_controller.yaml" />
+  <node name="led_controller_spawner" pkg="controller_manager" type="spawner" args="led_controller --shutdown-timeout 2" />
+</launch>

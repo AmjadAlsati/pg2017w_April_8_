@@ -1,0 +1,3 @@
+distance_sensor_controller:
+    type: cooperative_driving/DistanceSensorController
+    publish_rate: 50

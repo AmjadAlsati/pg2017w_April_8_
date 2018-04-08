@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <title>Main Signin</title>
+</head>
+
+<body>
+
+    <div data-role="page">
+        <div data-role="header">
+            <h1>Slider Control</h1>
+        </div>
+
+        <div data-role="main" class="ui-content" >
+        <p><a href="/">Homepage</a></p>
+        <p><a href="/sliders">logic</a></p>
+            <form id= my-form> 
+
+
+                <div id=line_interval_lower onmouseup="ChangeParm(this.id)"  >
+                <label for="line_interval_lower">line_interval_lower:</label>
+                <input type="range" name="line_interval_lower"  id="line_interval_lower_" value="0" min="0" max="1" step="0.01"  />
+                </div>
+
+                <div id=line_interval_upper onmouseup="ChangeParm(this.id)" >
+                <label for="line_interval_upper">line_interval_upper:</label>
+                <input type="range" name="line_interval_upper" id="line_interval_upper_" value="0.4" min="0" max="1" step="0.1" />
+                </div>
+
+                <div id=line_count onmouseup="ChangeParm(this.id)" >
+                <label for="line_count">line_count:</label>
+                <input type="range" name="line_count" id="line_count_" value="20" min="1" max="50" step="1"/>
+                </div>
+
+                <div id=row_influence_area onmouseup="ChangeParm(this.id)" >
+                <label for="row_influence_area">row_influence_area:</label>
+                <input type="range" name="row_influence_area" id="row_influence_area_" value="5" min="0" max="25" step="1" />
+                </div>
+
+                <div id=lower_canny_threshold onmouseup="ChangeParm(this.id)" >
+                <label for="lower_canny_threshold">lower_canny_threshold:</label>
+                <input type="range" name="lower_canny_threshold" id="lower_canny_threshold_" value="30" min="1" max="100" step="1" />
+                </div>
+
+                <div id=min_line_length onmouseup="ChangeParm(this.id)" >
+                <label for="min_line_length">min_line_length:</label>
+                <input type="range" name="min_line_length" id="min_line_length_" value="4" min="0" max="100" step="1" />
+                </div>
+
+                <div id=min_region_size onmouseup="ChangeParm(this.id)" >
+                <label for="min_region_size">min_region_size:</label>
+                <input type="range" name="min_region_size" id="min_region_size_" value="200" min="0" max="800" step="1" />
+                </div>
+
+               
+
+
+
+                </script>
+                <script >
+                   $( "#line_interval_lower" ).bind( "touchend", function() {
+                    ChangeParm("line_interval_lower");
+                                                                    });
+                    $( "#line_interval_upper" ).bind( "touchend", function() {
+                    ChangeParm("line_interval_upper");
+                                                                        });
+
+                $( "#line_count" ).bind( "touchend", function() {
+                    ChangeParm("line_count");
+                                                                        });
+
+                $( "#row_influence_area" ).bind( "touchend", function() {
+                    ChangeParm("row_influence_area");
+                                                            });
+
+                 $( "#lower_canny_threshold" ).bind( "touchend", function() {
+                    ChangeParm("lower_canny_threshold");
+                                                            });
+
+                $( "#min_line_length" ).bind( "touchend", function() {
+                    ChangeParm("min_line_length");
+                                                            });
+                $( "#min_region_size" ).bind( "touchend", function() {
+                    ChangeParm("min_region_size");
+                                                            });
+
+
+            function ChangeParm(clicked_id){
+            var ParameterName = document.getElementById(clicked_id).id; //get the name of clicked Parameter
+            var ParameterValue=document.getElementsByName(clicked_id)[0].value;//get the value of clicked Parameter
+             
+            var JsonObject = {};// create a JSON object
+            JsonObject[clicked_id] = ParameterValue; //fill the object with the name and value
+           
+
+        $.ajax({
+
+
+            type: 'POST',
+            url: '/post_vision/',
+            data:{
+
+                  JsonObject,
+                  csrfmiddlewaretoken: '{{ csrf_token }}'
+
+
+            },
+            sucess:function()
+            {
+
+            }
+        });
+
+        }
+
+                </script>
+               
+
+            </form>
+        </div>
+    </div>
+    
+</body>
+
+</html>

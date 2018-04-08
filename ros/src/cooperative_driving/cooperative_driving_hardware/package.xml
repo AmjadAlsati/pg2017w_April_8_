@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>cooperative_driving_hardware</name>
+  <version>0.0.1</version>
+  <description>The cooperative_driving hardware package</description>
+
+  <maintainer email="julian93@mail.upb.de">Julian Heinovski</maintainer>
+  <maintainer email="descart@mail.upb.de">Sergej Japs</maintainer>
+  <maintainer email="srinivas@mail.upb.de">Srinivas Krishnan</maintainer>
+  <maintainer email="schettle@mail.upb.de">Max Schettler</maintainer>
+  <maintainer email="psteffen@mail.upb.de">Patrick Steffens</maintainer>
+  <maintainer email="dti@mail.upb.de">Daniel Tigges</maintainer>
+  <license>BSD 3Clause</license>
+  <url type="website">http://www.ccs-labs.org/teaching/pg/2016w/</url>
+  <author email="julian93@mail.upb.de">Julian Heinovski</author>
+  <author email="descart@mail.upb.de">Sergej Japs</author>
+  <author email="srinivas@mail.upb.de">Srinivas Krishnan</author>
+  <author email="schettle@mail.upb.de">Max Schettler</author>
+  <author email="psteffen@mail.upb.de">Patrick Steffens</author>
+  <author email="dti@mail.upb.de">Daniel Tigges</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>hardware_interface</build_depend>
+  <build_depend>message_generation</build_depend>
+
+  <depend>controller_interface</depend>
+  <depend>controller_manager</depend>
+  <depend>nodelet</depend>
+  <depend>roscpp</depend>
+  <depend>std_msgs</depend>
+  <depend>cooperative_driving_common</depend>
+  <depend>cooperative_driving_networking</depend>
+
+  <exec_depend>diff_drive_controller</exec_depend>
+  <exec_depend>message_runtime</exec_depend>
+  <exec_depend>nav_msgs</exec_depend>
+  <exec_depend>xacro</exec_depend>
+  <exec_depend>cooperative_driving_description</exec_depend>
+
+  <export>
+    <controller_interface plugin="${prefix}/controller_interface_plugins.xml"/>
+    <nodelet plugin="${prefix}/nodelet_plugins.xml" />
+  </export>
+</package>

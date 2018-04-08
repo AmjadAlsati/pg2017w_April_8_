@@ -1,0 +1,5 @@
+<library path="lib/libcooperative_driving_logic">
+	<class name="cooperative_driving/ReflekteNodelet" type="cooperative_driving::ReflekteNodelet" base_class_type="nodelet::Nodelet">
+		<description>Low-level logic node for reactive behavior.</description>
+	</class>
+</library>

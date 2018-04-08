@@ -1,0 +1,9 @@
+\subsubsection usage Usage
+\verbatim
+<node name="application" pkg="cooperative_driving_application" type="application">
+  <param name="beaconing_interval" type="int" value="1" />
+  <param name="enable_beaconing" type="bool" value="True" />
+  <param name="announce" type="bool" value="False" />
+</node>
+\endverbatim
+

@@ -1,0 +1,13 @@
+max_velocity: 1.88
+max_turn_rate: 4
+line_row_location: 230
+LF_K_p: 0.32
+LF_K_i: 0
+LF_K_d: 0.09
+LF_windup_limit: 0.8
+BD_K_p: 0.03
+BD_K_i: 0.00016
+BD_K_d: 0.0013
+BD_deadzone: 0.03
+BD_windup_limit: 1.5
+target_distance: 15

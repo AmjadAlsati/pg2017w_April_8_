@@ -1,0 +1,5 @@
+<library path="lib/libcooperative_driving_hardware">
+	<class name="cooperative_driving/CCSRobotNodelet" type="cooperative_driving::CCSRobotNodelet" base_class_type="nodelet::Nodelet">
+		<description>Interface for the hardware. Provides access to a DiffDriveController.</description>
+	</class>
+</library>

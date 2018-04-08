@@ -1,0 +1,9 @@
+<launch>
+  <env name="ROSCONSOLE_CONFIG_FILE" value="$(find cooperative_driving)/config/custom_rosconsole.conf" />
+
+  <arg name="id" default="0" />
+  <include file="$(find cooperative_driving_application)/launch/demo_app.xml" >
+    <arg name="id" value="$(arg id)" />
+  </include>
+  <include file="$(find cooperative_driving)/launch/robot_pc.launch" />
+</launch>

@@ -1,0 +1,4 @@
+<launch>
+  <test test-name="pubscriber_cpp" pkg="cooperative_driving_common" type="test_pubscriber_cpp" />
+  <test test-name="pubscriber_python" pkg="cooperative_driving_common" type="test_pubscriber.py" />
+</launch>

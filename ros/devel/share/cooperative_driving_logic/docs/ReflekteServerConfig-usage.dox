@@ -1,0 +1,19 @@
+\subsubsection usage Usage
+\verbatim
+<node name="reflekte" pkg="cooperative_driving_logic" type="reflekte">
+  <param name="max_velocity" type="double" value="0.3" />
+  <param name="max_turn_rate" type="double" value="4.0" />
+  <param name="line_row_location" type="int" value="230" />
+  <param name="LF_K_p" type="double" value="0.32" />
+  <param name="LF_K_i" type="double" value="0.002" />
+  <param name="LF_K_d" type="double" value="0.09" />
+  <param name="LF_windup_limit" type="double" value="0.8" />
+  <param name="target_distance" type="double" value="15.0" />
+  <param name="BD_K_p" type="double" value="0.03" />
+  <param name="BD_K_i" type="double" value="0.00016" />
+  <param name="BD_K_d" type="double" value="0.0013" />
+  <param name="BD_windup_limit" type="double" value="1.5" />
+  <param name="BD_deadzone" type="double" value="0.03" />
+</node>
+\endverbatim
+

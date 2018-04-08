@@ -1,0 +1,11 @@
+<launch>
+  <!-- declare args to be passed in -->
+  <arg name="id" default="0" />
+  <arg name="demo" />
+
+  <node name="demo_app" pkg="cooperative_driving_application" type="demo_app.py" output="screen" >
+    <!-- read arg values -->
+    <param name="id" value="$(arg id)"/>
+    <param name="demo" value="$(arg demo)"/>
+  </node>
+</launch>

@@ -1,0 +1,3 @@
+#!/bin/sh
+
+[ "$1" = "remove" ] && find /opt/ros/kinetic -name '*.pyc' -exec rm {} \;

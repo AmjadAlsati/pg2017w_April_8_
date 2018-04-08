@@ -1,0 +1,65 @@
+namespace cooperative_driving
+{
+
+/*! \mainpage The cooperative_driving package
+
+This project contains a base to interact with the CCS-Labs' cooperative driving demonstrator robot. The demonstrator will be used to implement and test distributed cooperative driving algorithms in a controlled environment as a middleground between simulation and testing in real cars. One possible application is platooning, where messaging can be used to decrease the distance between cars to increase fuel efficiency and use infrastructure more efficiently without reducing safety or even improving it. Another example is intersection collision avoidance which could possibly eliminate the necessity of traffic lights for organizing traffic on intersections. 
+
+In order to achieve these goals, various low-level tasks need to be solved, e.g. perception of the robot's surroundings, decision-making and networking. These are implemented as independent processes (Nodes in ROS terminology) which are losely coupled by an internal messaging system which uses publish-subscribe-semantics. The overall architecture is below:
+\dotfile doc/architecture.dot "System overview"
+The most important part is a reactive control loop, which takes short-term decisions based on the robot's surroundings. In the current project state this means that the images taken by the robot's camera are analyzed for features (FeatureExtractionNodelet) which are processed by a low-level-logic node (ReflekteNodelet) which takes actions based on its current state that are communicated to the hardware (CCSRobotNodelet). This control-loop is supposed to be able to run the robot autonomously for reasonably short timeintervals without intervention of higher-level logic. In platooning, this would typicaly mean making the robot follow the road (or line) while keeping a specific distance to the predecessor. On top of this loop, higher level logic and inter-robot communication (NetworkingNode) is implemented. The logic defines the macroscopic robot behavior by the low-level logic's parameters, e.g. its state. For example, in platooning, a following robot might be instructed by the platoon-leader to change it's desired velocity or perform an emergency break.
+
+The functionality is separated across different ROS packages. For details on the contents refer to their individual documentation below.
+\note The implementation's include paths, namespaces and python modules are not consistent! Currently, there are two different conventions:
+- Python code and generated code (e.g. messages) use the containing package's name as include prefix, C++ namespace and Python module
+- Self-written C++ code uses the cooperative_driving namespace and include prefix. For example <tt>'#include "cooperative_driving/util.h"'</tt> provides acces to cooperative_driving::pi
+.
+The preferred convention would be using subnamespaces/-modules/-directories (e.g. \c 'cooperative_driving::util::pi'), however for generating code for this convention is not supported.
+
+\section coop_driv Top-level package (cooperative_driving)
+
+The top-level package uses the more specific packages to provide a combined launch configuration for running the robot
+
+\subsection coop_driv_appl Application subpackage (cooperative_driving_application)
+
+\todo fix namespaces of linked files
+
+Includes an base class (cooperative_driving_application._application_base.BaseApplication) for arbitrary applications providing functionality to utilize the platform (e.g. sending messages, flashing LEDs) and fulfill general C2X requirements (e.g. sending of a CooperativeAwarenessMessage.msg) and a simple demo_app.DemoApplication which executes a token passing protocol in a platoon ordering and includes simple emergency brake handling logic.
+
+This package also provides some launch file for running the demo application.
+
+\subsection coop_driv_hw Hardware subpackage (cooperative_driving_hardware)
+
+Provides utilities for interfacing with the robot's microcontroller.
+
+The most important element is the CCSRobotNodelet, a gateway which writes commands from the ROS ecosystem to the microcontroller and processes data read from it such that it can be made available to other nodes. It is built based on the <a href="http://wiki.ros.org/ros_control">ROS-control framework</a> provides an abstraction layer to keep most of the code independent of the actual hardware. The project uses a <a href="http://wiki.ros.org/diff_drive_controller">differential drive controller</a> to pass velocity commands to the microcontroller and publish odometry data. Also, there is a custom controller (LedController) for managing LEDs which accepts values for LEDs and publishes the current values and there is a custom controller (DistanceSensorController) for publishing the distance sensor readings.
+
+All robot-specific code is contained in configuration files, CCSRobot and ccs_hw.h.
+
+\subsection coop_driv_logic Logic Subpackage (cooperative_driving_logic)
+
+Low-level-logic which implements reactive behavior wrapped in the ReflekteNodelet.
+
+Internaly, potential fields are used to combine different low-level goals into one output decision. This means that different sub-goals ('simple behaviors') are assigend movement-vectors which should be used to achieve the corresponding goals. Each actual goal ('structured behaviors') is a linear combination of the simple behavior's vectors. Based on the current state, the output of one of these structured behaviors is then used for steering the robot. For example, currently the platooning structured behavior consists of the 'turn-to-line' and 'keep-blob-distance' behaviors. In this simple case, the first behavior provides the steering component while the second provides the velocity component. The approach is however not limited to orthogonal simple behaviors (c.f. the 'dynamic-line-following' structured behavior).
+
+\subsection coop_driv_net Networking Subpackage (cooperative_driving_networking)
+
+The cooperative_driving_networking subpackage contains all nodes related to external networking such as the \c networking_node which is capable of monitoring a specific network channel as well as injecting frames. Also it inclues a launch config (networking.launch) which can be used to conveniently run the networking node with properly set parameters. See the Tutorial in the Wiki for an idea of how to use this networking node.
+
+\subsection coop_driv_vision Vision subpackage (cooperative_driving_vision)
+
+Contains the perception code used by the robot.
+
+It provides feature extraction node (FeatureExtractionNodelet) that analyzes images to extract colored regions which will be used to determine locations of pre-defined markers which are attached to robots or placed on the ground, as well as launch configurations to also start a camera node. The extraction algorithms are independent of ROS and extract locations of lines (extract_line()) and colored regions (extract_regions()) in the image. Currently, only individual regions are used for decision making, in the future it needs to be extended to detect structures which consist of multiple regions.
+
+\subsection coop_driv_common Common subpackage (cooperative_driving_common)
+
+Common utilities for extending the STL or ROS API. Apart from small helper functions, the most notable contribution is the Pubscriber, which is used to publish and subscribe to the same topic without receiving self-published messages. The package provides no configurations or compiled code.
+
+\subsection coop_driv_description Description subpackage (cooperative_driving_description)
+
+Contains a description file of the robot in <a href="http://wiki.ros.org/urdf">URDF format</a>. This can possibly used for coordinate transformations, rendering the robot in a visualization tool or using it in a simulated environment. It is currently unused and has not yet been tested, it's contents should not be trusted apart from their general structure.
+
+*/
+
+} // namespace cooperative_driving

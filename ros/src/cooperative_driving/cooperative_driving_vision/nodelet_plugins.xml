@@ -1,0 +1,5 @@
+<library path="lib/libcooperative_driving_vision">
+	<class name="cooperative_driving/FeatureExtractionNodelet" type="cooperative_driving::FeatureExtractionNodelet" base_class_type="nodelet::Nodelet">
+		<description>Extracts features of the cv_camera image feed.</description>
+	</class>
+</library>

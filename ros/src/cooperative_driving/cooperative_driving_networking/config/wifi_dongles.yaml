@@ -1,0 +1,28 @@
+wifi_dongles:
+  dongle01:
+    - "18:d6:c7:0f:4f:29"
+    - "tplink"
+
+  dongle02:
+    - "18:d6:c7:0f:0c:40"
+    - "tplink"
+
+  dongle03:
+    - "00:4f:62:2e:91:97"
+    - "airlive"
+
+  dongle04:
+    - "00:4f:62:2e:91:8e"
+    - "airlive"
+
+  dongle05:
+    - "00:4f:62:2e:93:7e" 
+    - "airlive"
+
+  dongle06:
+    - "00:4f:62:2e:93:60"
+    - "airlive"
+
+  dongle07:
+    - "00:4f:62:2e:91:a2"
+    - "airlive"

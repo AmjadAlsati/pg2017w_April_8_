@@ -1,0 +1,8 @@
+<launch>
+  <env name="ROSCONSOLE_CONFIG_FILE" value="$(find cooperative_driving)/config/custom_rosconsole.conf" />
+
+  <rosparam file="$(find cooperative_driving_networking)/config/wifi_dongles.yaml" />
+  <node name="networking" pkg="cooperative_driving_networking" type="networking" respawn="true" output="screen" >
+     <param name="name" value="networking" />
+  </node>
+</launch>

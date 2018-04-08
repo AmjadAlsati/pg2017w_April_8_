@@ -1,0 +1,163 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+<title>Robot page</title>
+</head>
+<body>
+<h1>Welcome! Press one of the following or go to <a href="/sliders">logic sliders</a> or <a href="/sliders_vision">feature extractor</a> page to control the robot Parameters</h1>
+<h1><a href="/Server"> Restart the server </a></h1>
+
+
+<input type="submit" value="Start the Robot" id="leader" onclick="StartTheRobot()"  style="background: blue; color: white;">
+<select id="Mode">
+  <option value="0">Last Run Parameters</option>
+  <option value="1">Default Parameters</option>
+</select>
+
+<input type="submit" value="Stop the Robot" id="stop" onclick="Stop()" style="background: red; color: white;">
+
+<select id="IDSelector">
+  <option value="0">ID0</option>
+  <option value="1">ID1</option>
+  <option value="2">ID2</option>
+  <option value="3">ID3</option>
+  <option value="4">ID4</option>
+  <option value="5">ID5</option>
+  <option value="6">ID6</option>
+  <option value="7">ID7</option>
+  <option value="8">ID8</option>
+  <option value="9">ID9</option>
+
+
+</select>
+
+<div data-role="fieldcontain" class="ui-hide-label">
+    <label for="path">Project Path</label>
+    <input type="text" name="path" id="path" value="" placeholder="Project Path"/>
+</div>
+
+<input type="submit" value="source root&devel" onclick="source()" id="source" style="background: green; color: white;">
+
+<textarea id="output" class="MyStyle" placeholder="Terminal Output" rows="1000" ></textarea> 
+
+
+<script >
+  
+	function StartTheRobot(){
+     alert("running as a leader");
+    $('#output').text("The Robot is running, you'll see the output after pressing stop");
+
+           var Selector = document.getElementById("IDSelector");
+           var Mode = document.getElementById("Mode");
+           var JsonObject = {};
+           JsonObject["ID"]= Selector.value;
+           JsonObject["Mode"] = Mode.value;
+
+       /*https://stackoverflow.com/questions/7053335/jquery-mobile-cannot-hide-submit-button*/
+        $('#leader').closest('.ui-btn').hide("slow");
+
+
+
+		  $.ajax({
+
+
+            type: 'POST',
+            url: '/StartTheRobot/',
+            data:{
+
+                  JsonObject,
+                  csrfmiddlewaretoken: '{{ csrf_token }}'
+
+
+            },
+            success:function(json)
+            {
+                if (json.contents!="")
+            $('#output').text(json.contents);
+        else
+            $('#output').text("Something went wrong. The robot won't start. try source the setup then run the robot");
+
+            }
+        });
+
+        }
+
+       
+
+        function Stop(){
+
+        $('#follower').closest('.ui-btn').show("slow");
+        $('#leader').closest('.ui-btn').show("slow");
+		  $.ajax({
+
+
+            type: 'POST',
+            url: '/stop/',
+            data:{
+
+                  
+                  csrfmiddlewaretoken: '{{ csrf_token }}'
+
+
+            },
+            success:function()
+            {
+                        alert("Stopping the robot");
+
+            }
+        });
+
+        }
+
+       
+
+         function source()
+        {
+            var TextField = document.getElementById("path");
+           var JsonObject = {};
+           JsonObject["path"]= TextField.value;
+
+            $.ajax({
+
+
+            type: 'POST',
+            url: '/source/',
+            data:{
+
+                  JsonObject,
+                  csrfmiddlewaretoken: '{{ csrf_token }}'
+
+
+            },
+            success:function(json)
+            {
+                alert("done making source, check the output on the page");
+                $('#output').text(json.contents);
+
+
+            }
+        });
+
+
+        }
+
+
+setTimeout(function () {
+    //$('.foo').addClass('bar');
+    $('.MyStyle').css({
+        'height': 'auto'
+    });
+}, 100);
+	
+
+
+</script>
+
+</body>

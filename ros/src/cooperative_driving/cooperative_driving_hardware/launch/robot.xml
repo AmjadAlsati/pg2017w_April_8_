@@ -1,0 +1,10 @@
+<launch>
+  <arg name="nodelet_manager" />
+  <node name="robot" pkg="nodelet" type="nodelet" args="load cooperative_driving/CCSRobotNodelet $(arg nodelet_manager)" >
+    <param name="rate" value="100" />
+    <param name="ros_hw_velocity_conversion_factor" value="5.615" />
+    <param name="ros_hw_led_max_value" value="64" />
+    <param name="distance_sensor_index" value="0" />
+    <param name="braking_threshold" value="0.10" />
+  </node>
+</launch>

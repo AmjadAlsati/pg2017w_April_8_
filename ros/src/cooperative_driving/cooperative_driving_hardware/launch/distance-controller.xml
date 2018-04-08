@@ -1,0 +1,4 @@
+<launch>
+  <rosparam file="$(find cooperative_driving_hardware)/config/distance_sensor_controller.yaml" />
+  <node name="distance_sensor_controller_spawner" pkg="controller_manager" type="spawner" args="distance_sensor_controller --shutdown-timeout 2" />
+</launch>

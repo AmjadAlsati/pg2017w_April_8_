@@ -1,0 +1,11 @@
+# State constants
+string REMOTE_CONTROL=remote_control
+string FOLLOW_BLOB=follow_blob
+string FOLLOW_LINE=follow_line
+string PLATOONING=platooning
+string DYNAMIC_FOLLOW_LINE=dynamic_follow_line
+string IDLE=idle
+# Target state
+string target_state
+int8 tag_id_to_follow
+---

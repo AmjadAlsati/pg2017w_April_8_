@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>cooperative_driving_common</name>
+  <version>0.0.1</version>
+  <description>The common source used by multiple cooperative-driving-packages</description>
+
+  <maintainer email="julian93@mail.upb.de">Julian Heinovski</maintainer>
+  <maintainer email="descart@mail.upb.de">Sergej Japs</maintainer>
+  <maintainer email="srinivas@mail.upb.de">Srinivas Krishnan</maintainer>
+  <maintainer email="schettle@mail.upb.de">Max Schettler</maintainer>
+  <maintainer email="psteffen@mail.upb.de">Patrick Steffens</maintainer>
+  <maintainer email="dti@mail.upb.de">Daniel Tigges</maintainer>
+  <license>BSD 3Clause</license>
+  <url type="website">http://www.ccs-labs.org/teaching/pg/2016w/</url>
+  <author email="julian93@mail.upb.de">Julian Heinovski</author>
+  <author email="descart@mail.upb.de">Sergej Japs</author>
+  <author email="srinivas@mail.upb.de">Srinivas Krishnan</author>
+  <author email="schettle@mail.upb.de">Max Schettler</author>
+  <author email="psteffen@mail.upb.de">Patrick Steffens</author>
+  <author email="dti@mail.upb.de">Daniel Tigges</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <test_depend>rostest</test_depend>
+  <test_depend>roscpp</test_depend>
+  <test_depend>rospy</test_depend>
+  <test_depend>geometry_msgs</test_depend>
+
+</package>

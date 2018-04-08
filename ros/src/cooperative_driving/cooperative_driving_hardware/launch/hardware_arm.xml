@@ -1,0 +1,9 @@
+<launch>
+  <arg name="nodelet_manager" />
+  <include file="$(find cooperative_driving_hardware)/launch/robot.xml" >
+    <arg name="nodelet_manager" value="$(arg nodelet_manager)" />
+  </include>
+  <include file="$(find cooperative_driving_hardware)/launch/drive-controller.xml" />
+  <include file="$(find cooperative_driving_hardware)/launch/distance-controller.xml" />
+  <include file="$(find cooperative_driving_hardware)/launch/led-controller-pi.xml" />
+</launch>

@@ -1,0 +1,4 @@
+led_controller:
+    type: cooperative_driving/LedController
+    publish_rate: 50
+    cmd_timeout: .5

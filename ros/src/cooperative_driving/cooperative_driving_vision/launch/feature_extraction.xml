@@ -1,0 +1,23 @@
+<launch>
+  <arg name="nodelet_manager" />
+  <node name="camera" pkg="nodelet" type="nodelet" args="load cv_camera/CvCameraNodelet $(arg nodelet_manager)">
+    <param name="rate" value="25.0"/> <!-- limit to 25Hz because of feature extractor performance -->
+    <param name="camera_info_url" value="file://$(find cooperative_driving_vision)/config/robot_fisheye.yaml"/>
+  </node>
+  <node name="feature_extractor" pkg="nodelet" type="nodelet" args="load cooperative_driving/FeatureExtractionNodelet $(arg nodelet_manager)">
+    <rosparam file="$(find cooperative_driving_vision)/config/color_ranges.yaml" />
+  </node>
+ 
+  <!-- AprilTags for distance measurements and identification -->
+  <arg name="node_namespace" default="apriltags2_ros_continuous_node" />
+  <rosparam command="load" file="$(find cooperative_driving_vision)/config/apriltags_settings.yaml" ns="$(arg node_namespace)" />
+  <rosparam command="load" file="$(find cooperative_driving_vision)/config/apriltags_tags.yaml" ns="$(arg node_namespace)" />
+  <node pkg="apriltags2_ros" type="apriltags2_ros_continuous_node" name="$(arg node_namespace)" clear_params="true" output="screen" launch-prefix="" >
+    <!-- Remap topics from those used in code to those on the ROS network -->
+    <remap from="image_rect" to="/camera/image_raw" />
+    <remap from="camera_info" to="/camera/camera_info" />
+
+    <param name="camera_frame" type="str" value="camera" />
+    <param name="publish_tag_detections_image" type="bool" value="true" />      <!-- default: false -->
+  </node>
+</launch>

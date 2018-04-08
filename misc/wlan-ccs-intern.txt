@@ -1,0 +1,2 @@
+SSID CCS-LAB_Intern
+PWD rdnzl123

@@ -1,0 +1,18 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~max_velocity" : \b [double] The maximum velocity min: 0.0, default: 0.3, max: 2.0
+- \b "~max_turn_rate" : \b [double] The maximum turn rate min: 0.0, default: 4.0, max: 10.0
+- \b "~line_row_location" : \b [int] Location where to look for the line that should be followed. min: 0, default: 230, max: 480
+- \b "~LF_K_p" : \b [double] Proportional component for the line-folling PID-controller min: 0.0, default: 0.32, max: 1.0
+- \b "~LF_K_i" : \b [double] Integral component for the line-folling PID-controller min: 0.0, default: 0.002, max: 1.0
+- \b "~LF_K_d" : \b [double] Derivative component for the line-folling PID-controller min: 0.0, default: 0.09, max: 1.0
+- \b "~LF_windup_limit" : \b [double] Limits the absolute value of the integral term of the line-following PID-controller. min: 0.0, default: 0.8, max: 5.0
+- \b "~target_distance" : \b [double] The target distance of the robot min: 0.0, default: 15.0, max: 50.0
+- \b "~BD_K_p" : \b [double] Proportional component for the blob-distance PID-controller min: 0.0, default: 0.03, max: 1.0
+- \b "~BD_K_i" : \b [double] Integral component for the blob-distance PID-controller min: 0.0, default: 0.00016, max: 1.0
+- \b "~BD_K_d" : \b [double] Derivative component for the blob-distance PID-controller min: 0.0, default: 0.0013, max: 1.0
+- \b "~BD_windup_limit" : \b [double] Limits the absolute value of the integral term of the blob-distance PID-controller. min: 0.0, default: 1.5, max: 5.0
+- \b "~BD_deadzone" : \b [double] The deadzone used for keeping the blob distance. min: 0.0, default: 0.03, max: 1.0
+

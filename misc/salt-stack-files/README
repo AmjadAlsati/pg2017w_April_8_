@@ -1,0 +1,6 @@
+Todo at setup of a new raspi
+
+Add raspi to lab gateway's hosts file (mac address, hostname, ip)
+
+copy srv/salt/managed_files/hostname to raspi at /etc/dhcp/dhclient-exit-hooks.d/hostname
+copy srv/salt/managed_files/wpa_supplicant.conf to raspi at /etc/wpa_supplicant/wpa_supplicant.conf

@@ -1,0 +1,994 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name="build">
+        <df name="catkin">
+          <df name="catkin_generated">
+            <df name="version">
+            </df>
+          </df>
+        </df>
+        <df name="catkin_generated">
+          <df name="installspace">
+          </df>
+          <df name="stamps">
+            <df name="Project">
+            </df>
+          </df>
+        </df>
+        <df name="CMakeFiles">
+          <df name="3.5.1">
+            <df name="CompilerIdC">
+              <in>CMakeCCompilerId.c</in>
+            </df>
+            <df name="CompilerIdCXX">
+              <in>CMakeCXXCompilerId.cpp</in>
+            </df>
+          </df>
+          <df name="clean_test_results.dir">
+          </df>
+          <df name="CMakeTmp">
+          </df>
+          <df name="download_extra_data.dir">
+          </df>
+          <df name="doxygen.dir">
+          </df>
+          <df name="run_tests.dir">
+          </df>
+          <df name="tests.dir">
+          </df>
+          <in>feature_tests.c</in>
+          <in>feature_tests.cxx</in>
+        </df>
+        <df name="cooperative_driving">
+          <df name="cooperative_driving">
+            <df name="catkin_generated">
+              <df name="installspace">
+              </df>
+              <df name="stamps">
+                <df name="cooperative_driving">
+                </df>
+              </df>
+            </df>
+            <df name="CMakeFiles">
+              <df name="_run_tests_cooperative_driving.dir">
+              </df>
+              <df name="_run_tests_cooperative_driving_roslaunch-check.dir">
+              </df>
+              <df name="_run_tests_cooperative_driving_roslaunch-check_launch_demo_pc.launch.dir">
+              </df>
+              <df name="_run_tests_cooperative_driving_roslaunch-check_launch_demo_raspi.launch.dir">
+              </df>
+              <df name="_run_tests_cooperative_driving_roslaunch-check_launch_robot_pc.launch.dir">
+              </df>
+              <df name="_run_tests_cooperative_driving_roslaunch-check_launch_robot_raspi.launch.dir">
+              </df>
+              <df name="clean_test_results_cooperative_driving.dir">
+              </df>
+              <df name="run_tests_cooperative_driving.dir">
+              </df>
+              <df name="run_tests_cooperative_driving_roslaunch-check.dir">
+              </df>
+              <df name="run_tests_cooperative_driving_roslaunch-check_launch_demo_pc.launch.dir">
+              </df>
+              <df name="run_tests_cooperative_driving_roslaunch-check_launch_demo_raspi.launch.dir">
+              </df>
+              <df name="run_tests_cooperative_driving_roslaunch-check_launch_robot_pc.launch.dir">
+              </df>
+              <df name="run_tests_cooperative_driving_roslaunch-check_launch_robot_raspi.launch.dir">
+              </df>
+            </df>
+          </df>
+          <df name="cooperative_driving_application">
+            <df name="catkin_generated">
+              <df name="installspace">
+              </df>
+              <df name="stamps">
+                <df name="cooperative_driving_application">
+                </df>
+              </df>
+            </df>
+            <df name="CMakeFiles">
+              <df name="_run_tests_cooperative_driving_application.dir">
+              </df>
+              <df name="_run_tests_cooperative_driving_application_roslaunch-check.dir">
+              </df>
+              <df name="_run_tests_cooperative_driving_application_roslaunch-check_launch_demo_app.xml.dir">
+              </df>
+              <df name="clean_test_results_cooperative_driving_application.dir">
+              </df>
+              <df name="run_tests_cooperative_driving_application.dir">
+              </df>
+              <df name="run_tests_cooperative_driving_application_roslaunch-check.dir">
+              </df>
+              <df name="run_tests_cooperative_driving_application_roslaunch-check_launch_demo_app.xml.dir">
+              </df>
+            </df>
+            <df name="test">
+              <df name="CMakeFiles">
+                <df name="_run_tests_cooperative_driving_application_nosetests.dir">
+                </df>
+                <df name="_run_tests_cooperative_driving_application_nosetests_message_util.py.dir">
+                </df>
+                <df name="run_tests_cooperative_driving_application_nosetests.dir">
+                </df>
+                <df name="run_tests_cooperative_driving_application_nosetests_message_util.py.dir">
+                </df>
+              </df>
+            </df>
+          </df>
+          <df name="cooperative_driving_common">
+            <df name="catkin_generated">
+              <df name="installspace">
+              </df>
+              <df name="stamps">
+                <df name="cooperative_driving_common">
+                </df>
+              </df>
+            </df>
+            <df name="CMakeFiles">
+              <df name="_catkin_empty_exported_target.dir">
+              </df>
+              <df name="geometry_msgs_generate_messages_cpp.dir">
+              </df>
+              <df name="geometry_msgs_generate_messages_eus.dir">
+              </df>
+              <df name="geometry_msgs_generate_messages_lisp.dir">
+              </df>
+              <df name="geometry_msgs_generate_messages_nodejs.dir">
+              </df>
+              <df name="geometry_msgs_generate_messages_py.dir">
+              </df>
+              <df name="roscpp_generate_messages_cpp.dir">
+              </df>
+              <df name="roscpp_generate_messages_eus.dir">
+              </df>
+              <df name="roscpp_generate_messages_lisp.dir">
+              </df>
+              <df name="roscpp_generate_messages_nodejs.dir">
+              </df>
+              <df name="roscpp_generate_messages_py.dir">
+              </df>
+              <df name="rosgraph_msgs_generate_messages_cpp.dir">
+              </df>
+              <df name="rosgraph_msgs_generate_messages_eus.dir">
+              </df>
+              <df name="rosgraph_msgs_generate_messages_lisp.dir">
+              </df>
+              <df name="rosgraph_msgs_generate_messages_nodejs.dir">
+              </df>
+              <df name="rosgraph_msgs_generate_messages_py.dir">
+              </df>
+              <df name="std_msgs_generate_messages_cpp.dir">
+              </df>
+              <df name="std_msgs_generate_messages_eus.dir">
+              </df>
+              <df name="std_msgs_generate_messages_lisp.dir">
+              </df>
+              <df name="std_msgs_generate_messages_nodejs.dir">
+              </df>
+              <df name="std_msgs_generate_messages_py.dir">
+              </df>
+            </df>
+            <df name="test">
+              <df name="CMakeFiles">
+                <df name="_run_tests_cooperative_driving_common.dir">
+                </df>
+                <df name="_run_tests_cooperative_driving_common_rostest.dir">
+                </df>
+                <df name="_run_tests_cooperative_driving_common_rostest_test_pubscriber.test.dir">
+                </df>
+                <df name="clean_test_results_cooperative_driving_common.dir">
+                </df>
+                <df name="run_tests_cooperative_driving_common.dir">
+                </df>
+                <df name="run_tests_cooperative_driving_common_rostest.dir">
+                </df>
+                <df name="run_tests_cooperative_driving_common_rostest_test_pubscriber.test.dir">
+                </df>
+                <df name="test_pubscriber_cpp.dir">
+                </df>
+              </df>
+            </df>
+          </df>
+          <df name="cooperative_driving_description">
+            <df name="CMakeFiles">
+            </df>
+          </df>
+          <df name="cooperative_driving_hardware">
+            <df name="catkin_generated">
+              <df name="installspace">
+              </df>
+              <df name="stamps">
+                <df name="cooperative_driving_hardware">
+                </df>
+              </df>
+            </df>
+            <df name="cmake">
+            </df>
+            <df name="CMakeFiles">
+              <df name="_cooperative_driving_hardware_generate_messages_check_deps_DistanceValue.dir">
+              </df>
+              <df name="_cooperative_driving_hardware_generate_messages_check_deps_DistanceValues.dir">
+              </df>
+              <df name="_cooperative_driving_hardware_generate_messages_check_deps_LedCommand.dir">
+              </df>
+              <df name="_cooperative_driving_hardware_generate_messages_check_deps_LedValue.dir">
+              </df>
+              <df name="_cooperative_driving_hardware_generate_messages_check_deps_LedValues.dir">
+              </df>
+              <df name="_run_tests_cooperative_driving_hardware.dir">
+              </df>
+              <df name="_run_tests_cooperative_driving_hardware_roslaunch-check.dir">
+              </df>
+              <df name="_run_tests_cooperative_driving_hardware_roslaunch-check_launch_distance-controller.xml.dir">
+              </df>
+              <df name="_run_tests_cooperative_driving_hardware_roslaunch-check_launch_drive-controller.xml.dir">
+              </df>
+              <df name="_run_tests_cooperative_driving_hardware_roslaunch-check_launch_hardware_arm.xml.dir">
+              </df>
+              <df name="_run_tests_cooperative_driving_hardware_roslaunch-check_launch_hardware_x86_64.xml.dir">
+              </df>
+              <df name="_run_tests_cooperative_driving_hardware_roslaunch-check_launch_led-controller-pi.xml.dir">
+              </df>
+              <df name="clean_test_results_cooperative_driving_hardware.dir">
+              </df>
+              <df name="controller_manager_msgs_generate_messages_cpp.dir">
+              </df>
+              <df name="controller_manager_msgs_generate_messages_eus.dir">
+              </df>
+              <df name="controller_manager_msgs_generate_messages_lisp.dir">
+              </df>
+              <df name="controller_manager_msgs_generate_messages_nodejs.dir">
+              </df>
+              <df name="controller_manager_msgs_generate_messages_py.dir">
+              </df>
+              <df name="cooperative_driving_hardware.dir">
+                <df name="src">
+                </df>
+              </df>
+              <df name="cooperative_driving_hardware_gencpp.dir">
+              </df>
+              <df name="cooperative_driving_hardware_generate_messages.dir">
+              </df>
+              <df name="cooperative_driving_hardware_generate_messages_cpp.dir">
+              </df>
+              <df name="cooperative_driving_hardware_generate_messages_eus.dir">
+              </df>
+              <df name="cooperative_driving_hardware_generate_messages_lisp.dir">
+              </df>
+              <df name="cooperative_driving_hardware_generate_messages_nodejs.dir">
+              </df>
+              <df name="cooperative_driving_hardware_generate_messages_py.dir">
+              </df>
+              <df name="cooperative_driving_hardware_geneus.dir">
+              </df>
+              <df name="cooperative_driving_hardware_genlisp.dir">
+              </df>
+              <df name="cooperative_driving_hardware_gennodejs.dir">
+              </df>
+              <df name="cooperative_driving_hardware_genpy.dir">
+              </df>
+              <df name="run_tests_cooperative_driving_hardware.dir">
+              </df>
+              <df name="run_tests_cooperative_driving_hardware_roslaunch-check.dir">
+              </df>
+              <df name="run_tests_cooperative_driving_hardware_roslaunch-check_launch_distance-controller.xml.dir">
+              </df>
+              <df name="run_tests_cooperative_driving_hardware_roslaunch-check_launch_drive-controller.xml.dir">
+              </df>
+              <df name="run_tests_cooperative_driving_hardware_roslaunch-check_launch_hardware_arm.xml.dir">
+              </df>
+              <df name="run_tests_cooperative_driving_hardware_roslaunch-check_launch_hardware_x86_64.xml.dir">
+              </df>
+              <df name="run_tests_cooperative_driving_hardware_roslaunch-check_launch_led-controller-pi.xml.dir">
+              </df>
+            </df>
+          </df>
+          <df name="cooperative_driving_logic">
+            <df name="catkin_generated">
+              <df name="installspace">
+              </df>
+              <df name="stamps">
+                <df name="cooperative_driving_logic">
+                </df>
+              </df>
+            </df>
+            <df name="cmake">
+            </df>
+            <df name="CMakeFiles">
+              <df name="_cooperative_driving_logic_generate_messages_check_deps_ChangeState.dir">
+              </df>
+              <df name="_cooperative_driving_logic_generate_messages_check_deps_ReflekteState.dir">
+              </df>
+              <df name="_run_tests_cooperative_driving_logic.dir">
+              </df>
+              <df name="_run_tests_cooperative_driving_logic_roslaunch-check.dir">
+              </df>
+              <df name="_run_tests_cooperative_driving_logic_roslaunch-check_launch_logic.xml.dir">
+              </df>
+              <df name="clean_test_results_cooperative_driving_logic.dir">
+              </df>
+              <df name="cooperative_driving_logic.dir">
+                <df name="src">
+                </df>
+              </df>
+              <df name="cooperative_driving_logic_gencfg.dir">
+              </df>
+              <df name="cooperative_driving_logic_gencpp.dir">
+              </df>
+              <df name="cooperative_driving_logic_generate_messages.dir">
+              </df>
+              <df name="cooperative_driving_logic_generate_messages_cpp.dir">
+              </df>
+              <df name="cooperative_driving_logic_generate_messages_eus.dir">
+              </df>
+              <df name="cooperative_driving_logic_generate_messages_lisp.dir">
+              </df>
+              <df name="cooperative_driving_logic_generate_messages_nodejs.dir">
+              </df>
+              <df name="cooperative_driving_logic_generate_messages_py.dir">
+              </df>
+              <df name="cooperative_driving_logic_geneus.dir">
+              </df>
+              <df name="cooperative_driving_logic_genlisp.dir">
+              </df>
+              <df name="cooperative_driving_logic_gennodejs.dir">
+              </df>
+              <df name="cooperative_driving_logic_genpy.dir">
+              </df>
+              <df name="nav_msgs_generate_messages_cpp.dir">
+              </df>
+              <df name="nav_msgs_generate_messages_eus.dir">
+              </df>
+              <df name="nav_msgs_generate_messages_lisp.dir">
+              </df>
+              <df name="nav_msgs_generate_messages_nodejs.dir">
+              </df>
+              <df name="nav_msgs_generate_messages_py.dir">
+              </df>
+              <df name="run_tests_cooperative_driving_logic.dir">
+              </df>
+              <df name="run_tests_cooperative_driving_logic_roslaunch-check.dir">
+              </df>
+              <df name="run_tests_cooperative_driving_logic_roslaunch-check_launch_logic.xml.dir">
+              </df>
+            </df>
+            <df name="docs">
+            </df>
+          </df>
+          <df name="cooperative_driving_networking">
+            <df name="catkin_generated">
+              <df name="installspace">
+              </df>
+              <df name="stamps">
+                <df name="cooperative_driving_networking">
+                </df>
+              </df>
+            </df>
+            <df name="cmake">
+            </df>
+            <df name="CMakeFiles">
+              <df name="_cooperative_driving_networking_generate_messages_check_deps_BroadcastMessage.dir">
+              </df>
+              <df name="_cooperative_driving_networking_generate_messages_check_deps_CooperativeAwarenessMessage.dir">
+              </df>
+              <df name="_cooperative_driving_networking_generate_messages_check_deps_EmergencyBrake.dir">
+              </df>
+              <df name="_cooperative_driving_networking_generate_messages_check_deps_Platooning.dir">
+              </df>
+              <df name="_cooperative_driving_networking_generate_messages_check_deps_StringStamped.dir">
+              </df>
+              <df name="_cooperative_driving_networking_generate_messages_check_deps_Token.dir">
+              </df>
+              <df name="cooperative_driving_networking_gencpp.dir">
+              </df>
+              <df name="cooperative_driving_networking_generate_messages.dir">
+              </df>
+              <df name="cooperative_driving_networking_generate_messages_cpp.dir">
+              </df>
+              <df name="cooperative_driving_networking_generate_messages_eus.dir">
+              </df>
+              <df name="cooperative_driving_networking_generate_messages_lisp.dir">
+              </df>
+              <df name="cooperative_driving_networking_generate_messages_nodejs.dir">
+              </df>
+              <df name="cooperative_driving_networking_generate_messages_py.dir">
+              </df>
+              <df name="cooperative_driving_networking_geneus.dir">
+              </df>
+              <df name="cooperative_driving_networking_genlisp.dir">
+              </df>
+              <df name="cooperative_driving_networking_gennodejs.dir">
+              </df>
+              <df name="cooperative_driving_networking_genpy.dir">
+              </df>
+              <df name="networking.dir">
+                <df name="src">
+                  <df name="networking">
+                  </df>
+                </df>
+              </df>
+              <df name="set_cap.dir">
+              </df>
+            </df>
+          </df>
+          <df name="cooperative_driving_vision">
+            <df name="catkin_generated">
+              <df name="installspace">
+              </df>
+              <df name="stamps">
+                <df name="cooperative_driving_vision">
+                </df>
+              </df>
+            </df>
+            <df name="cmake">
+            </df>
+            <df name="CMakeFiles">
+              <df name="_cooperative_driving_vision_generate_messages_check_deps_Features.dir">
+              </df>
+              <df name="_cooperative_driving_vision_generate_messages_check_deps_Moment.dir">
+              </df>
+              <df name="_cooperative_driving_vision_generate_messages_check_deps_Region.dir">
+              </df>
+              <df name="_run_tests_cooperative_driving_vision.dir">
+              </df>
+              <df name="_run_tests_cooperative_driving_vision_roslaunch-check.dir">
+              </df>
+              <df name="_run_tests_cooperative_driving_vision_roslaunch-check_launch_feature_extraction.xml.dir">
+              </df>
+              <df name="actionlib_generate_messages_cpp.dir">
+              </df>
+              <df name="actionlib_generate_messages_eus.dir">
+              </df>
+              <df name="actionlib_generate_messages_lisp.dir">
+              </df>
+              <df name="actionlib_generate_messages_nodejs.dir">
+              </df>
+              <df name="actionlib_generate_messages_py.dir">
+              </df>
+              <df name="actionlib_msgs_generate_messages_cpp.dir">
+              </df>
+              <df name="actionlib_msgs_generate_messages_eus.dir">
+              </df>
+              <df name="actionlib_msgs_generate_messages_lisp.dir">
+              </df>
+              <df name="actionlib_msgs_generate_messages_nodejs.dir">
+              </df>
+              <df name="actionlib_msgs_generate_messages_py.dir">
+              </df>
+              <df name="bond_generate_messages_cpp.dir">
+              </df>
+              <df name="bond_generate_messages_eus.dir">
+              </df>
+              <df name="bond_generate_messages_lisp.dir">
+              </df>
+              <df name="bond_generate_messages_nodejs.dir">
+              </df>
+              <df name="bond_generate_messages_py.dir">
+              </df>
+              <df name="clean_test_results_cooperative_driving_vision.dir">
+              </df>
+              <df name="cooperative_driving_vision.dir">
+                <df name="src">
+                </df>
+              </df>
+              <df name="cooperative_driving_vision_gencfg.dir">
+              </df>
+              <df name="cooperative_driving_vision_gencpp.dir">
+              </df>
+              <df name="cooperative_driving_vision_generate_messages.dir">
+              </df>
+              <df name="cooperative_driving_vision_generate_messages_cpp.dir">
+              </df>
+              <df name="cooperative_driving_vision_generate_messages_eus.dir">
+              </df>
+              <df name="cooperative_driving_vision_generate_messages_lisp.dir">
+              </df>
+              <df name="cooperative_driving_vision_generate_messages_nodejs.dir">
+              </df>
+              <df name="cooperative_driving_vision_generate_messages_py.dir">
+              </df>
+              <df name="cooperative_driving_vision_geneus.dir">
+              </df>
+              <df name="cooperative_driving_vision_genlisp.dir">
+              </df>
+              <df name="cooperative_driving_vision_gennodejs.dir">
+              </df>
+              <df name="cooperative_driving_vision_genpy.dir">
+              </df>
+              <df name="dynamic_reconfigure_gencfg.dir">
+              </df>
+              <df name="dynamic_reconfigure_generate_messages_cpp.dir">
+              </df>
+              <df name="dynamic_reconfigure_generate_messages_eus.dir">
+              </df>
+              <df name="dynamic_reconfigure_generate_messages_lisp.dir">
+              </df>
+              <df name="dynamic_reconfigure_generate_messages_nodejs.dir">
+              </df>
+              <df name="dynamic_reconfigure_generate_messages_py.dir">
+              </df>
+              <df name="feature_image_renderer.dir">
+                <df name="src">
+                </df>
+              </df>
+              <df name="nodelet_generate_messages_cpp.dir">
+              </df>
+              <df name="nodelet_generate_messages_eus.dir">
+              </df>
+              <df name="nodelet_generate_messages_lisp.dir">
+              </df>
+              <df name="nodelet_generate_messages_nodejs.dir">
+              </df>
+              <df name="nodelet_generate_messages_py.dir">
+              </df>
+              <df name="run_tests_cooperative_driving_vision.dir">
+              </df>
+              <df name="run_tests_cooperative_driving_vision_roslaunch-check.dir">
+              </df>
+              <df name="run_tests_cooperative_driving_vision_roslaunch-check_launch_feature_extraction.xml.dir">
+              </df>
+              <df name="sensor_msgs_generate_messages_cpp.dir">
+              </df>
+              <df name="sensor_msgs_generate_messages_eus.dir">
+              </df>
+              <df name="sensor_msgs_generate_messages_lisp.dir">
+              </df>
+              <df name="sensor_msgs_generate_messages_nodejs.dir">
+              </df>
+              <df name="sensor_msgs_generate_messages_py.dir">
+              </df>
+              <df name="tf2_msgs_generate_messages_cpp.dir">
+              </df>
+              <df name="tf2_msgs_generate_messages_eus.dir">
+              </df>
+              <df name="tf2_msgs_generate_messages_lisp.dir">
+              </df>
+              <df name="tf2_msgs_generate_messages_nodejs.dir">
+              </df>
+              <df name="tf2_msgs_generate_messages_py.dir">
+              </df>
+              <df name="tf_generate_messages_cpp.dir">
+              </df>
+              <df name="tf_generate_messages_eus.dir">
+              </df>
+              <df name="tf_generate_messages_lisp.dir">
+              </df>
+              <df name="tf_generate_messages_nodejs.dir">
+              </df>
+              <df name="tf_generate_messages_py.dir">
+              </df>
+            </df>
+            <df name="docs">
+            </df>
+          </df>
+        </df>
+        <df name="gtest">
+          <df name="CMakeFiles">
+            <df name="gtest.dir">
+              <df name="src">
+              </df>
+            </df>
+            <df name="gtest_main.dir">
+              <df name="src">
+              </df>
+            </df>
+          </df>
+        </df>
+        <df name="test_results">
+        </df>
+      </df>
+      <df name="cross-compilation">
+      </df>
+      <df name="devel">
+        <df name="include">
+          <df name="cooperative_driving_hardware">
+            <in>DistanceValue.h</in>
+            <in>DistanceValues.h</in>
+            <in>LedCommand.h</in>
+            <in>LedValue.h</in>
+            <in>LedValues.h</in>
+          </df>
+          <df name="cooperative_driving_logic">
+            <in>ChangeState.h</in>
+            <in>ChangeStateRequest.h</in>
+            <in>ChangeStateResponse.h</in>
+            <in>ReflekteServerConfig.h</in>
+            <in>ReflekteState.h</in>
+          </df>
+          <df name="cooperative_driving_networking">
+            <in>BroadcastMessage.h</in>
+            <in>BroadcastMessageRequest.h</in>
+            <in>BroadcastMessageResponse.h</in>
+            <in>CooperativeAwarenessMessage.h</in>
+            <in>EmergencyBrake.h</in>
+            <in>Platooning.h</in>
+            <in>StringStamped.h</in>
+            <in>Token.h</in>
+          </df>
+          <df name="cooperative_driving_vision">
+            <in>FeatureExtractorServerConfig.h</in>
+            <in>Features.h</in>
+            <in>Moment.h</in>
+            <in>Region.h</in>
+          </df>
+        </df>
+        <df name="lib">
+          <df name="cooperative_driving_common">
+          </df>
+          <df name="cooperative_driving_networking">
+          </df>
+          <df name="cooperative_driving_vision">
+          </df>
+          <df name="pkgconfig">
+          </df>
+          <df name="python2.7">
+            <df name="dist-packages">
+              <df name="cooperative_driving_application">
+              </df>
+              <df name="cooperative_driving_common">
+              </df>
+              <df name="cooperative_driving_hardware">
+                <df name="msg">
+                </df>
+              </df>
+              <df name="cooperative_driving_logic">
+                <df name="cfg">
+                </df>
+                <df name="msg">
+                </df>
+                <df name="srv">
+                </df>
+              </df>
+              <df name="cooperative_driving_networking">
+                <df name="msg">
+                </df>
+                <df name="srv">
+                </df>
+              </df>
+              <df name="cooperative_driving_vision">
+                <df name="cfg">
+                </df>
+                <df name="msg">
+                </df>
+              </df>
+            </df>
+          </df>
+        </df>
+        <df name="share">
+          <df name="common-lisp">
+            <df name="ros">
+              <df name="cooperative_driving_hardware">
+                <df name="msg">
+                </df>
+              </df>
+              <df name="cooperative_driving_logic">
+                <df name="msg">
+                </df>
+                <df name="srv">
+                </df>
+              </df>
+              <df name="cooperative_driving_networking">
+                <df name="msg">
+                </df>
+                <df name="srv">
+                </df>
+              </df>
+              <df name="cooperative_driving_vision">
+                <df name="msg">
+                </df>
+              </df>
+            </df>
+          </df>
+          <df name="cooperative_driving">
+            <df name="cmake">
+            </df>
+          </df>
+          <df name="cooperative_driving_application">
+            <df name="cmake">
+            </df>
+          </df>
+          <df name="cooperative_driving_common">
+            <df name="cmake">
+            </df>
+          </df>
+          <df name="cooperative_driving_hardware">
+            <df name="cmake">
+            </df>
+          </df>
+          <df name="cooperative_driving_logic">
+            <df name="cmake">
+            </df>
+            <df name="docs">
+            </df>
+          </df>
+          <df name="cooperative_driving_networking">
+            <df name="cmake">
+            </df>
+          </df>
+          <df name="cooperative_driving_vision">
+            <df name="cmake">
+            </df>
+            <df name="docs">
+            </df>
+          </df>
+          <df name="gennodejs">
+            <df name="ros">
+              <df name="cooperative_driving_hardware">
+                <df name="msg">
+                </df>
+              </df>
+              <df name="cooperative_driving_logic">
+                <df name="msg">
+                </df>
+                <df name="srv">
+                </df>
+              </df>
+              <df name="cooperative_driving_networking">
+                <df name="msg">
+                </df>
+                <df name="srv">
+                </df>
+              </df>
+              <df name="cooperative_driving_vision">
+                <df name="msg">
+                </df>
+              </df>
+            </df>
+          </df>
+          <df name="roseus">
+            <df name="ros">
+              <df name="cooperative_driving_hardware">
+                <df name="msg">
+                </df>
+              </df>
+              <df name="cooperative_driving_logic">
+                <df name="msg">
+                </df>
+                <df name="srv">
+                </df>
+              </df>
+              <df name="cooperative_driving_networking">
+                <df name="msg">
+                </df>
+                <df name="srv">
+                </df>
+              </df>
+              <df name="cooperative_driving_vision">
+                <df name="msg">
+                </df>
+              </df>
+            </df>
+          </df>
+        </df>
+      </df>
+      <df name="evaluation">
+        <df name="delay_test">
+          <df name="scripts">
+          </df>
+        </df>
+        <df name="results">
+          <df name="1_talkers_1_listeners">
+          </df>
+          <df name="5_talkers_2_listeners">
+          </df>
+          <df name="realistic_conditions">
+          </df>
+        </df>
+        <df name="ZMQ">
+        </df>
+      </df>
+      <df name="src">
+        <df name="cooperative_driving">
+          <df name="cooperative_driving">
+            <df name="config">
+            </df>
+            <df name="doc">
+            </df>
+            <df name="launch">
+            </df>
+            <df name="scripts">
+            </df>
+          </df>
+          <df name="cooperative_driving_application">
+            <df name="launch">
+            </df>
+            <df name="scripts">
+            </df>
+            <df name="src">
+              <df name="cooperative_driving_application">
+              </df>
+            </df>
+            <df name="test">
+            </df>
+          </df>
+          <df name="cooperative_driving_common">
+            <df name="include">
+              <df name="cooperative_driving">
+                <in>disable_ros_warnings_post.h</in>
+                <in>disable_ros_warnings_pre.h</in>
+                <in>pubscriber.h</in>
+                <in>util.h</in>
+              </df>
+            </df>
+            <df name="src">
+              <df name="cooperative_driving_common">
+              </df>
+            </df>
+            <df name="test">
+              <in>test_pubscriber.cc</in>
+            </df>
+          </df>
+          <df name="cooperative_driving_description">
+            <df name="urdf">
+            </df>
+          </df>
+          <df name="cooperative_driving_hardware">
+            <df name="config">
+            </df>
+            <df name="include">
+              <df name="cooperative_driving">
+                <in>ccs_hw.h</in>
+                <in>ccs_robot.h</in>
+                <in>distance_sensor_controller.h</in>
+                <in>distance_sensor_interface.h</in>
+                <in>led_controller.h</in>
+                <in>led_interface.h</in>
+                <in>util.h</in>
+              </df>
+            </df>
+            <df name="launch">
+            </df>
+            <df name="msg">
+            </df>
+            <df name="scripts">
+            </df>
+            <df name="src">
+              <in>ccs_robot.cc</in>
+              <in>ccs_robot_nodelet.cc</in>
+              <in>distance_sensor_controller.cc</in>
+              <in>led_controller.cc</in>
+            </df>
+          </df>
+          <df name="cooperative_driving_logic">
+            <df name="config">
+            </df>
+            <df name="Dump">
+            </df>
+            <df name="include">
+              <df name="cooperative_driving">
+                <in>logic.h</in>
+                <in>pid_controller.h</in>
+                <in>simple_behaviors.h</in>
+                <in>structured_behaviors.h</in>
+              </df>
+            </df>
+            <df name="launch">
+            </df>
+            <df name="msg">
+            </df>
+            <df name="src">
+              <in>reflekte_nodelet.cc</in>
+            </df>
+            <df name="srv">
+            </df>
+          </df>
+          <df name="cooperative_driving_networking">
+            <df name="cmake">
+            </df>
+            <df name="config">
+            </df>
+            <df name="include">
+              <df name="cooperative_driving">
+                <df name="networking">
+                  <in>cohda_defs.h</in>
+                  <in>ieee80211.h</in>
+                  <in>ieee80211_radiotap.h</in>
+                  <in>message_types.h</in>
+                  <in>radiotap.h</in>
+                  <in>transceiver.h</in>
+                  <in>types.h</in>
+                  <in>util.h</in>
+                  <in>wifi_packet.h</in>
+                </df>
+              </df>
+            </df>
+            <df name="launch">
+            </df>
+            <df name="msg">
+            </df>
+            <df name="scripts">
+            </df>
+            <df name="src">
+              <df name="networking">
+                <in>main.cc</in>
+                <in>radiotap.c</in>
+                <in>transceiver.c</in>
+                <in>util.c</in>
+                <in>wave-app_noROS.cc</in>
+                <in>wifi_packet.cc</in>
+              </df>
+            </df>
+            <df name="srv">
+            </df>
+          </df>
+          <df name="cooperative_driving_vision">
+            <df name="config">
+            </df>
+            <df name="include">
+              <df name="cooperative_driving">
+                <in>feature_extractor.h</in>
+                <in>moment.h</in>
+                <in>region.h</in>
+                <in>vision_types.h</in>
+                <in>vision_util.h</in>
+              </df>
+            </df>
+            <df name="launch">
+            </df>
+            <df name="msg">
+            </df>
+            <df name="scripts">
+            </df>
+            <df name="src">
+              <in>feature_extraction_debugger.cc</in>
+              <in>feature_extractor.cc</in>
+              <in>feature_extractor_nodelet.cc</in>
+              <in>feature_image_renderer.cc</in>
+            </df>
+          </df>
+        </df>
+      </df>
+    </df>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <platform>2</platform>
+      </toolsSet>
+      <compile>
+        <compiledirpicklist>
+          <compiledirpicklistitem>.</compiledirpicklistitem>
+          <compiledirpicklistitem>${AUTO_FOLDER}</compiledirpicklistitem>
+        </compiledirpicklist>
+        <compiledir>${AUTO_FOLDER}</compiledir>
+        <compilecommandpicklist>
+          <compilecommandpicklistitem>${MAKE} ${ITEM_NAME}.o</compilecommandpicklistitem>
+          <compilecommandpicklistitem>${AUTO_COMPILE}</compilecommandpicklistitem>
+        </compilecommandpicklist>
+        <compilecommand>${AUTO_COMPILE}</compilecommand>
+      </compile>
+      <dbx_gdbdebugger version="1">
+        <gdb_pathmaps>
+        </gdb_pathmaps>
+        <gdb_interceptlist>
+          <gdbinterceptoptions gdb_all="false" gdb_unhandled="true" gdb_unexpected="true"/>
+        </gdb_interceptlist>
+        <gdb_options>
+          <DebugOptions>
+          </DebugOptions>
+        </gdb_options>
+        <gdb_buildfirst gdb_buildfirst_overriden="false" gdb_buildfirst_old="false"/>
+      </dbx_gdbdebugger>
+      <nativedebugger version="1">
+        <engine>gdb</engine>
+      </nativedebugger>
+      <runprofile version="9">
+        <runcommandpicklist>
+          <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
+        </runcommandpicklist>
+        <runcommand>"${OUTPUT_PATH}"</runcommand>
+        <rundir>.</rundir>
+        <buildfirst>false</buildfirst>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+  </confs>
+</configurationDescriptor>

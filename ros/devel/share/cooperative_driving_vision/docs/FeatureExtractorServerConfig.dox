@@ -1,0 +1,19 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~line_interval_lower_v" : \b [double] Lower end of normalized rows for vertical line detection min: 0.0, default: 0.0, max: 1.0
+- \b "~line_interval_upper_v" : \b [double] Upper end of normalized rows for vertical line detection min: 0.0, default: 1.0, max: 1.0
+- \b "~line_count_v" : \b [int] Number of vertical lines to extract min: 1, default: 20, max: 50
+- \b "~row_influence_area_v" : \b [int] Number of rows to include for vertical line detection min: 1, default: 5, max: 25
+- \b "~lower_canny_threshold_v" : \b [int] The lower threshold used for the vertical canny filter (Max. Threshold is 3 times the lower threshold) min: 1, default: 40, max: 100
+- \b "~line_interval_lower_h" : \b [double] Lower end of normalized rows for horizontal line detection min: 0.0, default: 0.0, max: 1.0
+- \b "~line_interval_upper_h" : \b [double] Upper end of normalized rows for horizontal line detection min: 0.0, default: 1.0, max: 1.0
+- \b "~line_count_h" : \b [int] Number of horizontal lines to extract min: 1, default: 20, max: 50
+- \b "~row_influence_area_h" : \b [int] Number of rows to include for horizontal line detection min: 1, default: 5, max: 25
+- \b "~lower_canny_threshold_h" : \b [int] The lower threshold used for the horizontal canny filter (Max. Threshold is 3 times the lower threshold) min: 1, default: 64, max: 100
+- \b "~box_width" : \b [double] Width of the box in percentage of image width min: 0.0, default: 0.68, max: 1.0
+- \b "~box_height" : \b [double] Height of the box in percentage of image height min: 0.0, default: 0.62, max: 1.0
+- \b "~min_line_length" : \b [int] The minimum line size for detecting blobs. min: 0, default: 4, max: 100
+- \b "~min_region_size" : \b [int] The minimum size detected regions are processed. min: 0, default: 200, max: 800
+

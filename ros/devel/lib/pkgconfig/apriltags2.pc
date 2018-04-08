@@ -1,0 +1,8 @@
+prefix=/home/amjad/Desktop/pg2017w/ros/devel
+
+Name: apriltags2
+Description: Description of apriltags2
+Version: 0.9.8
+Cflags: -I/home/amjad/Desktop/pg2017w/ros/src/cooperative_driving/apriltags2_ros/apriltags2/include
+Libs: -L/home/amjad/Desktop/pg2017w/ros/devel/lib -lapriltags2
+Requires: 

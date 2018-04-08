@@ -1,0 +1,32 @@
+# normal pi camera (with picamera lib)
+_COLORS = {'red': ((114, 158, 0), (180, 255, 255)),  # normal, big ball
+       'green': ((42, 159, 73), (70, 255, 206)),  # normal, big ball
+       #'green': ((55, 218, 72), (81, 255, 227))  # normal, small ball
+       'orange': ((0, 117, 137), (19, 255, 255)),  # normal, small ball
+       'blue': ((60, 96, 94), (180, 255, 239)),  # normal, small ball
+       'yellow': ((29, 206, 85), (46, 255, 255)),  # normal, small ball
+       'pink': ((36, 122, 116), (180, 255, 255)),  # TODO calibrate
+       'purple': ((102, 49, 41), (180, 100, 112)),  # normal, small ball
+}
+
+# fish eye camera (with ROS cv_camera nodelet)
+_COLORS = {'red': ((114, 99, 0), (180, 255, 255)),  # fish, big ball
+       'green': ((40, 100, 60), (80, 255, 206)),  # fish, big ball
+       #'green': ((0, 100, 83), (50, 255, 227))  # fish, small ball
+       'orange': ((85, 136, 140), (180, 255, 255)),  # fish, small ball
+       'blue': ((0, 110, 70), (180, 255, 239)),  # fish, small ball
+       'yellow': ((0, 105, 115), (90, 225, 255)),  # fish, small ball
+       'pink': ((115, 90, 110), (136, 218, 237)),  # fish, small ball
+       'purple': ((120, 26, 23), (180, 158, 117)),  # fish, small ball
+}
+
+# bernd's usb webcam (with open_cv camera lib)
+_COLORS = {'red': ((111, 116, 90), (135, 255, 255)),  # usb webcam, big ball
+   'green': ((14, 76, 34), (95, 184, 102)),  # big ball
+   #'green': ((55, 218, 72), (81. 255, 227))  # small ball
+   'orange': ((0, 119, 148), (90, 231, 255)),  # small ball
+   'blue': ((60, 96, 94), (180, 255, 239)),  # small ball
+   'yellow': ((29, 206, 85), (46, 255, 255)),  # small ball
+   'pink': ((108, 42, 120), (172, 111, 255)),  # small ball
+   'purple': ((102, 0, 2), (180, 255, 189)),  # small ball
+}

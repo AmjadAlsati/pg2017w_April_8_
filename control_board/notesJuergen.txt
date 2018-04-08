@@ -1,0 +1,22 @@
+Ihr müsst in der mCtl.h das neue Getriebe anpassen und die neue Software dann aufspielen.
+Die zu ändernden Defines sind:
+#define GETRIEBE_UNTERSETZ        34.014f
+#define WHEEL_DIST_RAW            1097.1f //(((GETRIEBE_UNTERSETZ * IMPULES_PRO_U_Encoder) / UMFANG_REIFEN_in_mm) * ABSTAND_REIFEN_in_mm)
+#define TICKTS_TO_CM            57.744f //(((GETRIEBE_UNTERSETZ * IMPULES_PRO_U_Encoder) / UMFANG_REIFEN_in_mm) * 10
+Die Neue Untersetzung sollte in etwas 47 sein!? Der genaue Kommawert steht auf  der Hersteller Homepage (oder vielleicht auch bei noDna).
+
+
+# Brownout-Detection (von 4.3V) auf 3.7V setzen. Sonst triggern die Infrarotabstandsmesser irgendwann die BO-Detection und der Roboter geht aus
+sudo avrdude -p m644 -P /dev/ttyACM0 -c avrispv2  -U efuse:w:0xfd:m
+
+# Empfohlene Kuehlkoerper fuer den Festspannungsregler:
+http://www.reichelt.de/IC-Kuehlkoerper/ICK-SMD-B7/3/index.html?&ACTION=3&LA=2&ARTICLE=113629&GROUPID=3381&artnr=ICK+SMD+B7
+http://www.reichelt.de/Waermeleit-paste-folien-scheiben/WK-709-5ML/3/index.html?&ACTION=3&LA=446&ARTICLE=35418&GROUPID=3384&artnr=WK+709-5ML
+
+
+# flash the robot with (you need to keep the ON-BUTTON pressed meanwhile)
+avrdude -c avrispv2 -p m644 -P /dev/ttyACM0 - -Uflash:w:iMotorCtl.hex
+
+# set fuses with (you need to keep the ON-BUTTON pressed meanwhile)
+avrdude -c avrispv2 -p m644 -P /dev/ttyACM0 -U lfuse:w:0xde:m -U hfuse:w:0xcf:m -U efuse:w:0xfc:m
+

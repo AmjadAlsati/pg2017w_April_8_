@@ -1,0 +1,56 @@
+### Troubleshooting the dongle issues, when the dongle is not detected ###
+
+1. An `ifconfig` would show all the available interfaces. With the dongle connected and working fine, it should be able to see an extra interface as `wlan1` or `mon*`.
+
+2. The firmware needed to successfully start working with the wifi dongles is "firmware-linux-free" for Airlive Sticks and "firmware-atheros" for the TP-Link sticks.
+Check if this package is installed as the first step of troubleshooting. If the firmware is just newly installed, a reboot is required to detect the dongles successfully.
+
+3. In the output of `ifconfig` if there is only wlan0 nothing else then check if the device is detected using lsusb. If the device is detected fine then the next step is to start looking at the dmesg for firmware issues.
+
+4. Rebooting may help.
+
+Now that the Dongle/stick is detected, lets look at how the Monitoring mode can be setup
+
+#### More information available at https://sandilands.info/sgordon/capturing-wifi-in-monitor-mode-with-iw ######
+#### List of basic commands to be used with the wifi dongle monitoring mode setup (NOTE: Already a script:monitor_mode_setup.sh is created to do this) ####
+#### Everytime the wireless stick is disconnected and reconnected, the phy# of the device changes. So please check it using iw dev before running the script. ####
+
+iw dev 							//Lists all the available devices
+iw phy phy0 info 					//Lists information about the interface name
+sudo iw phy phy0 interface add mon0 type monitor	//This adds a new interface of type monitoring to the physical device
+iw dev							//We check if the new interface is successfully added
+sudo iw dev wlan1 del					//Delete the old interface operating in managed mode. Not deleting this causes issues when setting channel
+sudo ifconfig mon0 up					//Start(up) the new interface
+sudo iw dev mon0 set freq 2437				//Set the monitoring frequency for the new interface
+iwconfig mon0						//List all the information about the interface	
+sudo tshark -i mon0 -w wireless.pcap			//tshark will start capturing on interface mon0 and dump the packets into wireless.pcap(alternative - tcpdump)
+
+
+#### Returning to managed mode ####
+
+sudo iw dev mon0 del
+sudo iw phy phy0 interface add wlan1 type managed
+iw dev
+iwconfig wlan1
+
+
+#### Troubleshooting the commands/scripts ####
+
+ If you get errors with some of the above iw commands, then:
+
+1. Check that the wireless device is not soft/hard blocked by rfkill and unblock it if it is:
+
+	$ rfkill list
+	0: phy0: Wireless LAN
+		Soft blocked: yes
+		Hard blocked: no
+	    
+	$ rfkill unblock 0
+
+Make sure you are using the correct interface/device. In my examples I use phy0, wlan0 and mon0. Yours may be different.
+
+2. If the commands work, but in Wireshark you can only see packets either to your computer or broadcast/multicast (i.e. you cannot see any packets from one computer to another computer, such as HTTP or SSH), then:
+
+  a) Make sure the frequency you selected is being used by others.
+  b) Check that your device supports monitor mode (look in the output of iw phy phy0 info). Some wireless cards do not support monitor mode, and even if they do, some drivers do not support it.
+

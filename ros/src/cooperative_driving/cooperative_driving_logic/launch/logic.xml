@@ -1,0 +1,6 @@
+<launch>
+  <arg name="nodelet_manager" />
+  <node name="reflekte" pkg="nodelet" type="nodelet" args="load cooperative_driving/ReflekteNodelet $(arg nodelet_manager)" required="true" output="log" ><!-- Set output to "screen" if you want to see INFO messages from the reflekte -->
+    <param name="Dump_Path" type="str" value="$(find cooperative_driving_logic)/Dump/dump.yaml"/>
+  </node>
+</launch>

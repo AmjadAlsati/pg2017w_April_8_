@@ -1,0 +1,20 @@
+digraph {
+  rankdir=LR
+  splines=line
+
+  net [shape=box,label="Networking"]
+  app [shape=box,label="Application"]
+
+  subgraph clusterreactive {
+    label="Reactive Behavior";
+    cam [shape=box,label="Camera"]
+    vis [shape=box,label="Feature extraction"]
+    lll [shape=box,label="Low-level-logic"]
+    hwi [shape=box,label="Hardware interface"]
+    cam -> vis -> lll -> hwi
+  }
+
+  net -> app
+  app -> net
+  app -> lll [constraint=false]
+}

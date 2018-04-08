@@ -1,0 +1,8 @@
+prefix=/home/amjad/Desktop/pg2017w/ros/devel
+
+Name: cooperative_driving
+Description: Description of cooperative_driving
+Version: 0.0.1
+Cflags: 
+Libs: -L/home/amjad/Desktop/pg2017w/ros/devel/lib 
+Requires: 

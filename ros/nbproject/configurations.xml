@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="Modules"
+                   displayName="Modules"
+                   projectFiles="true"
+                   root="/usr/share/cmake-3.5/Modules">
+      <itemPath>/usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c</itemPath>
+      <itemPath>/usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp</itemPath>
+      <itemPath>/usr/share/cmake-3.5/Modules/CMakeCompilerABI.h</itemPath>
+      <itemPath>/usr/share/cmake-3.5/Modules/CheckFunctionExists.c</itemPath>
+    </logicalFolder>
+    <df root="." name="0">
+      <df name="build">
+        <df name="CMakeFiles">
+          <df name="3.5.1">
+            <df name="CompilerIdC">
+              <in>CMakeCCompilerId.c</in>
+            </df>
+            <df name="CompilerIdCXX">
+              <in>CMakeCXXCompilerId.cpp</in>
+            </df>
+          </df>
+          <in>feature_tests.c</in>
+          <in>feature_tests.cxx</in>
+        </df>
+      </df>
+      <df name="src">
+        <df name="cooperative_driving">
+          <df name="cooperative_driving_hardware">
+            <df name="src">
+              <in>ccs_robot.cc</in>
+              <in>ccs_robot_nodelet.cc</in>
+              <in>distance_sensor_controller.cc</in>
+              <in>led_controller.cc</in>
+            </df>
+          </df>
+          <df name="cooperative_driving_logic">
+            <df name="src">
+              <in>reflekte_nodelet.cc</in>
+            </df>
+          </df>
+          <df name="cooperative_driving_networking">
+            <df name="src">
+              <df name="networking">
+                <in>main.cc</in>
+                <in>radiotap.c</in>
+                <in>transceiver.c</in>
+                <in>util.c</in>
+                <in>wifi_packet.cc</in>
+              </df>
+            </df>
+          </df>
+          <df name="cooperative_driving_vision">
+            <df name="src">
+              <in>feature_extraction_debugger.cc</in>
+              <in>feature_extractor.cc</in>
+              <in>feature_extractor_nodelet.cc</in>
+              <in>feature_image_renderer.cc</in>
+            </df>
+          </df>
+        </df>
+      </df>
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+      <itemPath>nbproject/private/launcher.properties</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>false</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <flagsDictionary>
+        <element flagsID="0" commonFlags="-fPIC -pedantic -std=gnu++11"/>
+        <element flagsID="1" commonFlags="-g -std=gnu11"/>
+        <element flagsID="2" commonFlags="-pedantic -std=gnu++11"/>
+        <element flagsID="3" commonFlags="-std=c++14"/>
+        <element flagsID="4" commonFlags="-std=c11"/>
+      </flagsDictionary>
+      <codeAssistance>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>.</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath></executablePath>
+        </makeTool>
+        <preBuild>
+          <preBuildCommandWorkingDir>.</preBuildCommandWorkingDir>
+          <preBuildCommand></preBuildCommand>
+        </preBuild>
+      </makefileType>
+      <item path="/usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="/usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="/usr/share/cmake-3.5/Modules/CheckFunctionExists.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+        <cTool>
+          <preprocessorList>
+            <Elem>CHECK_FUNCTION_EXISTS=pthread_create</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="build/CMakeFiles/feature_tests.c" ex="false" tool="0" flavor2="10">
+        <cTool flags="4">
+          <incDir>
+            <pElem>build/CMakeFiles/CMakeTmp</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="build/CMakeFiles/feature_tests.cxx"
+            ex="false"
+            tool="1"
+            flavor2="11">
+        <ccTool flags="3">
+          <incDir>
+            <pElem>build/CMakeFiles/CMakeTmp</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <folder path="0/src">
+        <cTool>
+          <incDir>
+            <pElem>devel/include</pElem>
+            <pElem>src/cooperative_driving/cooperative_driving_networking/include</pElem>
+            <pElem>src/cooperative_driving/cooperative_driving_common/include</pElem>
+            <pElem>/opt/ros/kinetic/include</pElem>
+            <pElem>/opt/ros/kinetic/include/xmlrpcpp</pElem>
+            <pElem>build/cooperative_driving/cooperative_driving_networking</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>ROSCONSOLE_BACKEND_LOG4CXX</Elem>
+            <Elem>ROS_BUILD_SHARED_LIBS=1</Elem>
+            <Elem>ROS_PACKAGE_NAME="cooperative_driving_networking"</Elem>
+          </preprocessorList>
+        </cTool>
+        <ccTool>
+          <incDir>
+            <pElem>devel/include</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>ROSCONSOLE_BACKEND_LOG4CXX</Elem>
+            <Elem>ROS_BUILD_SHARED_LIBS=1</Elem>
+            <Elem>ROS_PACKAGE_NAME="cooperative_driving_hardware"</Elem>
+          </preprocessorList>
+        </ccTool>
+      </folder>
+      <folder path="0/src/cooperative_driving/cooperative_driving_hardware">
+        <ccTool>
+          <incDir>
+            <pElem>src/cooperative_driving/cooperative_driving_hardware/include</pElem>
+            <pElem>src/cooperative_driving/cooperative_driving_common/include</pElem>
+            <pElem>/opt/ros/kinetic/include</pElem>
+            <pElem>/opt/ros/kinetic/include/xmlrpcpp</pElem>
+            <pElem>build/cooperative_driving/cooperative_driving_hardware</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>cooperative_driving_hardware_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </folder>
+      <folder path="0/src/cooperative_driving/cooperative_driving_logic">
+        <ccTool>
+          <incDir>
+            <pElem>src/cooperative_driving/cooperative_driving_logic/include</pElem>
+            <pElem>src/cooperative_driving/cooperative_driving_common/include</pElem>
+            <pElem>src/cooperative_driving/cooperative_driving_vision/include</pElem>
+            <pElem>/opt/ros/kinetic/include</pElem>
+            <pElem>/opt/ros/kinetic/include/xmlrpcpp</pElem>
+            <pElem>/opt/ros/kinetic/include/opencv-3.2.0-dev</pElem>
+            <pElem>/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv</pElem>
+            <pElem>build/cooperative_driving/cooperative_driving_logic</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>ROS_PACKAGE_NAME="cooperative_driving_logic"</Elem>
+            <Elem>cooperative_driving_logic_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </folder>
+      <folder path="0/src/cooperative_driving/cooperative_driving_networking">
+        <ccTool>
+          <incDir>
+            <pElem>src/cooperative_driving/cooperative_driving_networking/include</pElem>
+            <pElem>src/cooperative_driving/cooperative_driving_common/include</pElem>
+            <pElem>/opt/ros/kinetic/include</pElem>
+            <pElem>/opt/ros/kinetic/include/xmlrpcpp</pElem>
+            <pElem>build/cooperative_driving/cooperative_driving_networking</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>ROS_PACKAGE_NAME="cooperative_driving_networking"</Elem>
+          </preprocessorList>
+        </ccTool>
+      </folder>
+      <folder path="0/src/cooperative_driving/cooperative_driving_vision">
+        <ccTool>
+          <incDir>
+            <pElem>src/cooperative_driving/cooperative_driving_vision/include</pElem>
+            <pElem>src/cooperative_driving/cooperative_driving_common/include</pElem>
+            <pElem>/opt/ros/kinetic/include</pElem>
+            <pElem>/opt/ros/kinetic/include/xmlrpcpp</pElem>
+            <pElem>/opt/ros/kinetic/include/opencv-3.2.0-dev</pElem>
+            <pElem>/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv</pElem>
+            <pElem>build/cooperative_driving/cooperative_driving_vision</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>ROS_PACKAGE_NAME="cooperative_driving_vision"</Elem>
+          </preprocessorList>
+        </ccTool>
+      </folder>
+      <folder path="Modules">
+        <cTool>
+          <incDir>
+            <pElem>build/CMakeFiles/CMakeTmp</pElem>
+          </incDir>
+        </cTool>
+        <ccTool>
+          <incDir>
+            <pElem>build/CMakeFiles/CMakeTmp</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <item path="src/cooperative_driving/cooperative_driving_hardware/src/ccs_robot.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/cooperative_driving/cooperative_driving_hardware/src/ccs_robot_nodelet.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/cooperative_driving/cooperative_driving_hardware/src/distance_sensor_controller.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/cooperative_driving/cooperative_driving_hardware/src/led_controller.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/cooperative_driving/cooperative_driving_logic/src/reflekte_nodelet.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/cooperative_driving/cooperative_driving_networking/src/networking/main.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="src/cooperative_driving/cooperative_driving_networking/src/networking/radiotap.c"
+            ex="false"
+            tool="0"
+            flavor2="10">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/cooperative_driving/cooperative_driving_networking/src/networking/transceiver.c"
+            ex="false"
+            tool="0"
+            flavor2="10">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/cooperative_driving/cooperative_driving_networking/src/networking/util.c"
+            ex="false"
+            tool="0"
+            flavor2="10">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/cooperative_driving/cooperative_driving_networking/src/networking/wifi_packet.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="src/cooperative_driving/cooperative_driving_vision/src/feature_extraction_debugger.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="src/cooperative_driving/cooperative_driving_vision/src/feature_extractor.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+          <preprocessorList>
+            <Elem>cooperative_driving_vision_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/cooperative_driving/cooperative_driving_vision/src/feature_extractor_nodelet.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+          <preprocessorList>
+            <Elem>cooperative_driving_vision_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/cooperative_driving/cooperative_driving_vision/src/feature_image_renderer.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

@@ -1,0 +1,12 @@
+<library path="lib/libcooperative_driving_hardware">
+    <class name="cooperative_driving/DistanceSensorController" type="cooperative_driving::DistanceSensorController" base_class_type="controller_interface::ControllerBase">
+        <description>
+            The DistanceSensorController publishes values of the distance sensors.
+        </description>
+    </class>
+    <class name="cooperative_driving/LedController" type="cooperative_driving::LedController" base_class_type="controller_interface::ControllerBase">
+        <description>
+            The LedController takes led commands to control the leds and the publishes the read values of those leds.
+        </description>
+    </class>
+</library>

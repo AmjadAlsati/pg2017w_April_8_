@@ -1,0 +1,167 @@
+<?xml version="1.0"?>
+<robot name="ccs_robot">
+  <link name="base_link">
+    <!-- Approximate shape by box. The origin is on the ground between the wheels. The box is 2.6cm above the ground and starts 7.72cm in front of the origin. -->
+    <colision>
+      <geometry><box size=".18 .19 .069" /></geometry>
+      <origin xyz="-.0772 0 .026" rpy="0 0 0" />
+    </colision>
+    <visual>
+      <geometry><box size=".18 .19 .069" /></geometry>
+      <origin xyz="-.0772 0 .026" rpy="0 0 0" />
+    </visual>
+  </link>
+
+  <link name="left_wheel">
+    <collision>
+      <geometry><cylinder length=".01" radius=".045" /></geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </collision>
+    <visual>
+      <geometry><cylinder length=".01" radius=".045" /></geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <joint type="continuous" name="left_wheel_hinge">
+    <parent link="base_link" />
+    <child link="left_wheel" />
+    <origin xyz="0 .095 0" rpy="0 0 0" />
+    <axis xyz="0 1 0" rpy="0 0 0" />
+  </joint>
+  <transmission name="left_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="left_wheel_hinge">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="left_motor">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>50</mechanicalReduction> <!-- TODO: Untested  -->
+    </actuator>
+  </transmission>
+
+  <link name="right_wheel">
+    <collision>
+      <geometry><cylinder length=".01" radius=".045" /></geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </collision>
+    <visual>
+      <geometry><cylinder length=".01" radius=".045" /></geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <joint type="continuous" name="right_wheel_hinge">
+    <parent link="base_link" />
+    <child link="right_wheel" />
+    <origin xyz="0 -.095 0" rpy="0 0 0" />
+    <axis xyz="0 1 0" rpy="0 0 0" />
+  </joint>
+  <transmission name="right_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="right_wheel_hinge">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="right_motor">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>50</mechanicalReduction> <!-- TODO: Untested -->
+    </actuator>
+  </transmission>
+
+  <joint type="fixed" name="camera_base_link_hinge">
+    <parent link="base_link" />
+    <child link="camera_platform" />
+    <origin xyz="0 0 0.04" rpy="0 0 0" />
+  </joint>
+
+  <link name="camera_platform">
+    <collision>
+      <geometry><box size="0.068 0.02 0.003" /></geometry>
+      <origin xyz="0.034 0 0" rpy="0 0 0" />
+    </collision>
+    <visual>
+      <geometry><box size="0.068 0.02 0.003"/></geometry>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </visual>
+  </link>
+  <joint type="fixed" name="camera_mounting_hinge">
+    <parent link="camera_platform" />
+    <child link="camera_mounting" />
+    <origin xyz="0.034 0 0" rpy="0 0 0" />
+  </joint>
+
+  <link name="camera_mounting">
+    <collision>
+      <geometry><box size="0.04 0.03 0.03"/></geometry>
+      <origin xyz="0 0 0.019" rpy="0 0 0" />
+    </collision>
+    <visual>
+      <geometry><box size="0.04 0.03 0.03"/></geometry>
+      <origin xyz="0 0 0.019" rpy="0 0 0" />
+    </visual>
+  </link>
+  
+  <sensor name="camera" update_rate="20">
+    <parent link="camera_mounting"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <camera>
+            <image width="640" height="480" hfov="1.5708" format="RGB8" near="0.01" far="50.0"/> <!-- TODO: Untested-->
+    </camera>
+  </sensor>
+
+  <link name="led/red">
+  </link>
+  <joint type="fixed" name="led/red_fastening">
+    <parent link="base_link" />
+    <child link="led/red" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+
+  <link name="led/blue">
+  </link>
+  <joint type="fixed" name="led/blue_fastening">
+    <parent link="base_link" />
+    <child link="led/blue" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+
+  <link name="distance_sensor/back_right">
+  </link>
+  <joint type="fixed" name="distance_sensor/back_right_fastening">
+    <parent link="base_link" />
+    <child link="distance_sensor/back_right" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+
+  <link name="distance_sensor/back_left">
+  </link>
+  <joint type="fixed" name="distance_sensor/back_left_fastening">
+    <parent link="base_link" />
+    <child link="distance_sensor/back_left" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+
+  <link name="distance_sensor/front_left">
+  </link>
+  <joint type="fixed" name="distance_sensor/front_left_fastening">
+    <parent link="base_link" />
+    <child link="distance_sensor/front_left" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+
+  <link name="distance_sensor/front_center">
+  </link>
+  <joint type="fixed" name="distance_sensor/front_center_fastening">
+    <parent link="base_link" />
+    <child link="distance_sensor/front_center" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+
+  <link name="distance_sensor/front_right">
+  </link>
+  <joint type="fixed" name="distance_sensor/front_right_fastening">
+    <parent link="base_link" />
+    <child link="distance_sensor/front_right" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+
+
+</robot>

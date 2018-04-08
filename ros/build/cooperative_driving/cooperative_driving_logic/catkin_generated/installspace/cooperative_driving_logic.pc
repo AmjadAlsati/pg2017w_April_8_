@@ -1,0 +1,8 @@
+prefix=/home/amjad/Desktop/pg2017w/ros/install
+
+Name: cooperative_driving_logic
+Description: Description of cooperative_driving_logic
+Version: 0.0.1
+Cflags: -I/home/amjad/Desktop/pg2017w/ros/install/include
+Libs: -L/home/amjad/Desktop/pg2017w/ros/install/lib -lcooperative_driving_logic
+Requires: roscpp message_runtime nav_msgs

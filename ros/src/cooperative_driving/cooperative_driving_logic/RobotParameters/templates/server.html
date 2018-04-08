@@ -1,0 +1,66 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link href="myStyle.css" rel="stylesheet">
+
+<title>Server Page</title>
+
+</head>
+<body>
+<h1>You can either restart the server or go to<a href="/Server"> homepage </a></h1>
+
+<input type="submit" value="Restart the server" id="restart" onclick="Restart()"  style="background: gray; color: white;">
+
+<div data-role="fieldcontain" class="ui-hide-label">
+    <input type="text"  id="oldport" value="" placeholder="current Port Number to kill ex:8000"/>
+</div>
+<div data-role="fieldcontain" class="ui-hide-label">
+    <input type="text"  id="newport" value="" placeholder="New Port Number to star ex:8001"/>
+</div>
+
+<script>
+
+function Restart(){
+
+    var OldPort = document.getElementById("oldport");
+    var NewPort = document.getElementById("newport");
+
+
+    var JsonOldPort  = {};
+    var JsonNewPort = {};
+
+    JsonOldPort["oldport"]= OldPort.value;
+    JsonNewPort["newport"]= NewPort.value;
+
+
+    alert("This session will close and a new one will be initiated");
+
+      $.ajax({
+
+
+            type: 'POST',
+            url: '/Restart/',
+            data:{
+				  JsonOldPort,
+				  JsonNewPort,
+                  csrfmiddlewaretoken: '{{ csrf_token }}'
+
+
+            },
+            success:function(json)
+            {
+
+
+            }
+        });
+
+        }
+</script>
+
+</body>

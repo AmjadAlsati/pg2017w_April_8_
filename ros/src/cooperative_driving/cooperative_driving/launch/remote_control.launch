@@ -1,0 +1,4 @@
+<launch>
+  <node name="gamepad" pkg="joy" type="joy_node" />
+  <node name="remote_control" pkg="cooperative_driving" type="remote_control.py"  />
+</launch>

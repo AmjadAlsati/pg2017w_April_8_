@@ -1,0 +1,20 @@
+\subsubsection usage Usage
+\verbatim
+<node name="feature_extractor" pkg="cooperative_driving_vision" type="feature_extractor">
+  <param name="line_interval_lower_v" type="double" value="0.0" />
+  <param name="line_interval_upper_v" type="double" value="1.0" />
+  <param name="line_count_v" type="int" value="20" />
+  <param name="row_influence_area_v" type="int" value="5" />
+  <param name="lower_canny_threshold_v" type="int" value="40" />
+  <param name="line_interval_lower_h" type="double" value="0.0" />
+  <param name="line_interval_upper_h" type="double" value="1.0" />
+  <param name="line_count_h" type="int" value="20" />
+  <param name="row_influence_area_h" type="int" value="5" />
+  <param name="lower_canny_threshold_h" type="int" value="64" />
+  <param name="box_width" type="double" value="0.68" />
+  <param name="box_height" type="double" value="0.62" />
+  <param name="min_line_length" type="int" value="4" />
+  <param name="min_region_size" type="int" value="200" />
+</node>
+\endverbatim
+

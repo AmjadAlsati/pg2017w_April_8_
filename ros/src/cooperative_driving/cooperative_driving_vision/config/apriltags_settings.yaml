@@ -1,0 +1,32 @@
+# AprilTags 2 code parameters
+# Find descriptions in apriltags2/include/apriltag.h:struct apriltag_detector
+#                      apriltags2/include/apriltag.h:struct apriltag_family
+tag_family:          'tag16h5'  # options: tag36h11, tag36h10, tag25h9, tag25h7, tag16h5
+tag_border:          1          # default: 1
+tag_threads:         2          # default: 2
+tag_decimate:        3.0        # default: 1.0
+tag_blur:            0.0        # default: 0.0
+tag_refine_edges:    1          # default: 1
+tag_refine_decode:   0          # default: 0
+tag_refine_pose:     0          # default: 0
+tag_debug:           0          # default: 0
+# Other parameters
+publish_tf:          true       # default: false
+# Color range parameters (for detecting only yellow tags, for example)
+color_space:         'hsv'      # default: lab for CIE L*a*b*, alternative: hsv
+use_color_range:     true       # default: false
+color_range_low_1:   31         # default: 180
+color_range_low_2:   0          # default: 0
+color_range_low_3:   69         # default: 255
+color_range_high_1:  255        # default: 180
+color_range_high_2:  255        # default: 0
+color_range_high_3:  255        # default: 255
+
+# Defaults for CIE L*a*b*:
+#color_space:         'lab'
+#color_range_low_1:   68         # default: 180
+#color_range_low_2:   46          # default: 0
+#color_range_low_3:   42         # default: 255
+#color_range_high_1:  153        # default: 180
+#color_range_high_2:  182        # default: 0
+#color_range_high_3:  208

@@ -1,0 +1,8 @@
+prefix=/home/amjad/Desktop/pg2017w/ros/install
+
+Name: cooperative_driving_msgs
+Description: Description of cooperative_driving_msgs
+Version: 0.0.0
+Cflags: -I/home/amjad/Desktop/pg2017w/ros/install/include
+Libs: -L/home/amjad/Desktop/pg2017w/ros/install/lib 
+Requires: message_runtime

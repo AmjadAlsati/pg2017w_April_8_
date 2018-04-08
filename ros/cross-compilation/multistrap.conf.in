@@ -1,0 +1,14 @@
+[General]
+unpack=true
+cleanup=true
+noauth=true
+multiarch=armhf
+aptsources=CCS
+bootstrap=CCS
+
+[CCS]
+packages=@APT_DEPENDENCIES@
+source=http://archive.raspbian.org/raspbian
+keyring=raspbian-archive-keyring
+components=main contrib non-free rpi
+suite=jessie

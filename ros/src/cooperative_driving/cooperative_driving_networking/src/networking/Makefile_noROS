@@ -1,0 +1,14 @@
+CXX = g++
+CXXFLAGS = -Wall -g -Wall -O0 -std=c++11
+LDLIBS += -lm -lpcap -lpthread
+
+.phony: all clean
+
+all: wave-app
+
+clean: 
+	rm -f wave-app_noROS radiotap.o transceiver.o wave-app_noROS.o util.o
+ 
+wave-app: radiotap.o transceiver.o wave-app_noROS.o util.o
+
+

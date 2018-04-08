@@ -1,0 +1,3 @@
+SSID aurora*
+
+PWD aurorasfb601 | aurorasfb901

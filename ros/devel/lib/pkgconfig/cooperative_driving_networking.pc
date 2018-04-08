@@ -1,0 +1,8 @@
+prefix=/home/amjad/Desktop/pg2017w/ros/devel
+
+Name: cooperative_driving_networking
+Description: Description of cooperative_driving_networking
+Version: 0.0.1
+Cflags: -I/home/amjad/Desktop/pg2017w/ros/devel/include
+Libs: -L/home/amjad/Desktop/pg2017w/ros/devel/lib 
+Requires: roscpp message_runtime

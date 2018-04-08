@@ -1,0 +1,8 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~beaconing_interval" : \b [int] The beaconing interval for CAM messages min: 1, default: 1, max: 20
+- \b "~enable_beaconing" : \b [bool] Enable or disable beaconing min: False, default: True, max: True
+- \b "~announce" : \b [bool] Send command min: False, default: False, max: True
+

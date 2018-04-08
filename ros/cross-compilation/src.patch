@@ -1,0 +1,86 @@
+diff -uNr a/src/cmake_modules/cmake/Modules/Findyaml-cpp.cmake b/src/cmake_modules/cmake/Modules/Findyaml-cpp.cmake
+--- a/src/cmake_modules/cmake/Modules/Findyaml-cpp.cmake	1970-01-01 01:00:00.000000000 +0100
++++ b/src/cmake_modules/cmake/Modules/Findyaml-cpp.cmake	2017-05-09 13:13:35.920414522 +0200
+@@ -0,0 +1,17 @@
++find_path(yaml-cpp_INCLUDE_DIRS yaml-cpp/yaml.h)
++if(yaml-cpp_INCLUDE_DIRS)
++  find_library(yaml-cpp_LIBRARIES yaml-cpp)
++  if(yaml-cpp_LIBRARIES)
++    set(yaml-cpp_FOUND "YES")
++  endif(yaml-cpp_LIBRARIES)
++endif(yaml-cpp_INCLUDE_DIRS)
++
++if(yaml-cpp_FOUND)
++  message(STATUS "yaml-cpp found")
++else(yaml-cpp_FOUND)
++  if(yaml-cpp_FIND_REQUIRED)
++    message(FATAL "yaml-cpp not found")
++  else(yaml-cpp_FIND_REQUIRED)
++    message(STATUS "yaml-cpp not found")
++  endif(yaml-cpp_FIND_REQUIRED)
++endif()
+diff -uNr a/src/cv_camera/CMakeLists.txt b/src/cv_camera/CMakeLists.txt
+--- a/src/cv_camera/CMakeLists.txt	2017-05-09 01:00:16.000000000 +0200
++++ b/src/cv_camera/CMakeLists.txt	2017-05-09 17:54:58.460988888 +0200
+@@ -14,7 +14,6 @@
+   INCLUDE_DIRS include
+   LIBRARIES cv_camera
+   CATKIN_DEPENDS image_transport roscpp cv_bridge sensor_msgs nodelet camera_info_manager
+-  DEPENDS opencv2
+   )
+ 
+ include_directories(
+diff -uNr a/src/geometry2/tf2_kdl/CMakeLists.txt b/src/geometry2/tf2_kdl/CMakeLists.txt
+--- a/src/geometry2/tf2_kdl/CMakeLists.txt	2017-05-09 01:00:23.000000000 +0200
++++ b/src/geometry2/tf2_kdl/CMakeLists.txt	2017-05-09 13:36:36.111574560 +0200
+@@ -5,6 +5,7 @@
+ find_package(catkin REQUIRED COMPONENTS cmake_modules tf2 tf2_ros tf2_msgs)
+ 
+ find_package(Eigen REQUIRED)
++message(${Eigen_INCLUDE_DIRS})
+ 
+ catkin_package(
+   INCLUDE_DIRS include ${Eigen_INCLUDE_DIRS}
+diff -uNr a/src/image_common/camera_info_manager/CMakeLists.txt b/src/image_common/camera_info_manager/CMakeLists.txt
+--- a/src/image_common/camera_info_manager/CMakeLists.txt	2017-05-09 01:00:24.000000000 +0200
++++ b/src/image_common/camera_info_manager/CMakeLists.txt	2017-05-09 13:13:35.972413469 +0200
+@@ -7,6 +7,7 @@
+ find_package(catkin REQUIRED roscpp sensor_msgs)
+ catkin_package(INCLUDE_DIRS include
+                LIBRARIES ${PROJECT_NAME}
++               CATKIN_DEPENDS camera_calibration_parsers
+                DEPENDS Boost roscpp sensor_msgs
+ )
+ 
+diff -uNr a/src/orocos_kinematics_dynamics/orocos_kdl/KDLConfig.cmake.in b/src/orocos_kinematics_dynamics/orocos_kdl/KDLConfig.cmake.in
+--- a/src/orocos_kinematics_dynamics/orocos_kdl/KDLConfig.cmake.in	2017-05-09 01:13:38.000000000 +0200
++++ b/src/orocos_kinematics_dynamics/orocos_kdl/KDLConfig.cmake.in	2017-05-09 13:13:36.001412884 +0200
+@@ -6,7 +6,7 @@
+ 
+ # Compute paths
+ get_filename_component(SELF_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
+-set(orocos_kdl_INCLUDE_DIRS "@KDL_INCLUDE_DIRS@;@CMAKE_INSTALL_PREFIX@/include")
++set(orocos_kdl_INCLUDE_DIRS "@KDL_INCLUDE_DIRS@")
+ 
+ if(NOT TARGET orocos-kdl)
+   include("${SELF_DIR}/OrocosKDLTargets.cmake")
+diff -uNr a/src/robot_model/kdl_parser/CMakeLists.txt b/src/robot_model/kdl_parser/CMakeLists.txt
+--- a/src/robot_model/kdl_parser/CMakeLists.txt	2017-05-09 01:13:39.000000000 +0200
++++ b/src/robot_model/kdl_parser/CMakeLists.txt	2017-05-09 13:13:36.008412743 +0200
+@@ -14,15 +14,12 @@
+ include_directories(include ${orocos_kdl_INCLUDE_DIRS} ${TinyXML_INCLUDE_DIRS} ${catkin_INCLUDE_DIRS})
+ 
+ link_directories(${catkin_LIBRARY_DIRS})
+-link_directories(${orocos_kdl_LIBRARY_DIRS})
+ link_directories(${Boost_LIBRARY_DIRS})
+ 
+-find_library(KDL_LIBRARY REQUIRED NAMES orocos-kdl HINTS ${orocos_kdl_LIBRARY_DIRS})
+-
+ add_compile_options(-std=c++11)
+ 
+ catkin_package(
+-  LIBRARIES ${PROJECT_NAME} ${KDL_LIBRARY}
++  LIBRARIES ${PROJECT_NAME} ${orocos_kdl_LIBRARIES}
+   INCLUDE_DIRS include
+   CATKIN_DEPENDS roscpp rosconsole urdf
+   DEPENDS orocos_kdl TinyXML

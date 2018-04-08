@@ -1,0 +1,381 @@
+{%load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <title>Main Signin</title>
+</head>
+
+<body>
+    <a href="/"> Back to home page </a>
+    <div data-role="page">
+        <div data-role="header">
+            <h1>Slider Control</h1>
+        </div>
+
+        <div data-role="main" class="ui-content" >
+        <p><a href="/">Homepage</a></p>
+        <p><a href="/sliders_vision">feature_extractor</a></p>
+
+
+
+            <form id= my-form> 
+
+
+                <div id=max_velocity onmouseup="ChangeParm(this.id)">
+                <label for="max_velocity">max_velocity:</label>
+                <input type="range" name="max_velocity"  id="max_velocity_" value= "{{maxvelocity}}"" min="0" max="2.0" step="0.02"/>
+                </div>
+
+                <div id=max_turn_rate onmouseup="ChangeParm(this.id)">
+                <label for="max_turn_rate">max_turn_rate:</label>
+                <input type="range" name="max_turn_rate" id="max_turn_rate_" value="{{maxturnrate}}" min="0" max="10" step="0.1"/>
+                </div>
+
+                <div id=line_row_location onmouseup="ChangeParm(this.id)">
+                <label for="line_row_location">line_row_location:</label>
+                <input type="range" name="line_row_location" id="line_row_location_" value="{{linerowlocation}}" min="0" max="480"/>
+                </div>
+
+                <div id=LF_K_p onmouseup="ChangeParm(this.id)">
+                <label for="LF_K_p">LF_K_p:</label>
+                <input type="range" name="LF_K_p" id="LF_K_p_" value="{{LF_K_p}}" min="0" max="1" step="0.01"/>
+                </div>
+
+                <div id=LF_K_i onmouseup="ChangeParm(this.id)">
+                <label for="LF_K_i">LF_K_i:</label>
+                <input type="range" name="LF_K_i" id="LF_K_i_" value="{{LF_K_i}}" min="0" max="1" step="0.01"/>
+                </div>
+
+                <div id=LF_K_d onmouseup="ChangeParm(this.id)">
+                <label for="LF_K_d">LF_K_d:</label>
+                <input type="range" name="LF_K_d" id="LF_K_d_" value="{{LF_K_d}}" min="0" max="1" step="0.01"/>
+                </div>
+
+                <div id=LF_windup_limit onmouseup="ChangeParm(this.id)">
+                <label for="LF_windup_limit">LF_windup_limit:</label>
+                <input type="range" name="LF_windup_limit" id="LF_windup_limit_" value="{{LF_windup_limit}}" min="0" max="5" step="0.05"/>
+                </div>
+
+                <div id=target_distance onmouseup="ChangeParm(this.id)">
+                <label for="target_distance">target_distance:</label>
+                <input type="range" name="target_distance" id="target_distance_" value="{{target_distance}}" min="0" max="50" step="0.5"/>
+                </div>
+
+                <div id=BD_K_p onmouseup="ChangeParm(this.id)">
+                <label for=" BD_K_p ">BD_K_p:</label>
+                <input type="range" name="BD_K_p" id="BD_K_p_" value="{{BD_K_p}}" min="0" max="1" step="0.01"/>
+                </div>
+
+                <div id=BD_K_i onmouseup="ChangeParm(this.id)">
+                <label for=" BD_K_i ">BD_K_i:</label>
+                <input type="range" name="BD_K_i" id="BD_K_i_" value="{{BD_K_i}}" min="0" max="1" step="0.00001"/>
+                </div>
+
+                <div id=BD_K_d onmouseup="ChangeParm(this.id)">
+                <label for=" BD_K_d ">BD_K_d:</label>
+                <input type="range" name="BD_K_d" id="BD_K_d_" value="{{BD_K_d}}" min="0" max="1" step="0.0001"/>
+                </div>
+
+                <div id=BD_windup_limit onmouseup="ChangeParm(this.id)">
+                <label for=" BD_windup_limit ">BD__windup_limit:</label>
+                <input type="range" name="BD_windup_limit" id="BD_windup_limit_" value="{{BD_windup_limit}}" min="0" max="5" step="0.05"/>
+                </div>
+
+
+
+                </script>
+                <script >
+                    $( "#max_velocity" ).bind( "touchend", function() {
+                    ChangeParm("max_velocity");
+                                                                    });
+                    $( "#max_turn_rate" ).bind( "touchend", function() {
+                    ChangeParm("max_turn_rate");
+                                                                        });
+
+                $( "#line_row_location" ).bind( "touchend", function() {
+                    ChangeParm("line_row_location");
+                                                                        });
+
+                $( "#LF_K_p" ).bind( "touchend", function() {
+                    ChangeParm("LF_K_p");
+                                                            });
+
+                 $( "#LF_K_i" ).bind( "touchend", function() {
+                    ChangeParm("LF_K_i");
+                                                            });
+
+                $( "#LF_K_d" ).bind( "touchend", function() {
+                    ChangeParm("LF_K_d");
+                                                            });
+
+          $( "#LF_windup_limit" ).bind( "touchend", function() {
+                    ChangeParm("LF_windup_limit");
+                                                                });
+
+          $( "#target_distance" ).bind( "touchend", function() {
+                    ChangeParm("target_distance");
+                                                                });
+
+          $( "#BD_K_p" ).bind( "touchend", function() {
+                    ChangeParm("BD_K_p");
+                                                      });
+
+          $( "#BD_K_i" ).bind( "touchend", function() {
+                    ChangeParm("BD_K_i");
+                                                      });
+
+          $( "#BD_K_d" ).bind( "touchend", function() {
+                    ChangeParm("BD_K_d");
+                                                      });
+
+          $( "#BD_windup_limit" ).bind( "touchend", function() {
+                    ChangeParm("BD_windup_limit");
+                                                               });                 
+
+            function ChangeParm(clicked_id){
+            var ParameterName = document.getElementById(clicked_id).id; //get the name of clicked Parameter
+            var ParameterValue=document.getElementsByName(clicked_id)[0].value;//get the value of clicked Parameter
+             
+            var JsonObject = {};// create a JSON object
+            JsonObject[clicked_id] = ParameterValue; //fill the object with the name and value
+            
+           /* $.ajaxSetup ({
+        cache: false
+                        });
+        $( "#max_velocity" ).load( "/sliders");*/
+
+
+        $.ajax({
+
+
+            type: 'POST',
+            url: '/post/',
+            data:{
+
+                  JsonObject,
+                  csrfmiddlewaretoken: '{{ csrf_token }}'
+
+
+            },
+            success:function()
+            {
+
+
+            }
+        });
+
+        }
+        $(document).ready(function() {
+    var currenthtml;
+    var latesthtml;
+
+    $.get(window.location.href, function(data) {
+        currenthtml = data;
+        latesthtml = data;
+    });
+
+    setInterval(function() {
+
+        $.ajax({
+
+            url: "/sliders",
+            cache: false,
+            success: function(data)
+            {
+
+
+           var ajaxVelocity = $(data).find('#max_velocity_').val();
+           var PageVelocity= $('#max_velocity_').val();
+
+           var ajaxMaxTurnRate = $(data).find('#max_turn_rate_').val();
+           var PageMaxTurnRate= $('#max_turn_rate_').val();
+
+           var ajaxLineRowLocation = $(data).find('#line_row_location_').val();
+           var PageLineRowLocation= $('#line_row_location_').val();
+
+           var ajaxLFKP = $(data).find('#LF_K_p_').val();
+           var PageLFKP= $('#LF_K_p_').val();
+
+           var ajaxLFKI = $(data).find('#LF_K_i_').val();
+           var PageLFKI= $('#LF_K_i_').val();
+
+           var ajaxLFKD = $(data).find('#LF_K_d_').val();
+           var PageLFKD= $('#LF_K_d_').val();
+
+           var ajaxLFWindUpLimit = $(data).find('#LF_windup_limit_').val();
+           var PageLFWindUpLimit= $('#LF_windup_limit_').val();  
+
+
+           var ajaxTargetDistance = $(data).find('#target_distance_').val();
+           var PageTargetDistance= $('#target_distance_').val();
+
+           var ajaxBDKP = $(data).find('#BD_K_p_').val();
+           var PageBDKP= $('#BD_K_p_').val();  
+
+           var ajaxBDKI = $(data).find('#BD_K_i_').val();
+           var PageBDKI = $('#BD_K_i_').val();
+
+           var ajaxBDKD = $(data).find('#BD_K_d_').val();
+           var PageBDKD = $('#BD_K_d_').val();
+
+           var ajaxBDWindUpLimit = $(data).find('#BD_windup_limit_').val();
+           var PageBDWindUpLimit = $('#BD_windup_limit_').val();
+
+
+
+
+           if (PageVelocity != ajaxVelocity)
+           {
+            
+              $('#max_velocity_').val(ajaxVelocity);
+              $('#max_velocity_').slider('refresh');
+
+
+            }
+           if (PageMaxTurnRate != ajaxMaxTurnRate)
+           {
+            
+              $('#max_turn_rate_').val(ajaxMaxTurnRate);
+              $('#max_turn_rate_').slider('refresh');
+
+
+            }
+           if (ajaxLineRowLocation != PageLineRowLocation)
+           {
+            
+              $('#line_row_location_').val(ajaxLineRowLocation);
+              $('#line_row_location_').slider('refresh');
+
+
+            }
+
+            if (ajaxLFKP != PageLFKP)
+           {
+            
+              $('#LF_K_p_').val(ajaxLFKP);
+              $('#LF_K_p_').slider('refresh');
+
+
+            }
+
+             if (ajaxLFKI != PageLFKI)
+           {
+            
+              $('#LF_K_i_').val(ajaxLFKI);
+              $('#LF_K_i_').slider('refresh');
+
+
+            }
+
+              if (ajaxLFKD != PageLFKD)
+           {
+            
+              $('#LF_K_d_').val(ajaxLFKD);
+              $('#LF_K_d_').slider('refresh');
+
+
+            }
+               if (ajaxLFWindUpLimit != PageLFWindUpLimit)
+           {
+            
+              $('#LF_windup_limit_').val(ajaxLFWindUpLimit);
+              $('#LF_windup_limit').slider('refresh');
+
+
+            }
+
+                if (ajaxTargetDistance != PageTargetDistance)
+           {
+            
+              $('#target_distance_').val(ajaxTargetDistance);
+              $('#target_distance_').slider('refresh');
+
+
+            }
+
+                 if (ajaxBDKP != PageBDKP)
+           {
+            
+              $('#BD_K_p_').val(ajaxBDKP);
+              $('#BD_K_p_').slider('refresh');
+
+
+            }
+
+                if (ajaxBDKI != PageBDKI)
+           {
+            
+              $('#BD_K_i_').val(ajaxBDKI);
+              $('#BD_K_i_').slider('refresh');
+
+
+            }
+
+                if (ajaxBDKD != PageBDKD)
+           {
+            
+              $('#BD_K_d_').val(ajaxBDKD);
+              $('#BD_K_d_').slider('refresh');
+
+
+            }
+
+               if (ajaxBDWindUpLimit != PageBDWindUpLimit)
+           {
+            
+              $('#BD_windup_limit_').val(ajaxBDWindUpLimit);
+              $('#BD_windup_limit_').slider('refresh');
+
+
+            }
+}
+
+
+
+        });
+
+        if(currenthtml != latesthtml) {
+
+             // location.reload(true);
+
+        } 
+    }, 3000);
+});
+/*$(function(){
+
+  setInterval(function(){
+    loadLatestResults();
+  }, 5000);
+  });
+
+  function loadLatestResults(){
+
+    $.ajax({
+      url : '/sliders',
+      cache : false,
+      success : function(data){
+       $('#max_velocity').html(data);
+      }
+    });
+  }*/
+
+
+                </script>
+               
+
+            </form>
+        </div>
+    </div>
+    
+</body>
+
+</html>

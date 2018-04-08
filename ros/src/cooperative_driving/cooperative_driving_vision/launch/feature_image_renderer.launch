@@ -1,0 +1,3 @@
+<launch>
+    <node name="feature_image_renderer" pkg="cooperative_driving_vision" type="feature_image_renderer" />
+</launch>

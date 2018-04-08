@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>cooperative_driving_vision</name>
+  <version>0.0.1</version>
+  <description>The cooperative_driving vision package</description>
+
+  <maintainer email="julian93@mail.upb.de">Julian Heinovski</maintainer>
+  <maintainer email="descart@mail.upb.de">Sergej Japs</maintainer>
+  <maintainer email="srinivas@mail.upb.de">Srinivas Krishnan</maintainer>
+  <maintainer email="schettle@mail.upb.de">Max Schettler</maintainer>
+  <maintainer email="psteffen@mail.upb.de">Patrick Steffens</maintainer>
+  <maintainer email="dti@mail.upb.de">Daniel Tigges</maintainer>
+  <license>BSD 3Clause</license>
+  <url type="website">http://www.ccs-labs.org/teaching/pg/2016w/</url>
+  <author email="julian93@mail.upb.de">Julian Heinovski</author>
+  <author email="descart@mail.upb.de">Sergej Japs</author>
+  <author email="srinivas@mail.upb.de">Srinivas Krishnan</author>
+  <author email="schettle@mail.upb.de">Max Schettler</author>
+  <author email="psteffen@mail.upb.de">Patrick Steffens</author>
+  <author email="dti@mail.upb.de">Daniel Tigges</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>message_generation</build_depend>
+
+  <depend>roscpp</depend>
+  <depend>nodelet</depend>
+  <depend>opencv3</depend>
+  <depend>cv_bridge</depend>
+  <depend>tf</depend>
+  <depend>geometry_msgs</depend>
+  <depend>std_msgs</depend>
+  <depend>cooperative_driving_common</depend>
+
+  <exec_depend>rospy</exec_depend>
+  <exec_depend>message_runtime</exec_depend>
+  <exec_depend>cv_camera</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+
+  <export>
+    <nodelet plugin="${prefix}/nodelet_plugins.xml" />
+  </export>
+</package>

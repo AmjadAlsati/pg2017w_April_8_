@@ -1,0 +1,10 @@
+<launch>
+  <env name="ROSCONSOLE_CONFIG_FILE" value="$(find cooperative_driving)/config/custom_rosconsole.conf" />
+
+  <arg name="nodelet_manager" default="nodelet_manager" />
+  <node name="$(arg nodelet_manager)" pkg="nodelet" type="nodelet" args="manager" />
+
+  <include file="$(find cooperative_driving_vision)/launch/feature_extraction.xml">
+    <arg name="nodelet_manager" value="$(arg nodelet_manager)" />
+  </include>
+</launch>

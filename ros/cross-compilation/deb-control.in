@@ -1,0 +1,9 @@
+Package: ros-ccs-labs
+Architecture: armhf
+Maintainer: CCS-labs PG2016w <pg2016w@ccs-labs.org>
+Depends: @APT_DEPENDENCIES@
+Priority: optional
+Version: 1.0.0
+Description: CCS-lab ROS-framework
+	A complete ROS-framework. Contains all dependencies necessary to run the CCS-lab projectgroup 2016w's codebase.
+	Also provides some additional ROS-tooling not directly required.

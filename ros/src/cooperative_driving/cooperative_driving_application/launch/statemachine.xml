@@ -1,0 +1,11 @@
+<launch>
+  <!-- declare args to be passed in -->
+  <arg name="id" default="0" />
+  <arg name="rc" default='False' />
+
+  <node name="statemachine" pkg="cooperative_driving_application" type="statemachine.py" output="screen" >
+    <!-- read arg values -->
+    <param name="id" value="$(arg id)"/>
+    <param name="rc" value="$(arg rc)"/>
+  </node>
+</launch>

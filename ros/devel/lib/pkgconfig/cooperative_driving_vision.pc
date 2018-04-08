@@ -1,0 +1,8 @@
+prefix=/home/amjad/Desktop/pg2017w/ros/devel
+
+Name: cooperative_driving_vision
+Description: Description of cooperative_driving_vision
+Version: 0.0.1
+Cflags: -I/home/amjad/Desktop/pg2017w/ros/devel/include -I/home/amjad/Desktop/pg2017w/ros/src/cooperative_driving/cooperative_driving_vision/include
+Libs: -L/home/amjad/Desktop/pg2017w/ros/devel/lib -lcooperative_driving_vision
+Requires: roscpp message_runtime

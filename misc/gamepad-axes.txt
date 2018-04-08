@@ -1,0 +1,12 @@
+DragonRise Inc.   Generic   USB  Joystick
+
+0 --> links, x
+1 --> rechts, x
+2 --> invalid!!
+3 --> links, -y
+4 --> rechts, -y
+
+Microsoft SideWinder Game Pad Pro USB version 1.0
+
+0 --> x
+1 --> -y

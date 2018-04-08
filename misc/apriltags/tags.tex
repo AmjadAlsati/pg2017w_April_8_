@@ -1,0 +1,73 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{subcaption}
+
+
+\usepackage[pdftex]{graphicx} % Required for including pictures
+\usepackage[pdftex,linkcolor=black,pdfborder={0 0 0}]{hyperref} % Format links for pdf
+\usepackage{calc} % To reset the counter in the document after title page
+\usepackage{enumitem} % Includes lists
+
+\frenchspacing % No double spacing between sentences
+\linespread{1.2} % Set linespace
+\usepackage[a4paper, lmargin=1.5cm, rmargin=1.5cm, tmargin=1cm, bmargin=1cm]{geometry} %margins
+%\usepackage{parskip}
+
+%\usepackage[all]{nowidow} % Tries to remove widows
+%\usepackage[protrusion=true,expansion=true]{microtype} % Improves typography, load after fontpackage is selected
+
+%-----------------------
+% Begin document
+%-----------------------
+\begin{document} %All text i dokumentet hamnar mellan dessa taggar, allt ovanför är formatering av dokumentet
+
+    % If dealing with non-cropped images (yellow border):
+    % tag-width = 8/10 * tex-width <=> tex-width = tag-width * 10/8
+
+    \begin{figure}
+        \centering
+%         \begin{subfigure}[b]{.5\linewidth}
+%             \includegraphics[width=7cm]{tag36h11_cropped/tag36_11_00000.png}
+%             \caption*{tag36\_11 ID=0, width=8.75cm}
+%         \end{subfigure}
+        
+        \begin{subfigure}[b]{.5\linewidth}
+            \includegraphics[width=12.5cm]{tag16h5_mod/tag16_05_00000.png}
+            \caption*{tag16h5 ID=0, width=10cm}
+        \end{subfigure}
+        
+        %\vspace{1cm}
+        \begin{subfigure}[b]{.5\linewidth}
+            \includegraphics[width=12.5cm]{tag16h5_mod/tag16_05_00001.png}
+            \caption*{tag16h5 ID=1, width=10cm}
+        \end{subfigure}
+        
+        
+        %\vspace{1cm}
+%         \begin{subfigure}[b]{.5\linewidth}
+%             \includegraphics[width=12.5cm]{tag36h11_cropped/tag36_11_00100.png}
+%             \caption*{tag36\_11 ID=100, width=10cm}
+%         \end{subfigure}
+        
+%         \vspace{1cm}
+%         \begin{subfigure}[b]{.5\linewidth}
+%             \includegraphics[width=9cm]{tag36h11_cropped/tag36_11_00200.png}
+%             \caption*{tag36\_11 ID=200, width=11.25cm}
+%         \end{subfigure}
+    \end{figure}
+    
+%    \begin{figure}
+%         \begin{subfigure}[b]{.5\linewidth}
+%             \includegraphics[width=10cm]{tag36h11_cropped/tag36_11_00300.png}
+%             \caption*{tag36\_11 ID=300, width=12.5cm}
+%         \end{subfigure}
+%         
+%         \vspace{1cm}
+%         \begin{subfigure}[b]{.5\linewidth}
+%             \includegraphics[width=6cm]{tag36h11_cropped/tag36_11_00400.png}
+%             \caption*{tag36\_11 ID=400, width=7.5cm}
+%         \end{subfigure}
+%    \end{figure}
+
+\end{document}

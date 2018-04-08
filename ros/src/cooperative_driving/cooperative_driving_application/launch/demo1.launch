@@ -1,0 +1,6 @@
+<launch>
+  <arg name="demo" value="1" />
+  <include file="$(find cooperative_driving_application)/launch/demo_app.xml" >
+    <arg name="demo" value="$(arg demo)" />
+  </include>
+</launch>

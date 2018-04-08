@@ -1,0 +1,6 @@
+set(cooperative_driving_application_SETUP_PY_VERSION "0.0.1")
+set(cooperative_driving_application_SETUP_PY_SCRIPTS "")
+set(cooperative_driving_application_SETUP_PY_PACKAGES "cooperative_driving_application")
+set(cooperative_driving_application_SETUP_PY_PACKAGE_DIRS "src/cooperative_driving_application")
+set(cooperative_driving_application_SETUP_PY_MODULES "")
+set(cooperative_driving_application_SETUP_PY_MODULE_DIRS "")

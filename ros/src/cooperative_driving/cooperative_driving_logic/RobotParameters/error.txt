@@ -1,0 +1,2288 @@
+... logging to /home/amjad/.ros/log/a80dc1b0-3b62-11e8-ac1b-ec55f98341bd/roslaunch-amjad-Inspiron-N5110-7808.log
+Checking log directory for disk usage. This may take awhile.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+]2;/home/amjad/Desktop/pg2017w/ros/src/cooperative_driving/cooperative_driving/launch/demo_raspi.launch
+[1mstarted roslaunch server http://amjad-Inspiron-N5110:45865/[0m
+
+SUMMARY
+========
+
+CLEAR PARAMETERS
+ * /apriltags2_ros_continuous_node/
+
+PARAMETERS
+ * /apriltags2_ros_continuous_node/camera_frame: camera
+ * /apriltags2_ros_continuous_node/color_range_high_1: 255
+ * /apriltags2_ros_continuous_node/color_range_high_2: 255
+ * /apriltags2_ros_continuous_node/color_range_high_3: 255
+ * /apriltags2_ros_continuous_node/color_range_low_1: 31
+ * /apriltags2_ros_continuous_node/color_range_low_2: 0
+ * /apriltags2_ros_continuous_node/color_range_low_3: 69
+ * /apriltags2_ros_continuous_node/color_space: hsv
+ * /apriltags2_ros_continuous_node/publish_tag_detections_image: True
+ * /apriltags2_ros_continuous_node/publish_tf: True
+ * /apriltags2_ros_continuous_node/standalone_tags: [{'size': 0.1, 'i...
+ * /apriltags2_ros_continuous_node/tag_blur: 0.0
+ * /apriltags2_ros_continuous_node/tag_border: 1
+ * /apriltags2_ros_continuous_node/tag_bundles: []
+ * /apriltags2_ros_continuous_node/tag_debug: 0
+ * /apriltags2_ros_continuous_node/tag_decimate: 3.0
+ * /apriltags2_ros_continuous_node/tag_family: tag16h5
+ * /apriltags2_ros_continuous_node/tag_refine_decode: 0
+ * /apriltags2_ros_continuous_node/tag_refine_edges: 1
+ * /apriltags2_ros_continuous_node/tag_refine_pose: 0
+ * /apriltags2_ros_continuous_node/tag_threads: 2
+ * /apriltags2_ros_continuous_node/use_color_range: True
+ * /camera/camera_info_url: file:///home/amja...
+ * /camera/rate: 25.0
+ * /demo_app/demo: 0
+ * /demo_app/id: 0&JsonObject%5BMo...
+ * /distance_sensor_controller/publish_rate: 50
+ * /distance_sensor_controller/type: cooperative_drivi...
+ * /drive_controller/angular/z/has_acceleration_limits: True
+ * /drive_controller/angular/z/has_velocity_limits: True
+ * /drive_controller/angular/z/max_acceleration: 20.0
+ * /drive_controller/angular/z/max_velocity: 10.0
+ * /drive_controller/angular/z/min_acceleration: -30.0
+ * /drive_controller/base_frame_id: base_link
+ * /drive_controller/enable_odom_tf: False
+ * /drive_controller/left_wheel: left_wheel_hinge
+ * /drive_controller/linear/x/has_acceleration_limits: True
+ * /drive_controller/linear/x/has_velocity_limits: True
+ * /drive_controller/linear/x/max_acceleration: 4.0
+ * /drive_controller/linear/x/max_velocity: 0.7
+ * /drive_controller/linear/x/min_acceleration: -6.0
+ * /drive_controller/pose_covariance_diagonal: [1e-05, 1e-05, 10...
+ * /drive_controller/publish_rate: 100
+ * /drive_controller/right_wheel: right_wheel_hinge
+ * /drive_controller/twist_covariance_diagonal: [0.0, 0.0, 0.0, 0...
+ * /drive_controller/type: diff_drive_contro...
+ * /drive_controller/wheel_radius_multiplier: 1.0
+ * /drive_controller/wheel_separation_multiplier: 1.0
+ * /feature_extractor/color_ranges/red/lower_bound: [0, 10, 80]
+ * /feature_extractor/color_ranges/red/upper_bound: [50, 70, 200]
+ * /networking/name: networking
+ * /reflekte/Dump_Path: /home/amjad/Deskt...
+ * /robot/braking_threshold: 0.1
+ * /robot/distance_sensor_index: 0
+ * /robot/rate: 100
+ * /robot/ros_hw_led_max_value: 64
+ * /robot/ros_hw_velocity_conversion_factor: 5.615
+ * /robot_description: <?xml version="1....
+ * /rosdistro: kinetic
+ * /rosversion: 1.12.7
+ * /wifi_dongles/dongle01: ['18:d6:c7:0f:4f:...
+ * /wifi_dongles/dongle02: ['18:d6:c7:0f:0c:...
+ * /wifi_dongles/dongle03: ['00:4f:62:2e:91:...
+ * /wifi_dongles/dongle04: ['00:4f:62:2e:91:...
+ * /wifi_dongles/dongle05: ['00:4f:62:2e:93:...
+ * /wifi_dongles/dongle06: ['00:4f:62:2e:93:...
+ * /wifi_dongles/dongle07: ['00:4f:62:2e:91:...
+
+NODES
+  /
+    apriltags2_ros_continuous_node (apriltags2_ros/apriltags2_ros_continuous_node)
+    camera (nodelet/nodelet)
+    demo_app (cooperative_driving_application/demo_app.py)
+    distance_sensor_controller_spawner (controller_manager/spawner)
+   [INFO] [1523215556.657347]: Launching robot with id: 0&JsonObject%5BMode%5D=0
+Beacon Interval: 1
+Beacon config: True
+('Cam', 1)
+('Cam', True)
+**********DEMO APPLICATION**************
+[0m[ INFO] [1523215555.771051321]: Initializing nodelet with 8 worker threads.[0m
+[0m[ INFO] [1523215556.450307904]: camera calibration URL: file:///home/amjad/Desktop/pg2017w/ros/src/cooperative_driving/cooperative_driving_vision/config/robot_fisheye.yaml[0m
+[0m[ INFO] [1523215556.538641830]: Path to the dump file is: /home/amjad/Desktop/pg2017w/ros/src/cooperative_driving/cooperative_driving_logic/Dump/dump.yaml[0m
+[0m[ INFO] [1523215556.560748577]: velocity is 0.300000 
+[0m
+[0m[ INFO] [1523215556.560781392]: max_turn_rate_ is 4.000000 
+[0m
+[0m[ INFO] [1523215556.560794552]: line_row_location_ is 230 
+[0m
+[0m[ INFO] [1523215556.560810060]: LF_k_p_ is 0.320000 
+[0m
+[0m[ INFO] [1523215556.560825648]: LF_k_i_ is 0.002000 
+[0m
+[0m[ INFO] [1523215556.560843134]: LF_k_d_ is 0.090000 
+[0m
+[0m[ INFO] [1523215556.560858180]: LF_windup_limit_ is 0.800000 
+[0m
+[0m[ INFO] [1523215556.560872073]: BD_k_p_ is 0.030000 
+[0m
+[0m[ INFO] [1523215556.560886702]: BD_k_i_ is 0.000160 
+[0m
+[0m[ INFO] [1523215556.560900259]: BD_k_d_ is 0.001300 
+[0m
+[0m[ INFO] [1523215556.560912732]: BD_windup_limit_ is 1.500000 
+[0m
+[0m[ INFO] [1523215556.560926717]: BD_deadzone_ is 0.030000 
+[0m
+[0m[ INFO] [1523215556.687841811]: Color: red found and set.[0m
+[0m[ INFO] [1523215557.151162240]: Controller state will be published at 100Hz.[0m
+[0m[ INFO] [1523215557.153444920]: Wheel separation will be multiplied by 1.[0m
+[0m[ INFO] [1523215557.154989963]: Wheel radius will be multiplied by 1.[0m
+[0m[ INFO] [1523215557.155698326]: Velocity rolling window size of 10.[0m
+[0m[ INFO] [1523215557.156443402]: Velocity commands will be considered old if they are older than 0.5s.[0m
+[0m[ INFO] [1523215557.157236659]: Allow mutiple cmd_vel publishers is enabled[0m
+[0m[ INFO] [1523215557.158806552]: Base frame_id set to base_link[0m
+[0m[ INFO] [1523215557.159501087]: Odometry frame_id set to odom[0m
+[0m[ INFO] [1523215557.160844541]: Publishing to tf is disabled[0m
+[0m[ INFO] [1523215557.167196221]: CURRENT STATE CHANGED TO: Line Following[0m
+[0m[ INFO] [1523215557.186345620]: left wheel to origin: 0,0.095, 0[0m
+[0m[ INFO] [1523215557.186389262]: right wheel to origin: 0,-0.095, 0[0m
+[0m[ INFO] [1523215557.186455497]: Odometry params : wheel separation 0.19, wheel radius 0.045[0m
+[0m[ INFO] [1523215557.189697385]: Adding left wheel with joint name: left_wheel_hinge and right wheel with joint name: right_wheel_hinge[0m
+[0m[ INFO] [1523215559.556630307]: Possible Directions:[0m
+[0m[ INFO] [1523215559.556698186]: STRAIGHT[0m
+[0m[ INFO] [1523215559.556765579]: LEFT[0m
+[0m[ INFO] [1523215559.556831114]: RIGHT[0m
+[0m[ INFO] [1523215559.724986892]: Possible Directions:[0m
+[0m[ INFO] [1523215559.725033121]: STRAIGHT[0m
+[0m[ INFO] [1523215559.725051921]: LEFT[0m
+[0m[ INFO] [1523215559.725072420]: RIGHT[0m
+[0m[ INFO] [1523215559.873730810]: Possible Directions:[0m
+[0m[ INFO] [1523215559.873767052]: STRAIGHT[0m
+[0m[ INFO] [1523215559.873779490]: LEFT[0m
+[0m[ INFO] [1523215559.873790660]: RIGHT[0m
+[0m[ INFO] [1523215560.040463752]: Possible Directions:[0m
+[0m[ INFO] [1523215560.040513763]: STRAIGHT[0m
+[0m[ INFO] [1523215560.040528859]: LEFT[0m
+[0m[ INFO] [1523215560.040558649]: RIGHT[0m
+[0m[ INFO] [1523215560.194726174]: Possible Directions:[0m
+[0m[ INFO] [1523215560.194766973]: STRAIGHT[0m
+[0m[ INFO] [1523215560.194789904]: LEFT[0m
+[0m[ INFO] [1523215560.194810854]: RIGHT[0m
+[0m[ INFO] [1523215560.362143039]: Possible Directions:[0m
+[0m[ INFO] [1523215560.362182674]: STRAIGHT[0m
+[0m[ INFO] [1523215560.362199499]: LEFT[0m
+[0m[ INFO] [1523215560.362214008]: RIGHT[0m
+[0m[ INFO] [1523215560.516318579]: Possible Directions:[0m
+[0m[ INFO] [1523215560.516378491]: STRAIGHT[0m
+[0m[ INFO] [1523215560.516407511]: LEFT[0m
+[0m[ INFO] [1523215560.516439620]: RIGHT[0m
+[0m[ INFO] [1523215560.672579201]: Possible Directions:[0m
+[0m[ INFO] [1523215560.672617142]: STRAIGHT[0m
+[0m[ INFO] [1523215560.672639503]: LEFT[0m
+[0m[ INFO] [1523215560.672660865]: RIGHT[0m
+[0m[ INFO] [1523215560.829759163]: Possible Directions:[0m
+[0m[ INFO] [1523215560.829832129]: STRAIGHT[0m
+[0m[ INFO] [1523215560.829845372]: LEFT[0m
+[0m[ INFO] [1523215560.829868982]: RIGHT[0m
+[0m[ INFO] [1523215560.998776060]: Possible Directions:[0m
+[0m[ INFO] [1523215560.998838809]: STRAIGHT[0m
+[0m[ INFO] [1523215560.998865576]: LEFT[0m
+[0m[ INFO] [1523215560.998890222]: RIGHT[0m
+[0m[ INFO] [1523215561.149691932]: Possible Directions:[0m
+[0m[ INFO] [1523215561.149728453]: STRAIGHT[0m
+[0m[ INFO] [1523215561.149741258]: LEFT[0m
+[0m[ INFO] [1523215561.320286021]: Possible Directions:[0m
+[0m[ INFO] [1523215561.320378376]: STRAIGHT[0m
+[0m[ INFO] [1523215561.320446627]: LEFT[0m
+[0m[ INFO] [1523215561.320536792]: RIGHT[0m
+[0m[ INFO] [1523215561.471063469]: Possible Directions:[0m
+[0m[ INFO] [1523215561.471111769]: STRAIGHT[0m
+[0m[ INFO] [1523215561.471131910]: LEFT[0m
+[0m[ INFO] [1523215561.471162440]: RIGHT[0m
+[0m[ INFO] [1523215561.792784700]: Possible Directions:[0m
+[0m[ INFO] [1523215561.792850997]: STRAIGHT[0m
+[0m[ INFO] [1523215561.792899337]: LEFT[0m
+[0m[ INFO] [1523215561.792941909]: RIGHT[0m
+[0m[ INFO] [1523215561.948288888]: Possible Directions:[0m
+[0m[ INFO] [1523215561.948333276]: STRAIGHT[0m
+[0m[ INFO] [1523215561.948349780]: LEFT[0m
+[0m[ INFO] [1523215561.948369727]: RIGHT[0m
+[0m[ INFO] [1523215562.106574205]: Possible Directions:[0m
+[0m[ INFO] [1523215562.106608737]: STRAIGHT[0m
+[0m[ INFO] [1523215562.106621357]: LEFT[0m
+[0m[ INFO] [1523215562.106637443]: RIGHT[0m
+[0m[ INFO] [1523215562.274134950]: Possible Directions:[0m
+[0m[ INFO] [1523215562.274200724]: STRAIGHT[0m
+[0m[ INFO] [1523215562.274252219]: LEFT[0m
+[0m[ INFO] [1523215562.274296884]: RIGHT[0m
+[0m[ INFO] [1523215562.426315079]: Possible Directions:[0m
+[0m[ INFO] [1523215562.426361378]: STRAIGHT[0m
+[0m[ INFO] [1523215562.426383516]: LEFT[0m
+[0m[ INFO] [1523215562.426409954]: RIGHT[0m
+[0m[ INFO] [1523215562.594617304]: Possible Directions:[0m
+[0m[ INFO] [1523215562.594664311]: STRAIGHT[0m
+[0m[ INFO] [1523215562.594682815]: LEFT[0m
+[0m[ INFO] [1523215562.594703500]: RIGHT[0m
+[0m[ INFO] [1523215562.745932060]: Possible Directions:[0m
+[0m[ INFO] [1523215562.745975375]: STRAIGHT[0m
+[0m[ INFO] [1523215562.745997248]: LEFT[0m
+[0m[ INFO] [1523215562.746019420]: RIGHT[0m
+[0m[ INFO] [1523215562.913968345]: Possible Directions:[0m
+[0m[ INFO] [1523215562.914007040]: STRAIGHT[0m
+[0m[ INFO] [1523215562.914022949]: LEFT[0m
+[0m[ INFO] [1523215562.914038563]: RIGHT[0m
+[0m[ INFO] [1523215563.061729512]: Possible Directions:[0m
+[0m[ INFO] [1523215563.061770735]: STRAIGHT[0m
+[0m[ INFO] [1523215563.061795206]: LEFT[0m
+[0m[ INFO] [1523215563.061816151]: RIGHT[0m
+[0m[ INFO] [1523215563.225944323]: Possible Directions:[0m
+[0m[ INFO] [1523215563.225985175]: STRAIGHT[0m
+[0m[ INFO] [1523215563.225999184]: LEFT[0m
+[0m[ INFO] [1523215563.226012184]: RIGHT[0m
+[0m[ INFO] [1523215563.382342972]: Possible Directions:[0m
+[0m[ INFO] [1523215563.382379257]: STRAIGHT[0m
+[0m[ INFO] [1523215563.382394675]: LEFT[0m
+[0m[ INFO] [1523215563.382420435]: RIGHT[0m
+[0m[ INFO] [1523215563.551876092]: Possible Directions:[0m
+[0m[ INFO] [1523215563.551923617]: STRAIGHT[0m
+[0m[ INFO] [1523215563.551957739]: LEFT[0m
+[0m[ INFO] [1523215563.551980935]: RIGHT[0m
+[0m[ INFO] [1523215563.702939203]: Possible Directions:[0m
+[0m[ INFO] [1523215563.702977389]: STRAIGHT[0m
+[0m[ INFO] [1523215563.702989847]: LEFT[0m
+[0m[ INFO] [1523215563.703005401]: RIGHT[0m
+[0m[ INFO] [1523215563.872736210]: Possible Directions:[0m
+[0m[ INFO] [1523215563.872782861]: STRAIGHT[0m
+[0m[ INFO] [1523215563.872807597]: LEFT[0m
+[0m[ INFO] [1523215563.872831755]: RIGHT[0m
+[0m[ INFO] [1523215564.018144597]: Possible Directions:[0m
+[0m[ INFO] [1523215564.018185944]: STRAIGHT[0m
+[0m[ INFO] [1523215564.018213151]: LEFT[0m
+[0m[ INFO] [1523215564.018235178]: RIGHT[0m
+[0m[ INFO] [1523215564.184306406]: Possible Directions:[0m
+[0m[ INFO] [1523215564.184343634]: STRAIGHT[0m
+[0m[ INFO] [1523215564.18435 drive_controller_spawner (controller_manager/spawner)
+    feature_extractor (nodelet/nodelet)
+    led_controller_pi (cooperative_driving_hardware/led_controller_pi.py)
+    networking (cooperative_driving_networking/networking)
+    nodelet_manager (nodelet/nodelet)
+    reflekte (nodelet/nodelet)
+    robot (nodelet/nodelet)
+    robot_state_publisher (robot_state_publisher/robot_state_publisher)
+
+auto-starting new master
+[1mprocess[master]: started with pid [7822][0m
+[1mROS_MASTER_URI=http://localhost:11311[0m
+]2;/home/amjad/Desktop/pg2017w/ros/src/cooperative_driving/cooperative_driving/launch/demo_raspi.launch http://localhost:11311
+[1msetting /run_id to a80dc1b0-3b62-11e8-ac1b-ec55f98341bd[0m
+[1mprocess[rosout-1]: started with pid [7835][0m
+started core service [/rosout]
+[1mprocess[demo_app-2]: started with pid [7853][0m
+[1mprocess[nodelet_manager-3]: started with pid [7854][0m
+[1mprocess[robot_state_publisher-4]: started with pid [7855][0m
+[1mprocess[camera-5]: started with pid [7856][0m
+[1mprocess[feature_extractor-6]: started with pid [7857][0m
+[1mprocess[apriltags2_ros_continuous_node-7]: started with pid [7871][0m
+[1mprocess[reflekte-8]: started with pid [7881][0m
+[1mprocess[robot-9]: started with pid [7893][0m
+[1mprocess[drive_controller_spawner-10]: started with pid [7900][0m
+[1mprocess[distance_sensor_controller_spawner-11]: started with pid [7918][0m
+[1mprocess[led_controller_pi-12]: started with pid [7934][0m
+[1mprocess[networking-13]: started with pid [7948][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [8152][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [8416][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [8693][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [8856][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [8922][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [8985][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [9054][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [9117][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [9183][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [9315][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [9378][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [9440][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [9503][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [9573][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [9635][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [9698][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [9760][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [9822][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [9887][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [9956][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [10019][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [10081][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [10174][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [10281][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [10343][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [10405][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [10467][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [10529][0m
+[network6966]: LEFT[0m
+[0m[ INFO] [1523215564.184422367]: RIGHT[0m
+[0m[ INFO] [1523215564.339237704]: Possible Directions:[0m
+[0m[ INFO] [1523215564.339273777]: STRAIGHT[0m
+[0m[ INFO] [1523215564.339293260]: LEFT[0m
+[0m[ INFO] [1523215564.339315174]: RIGHT[0m
+[0m[ INFO] [1523215564.503117993]: Possible Directions:[0m
+[0m[ INFO] [1523215564.503154472]: STRAIGHT[0m
+[0m[ INFO] [1523215564.503172457]: LEFT[0m
+[0m[ INFO] [1523215564.503197229]: RIGHT[0m
+[0m[ INFO] [1523215564.659260775]: Possible Directions:[0m
+[0m[ INFO] [1523215564.659307405]: STRAIGHT[0m
+[0m[ INFO] [1523215564.659331983]: LEFT[0m
+[0m[ INFO] [1523215564.659358645]: RIGHT[0m
+[0m[ INFO] [1523215564.819962013]: Possible Directions:[0m
+[0m[ INFO] [1523215564.820029002]: STRAIGHT[0m
+[0m[ INFO] [1523215564.820082799]: LEFT[0m
+[0m[ INFO] [1523215564.820129542]: RIGHT[0m
+[0m[ INFO] [1523215564.979242897]: Possible Directions:[0m
+[0m[ INFO] [1523215564.979288174]: STRAIGHT[0m
+[0m[ INFO] [1523215564.979311640]: LEFT[0m
+[0m[ INFO] [1523215564.979337169]: RIGHT[0m
+[0m[ INFO] [1523215565.136090044]: Possible Directions:[0m
+[0m[ INFO] [1523215565.136137455]: STRAIGHT[0m
+[0m[ INFO] [1523215565.136166297]: LEFT[0m
+[0m[ INFO] [1523215565.136193613]: RIGHT[0m
+[0m[ INFO] [1523215565.295269663]: Possible Directions:[0m
+[0m[ INFO] [1523215565.295317712]: STRAIGHT[0m
+[0m[ INFO] [1523215565.295344400]: LEFT[0m
+[0m[ INFO] [1523215565.295372356]: RIGHT[0m
+[0m[ INFO] [1523215565.457263999]: Possible Directions:[0m
+[0m[ INFO] [1523215565.457313321]: STRAIGHT[0m
+[0m[ INFO] [1523215565.457334795]: LEFT[0m
+[0m[ INFO] [1523215565.457357064]: RIGHT[0m
+[0m[ INFO] [1523215565.614203954]: Possible Directions:[0m
+[0m[ INFO] [1523215565.614249656]: STRAIGHT[0m
+[0m[ INFO] [1523215565.614271527]: LEFT[0m
+[0m[ INFO] [1523215565.614295505]: RIGHT[0m
+[0m[ INFO] [1523215565.934363783]: Possible Directions:[0m
+[0m[ INFO] [1523215565.934410627]: STRAIGHT[0m
+[0m[ INFO] [1523215565.934433078]: LEFT[0m
+[0m[ INFO] [1523215565.934460554]: RIGHT[0m
+[0m[ INFO] [1523215566.099634423]: Possible Directions:[0m
+[0m[ INFO] [1523215566.099698313]: STRAIGHT[0m
+[0m[ INFO] [1523215566.099738269]: LEFT[0m
+[0m[ INFO] [1523215566.099776906]: RIGHT[0m
+[0m[ INFO] [1523215566.249758516]: Possible Directions:[0m
+[0m[ INFO] [1523215566.249806486]: STRAIGHT[0m
+[0m[ INFO] [1523215566.249832398]: LEFT[0m
+[0m[ INFO] [1523215566.249857030]: RIGHT[0m
+[0m[ INFO] [1523215566.411009153]: Possible Directions:[0m
+[0m[ INFO] [1523215566.411059257]: STRAIGHT[0m
+[0m[ INFO] [1523215566.411089179]: LEFT[0m
+[0m[ INFO] [1523215566.411119758]: RIGHT[0m
+[0m[ INFO] [1523215566.569852568]: Possible Directions:[0m
+[0m[ INFO] [1523215566.569888779]: STRAIGHT[0m
+[0m[ INFO] [1523215566.569903702]: LEFT[0m
+[0m[ INFO] [1523215566.569918872]: RIGHT[0m
+[0m[ INFO] [1523215566.737596758]: Possible Directions:[0m
+[0m[ INFO] [1523215566.737627912]: STRAIGHT[0m
+[0m[ INFO] [1523215566.737646772]: LEFT[0m
+[0m[ INFO] [1523215566.737671483]: RIGHT[0m
+[0m[ INFO] [1523215566.889860477]: Possible Directions:[0m
+[0m[ INFO] [1523215566.889898620]: STRAIGHT[0m
+[0m[ INFO] [1523215566.889916508]: LEFT[0m
+[0m[ INFO] [1523215566.889943410]: RIGHT[0m
+[0m[ INFO] [1523215567.056401998]: Possible Directions:[0m
+[0m[ INFO] [1523215567.056467965]: STRAIGHT[0m
+[0m[ INFO] [1523215567.056492199]: LEFT[0m
+[0m[ INFO] [1523215567.056518152]: RIGHT[0m
+[0m[ INFO] [1523215567.210667684]: Possible Directions:[0m
+[0m[ INFO] [1523215567.210705592]: STRAIGHT[0m
+[0m[ INFO] [1523215567.210728674]: LEFT[0m
+[0m[ INFO] [1523215567.210752377]: RIGHT[0m
+[0m[ INFO] [1523215567.367967568]: Possible Directions:[0m
+[0m[ INFO] [1523215567.368012274]: STRAIGHT[0m
+[0m[ INFO] [1523215567.368039351]: LEFT[0m
+[0m[ INFO] [1523215567.368064187]: RIGHT[0m
+[0m[ INFO] [1523215567.528835659]: Possible Directions:[0m
+[0m[ INFO] [1523215567.528896291]: STRAIGHT[0m
+[0m[ INFO] [1523215567.528922496]: LEFT[0m
+[0m[ INFO] [1523215567.528952095]: RIGHT[0m
+[0m[ INFO] [1523215567.847302308]: Possible Directions:[0m
+[0m[ INFO] [1523215567.847410748]: STRAIGHT[0m
+[0m[ INFO] [1523215567.847434632]: LEFT[0m
+[0m[ INFO] [1523215567.847455453]: RIGHT[0m
+[0m[ INFO] [1523215568.011506442]: Possible Directions:[0m
+[0m[ INFO] [1523215568.011542008]: STRAIGHT[0m
+[0m[ INFO] [1523215568.011557877]: LEFT[0m
+[0m[ INFO] [1523215568.011573334]: RIGHT[0m
+[0m[ INFO] [1523215568.171094742]: Possible Directions:[0m
+[0m[ INFO] [1523215568.171154167]: STRAIGHT[0m
+[0m[ INFO] [1523215568.171198285]: LEFT[0m
+[0m[ INFO] [1523215568.171237881]: RIGHT[0m
+[0m[ INFO] [1523215568.329401873]: Possible Directions:[0m
+[0m[ INFO] [1523215568.329453331]: STRAIGHT[0m
+[0m[ INFO] [1523215568.329467090]: LEFT[0m
+[0m[ INFO] [1523215568.329484089]: RIGHT[0m
+[0m[ INFO] [1523215568.491353695]: Possible Directions:[0m
+[0m[ INFO] [1523215568.491399188]: STRAIGHT[0m
+[0m[ INFO] [1523215568.491421237]: LEFT[0m
+[0m[ INFO] [1523215568.491443780]: RIGHT[0m
+[0m[ INFO] [1523215568.648286367]: Possible Directions:[0m
+[0m[ INFO] [1523215568.648354577]: STRAIGHT[0m
+[0m[ INFO] [1523215568.648395718]: LEFT[0m
+[0m[ INFO] [1523215568.648425584]: RIGHT[0m
+[0m[ INFO] [1523215568.807854335]: Possible Directions:[0m
+[0m[ INFO] [1523215568.807921317]: STRAIGHT[0m
+[0m[ INFO] [1523215568.807949373]: LEFT[0m
+[0m[ INFO] [1523215568.807978834]: RIGHT[0m
+[0m[ INFO] [1523215568.964301509]: Possible Directions:[0m
+[0m[ INFO] [1523215568.964346452]: STRAIGHT[0m
+[0m[ INFO] [1523215568.964372644]: LEFT[0m
+[0m[ INFO] [1523215568.964397059]: RIGHT[0m
+[0m[ INFO] [1523215569.133018340]: Possible Directions:[0m
+[0m[ INFO] [1523215569.133063032]: STRAIGHT[0m
+[0m[ INFO] [1523215569.133083724]: LEFT[0m
+[0m[ INFO] [1523215569.133108521]: RIGHT[0m
+[0m[ INFO] [1523215569.282025559]: Possible Directions:[0m
+[0m[ INFO] [1523215569.282061402]: STRAIGHT[0m
+[0m[ INFO] [1523215569.282075468]: LEFT[0m
+[0m[ INFO] [1523215569.282089017]: RIGHT[0m
+[0m[ INFO] [1523215569.454149731]: Possible Directions:[0m
+[0m[ INFO] [1523215569.454184134]: STRAIGHT[0m
+[0m[ INFO] [1523215569.454197252]: LEFT[0m
+[0m[ INFO] [1523215569.454215208]: RIGHT[0m
+[0m[ INFO] [1523215569.598266427]: Possible Directions:[0m
+[0m[ INFO] [1523215569.598303910]: STRAIGHT[0m
+[0m[ INFO] [1523215569.598316866]: LEFT[0m
+[0m[ INFO] [1523215569.598332844]: RIGHT[0m
+[0m[ INFO] [1523215569.770866736]: Possible Directions:[0m
+[0m[ INFO] [1523215569.770976475]: STRAIGHT[0m
+[0m[ INFO] [1523215569.771049877]: LEFT[0m
+[0m[ INFO] [1523215569.771118785]: RIGHT[0m
+[0m[ INFO] [1523215569.920282458]: Possible Directions:[0m
+[0m[ INFO] [1523215569.920319209]: STRAIGHT[0m
+[0m[ INFO] [1523215569.920334471]: LEFT[0m
+[0m[ INFO] [1523215569.920348811]: RIGHT[0m
+[0m[ INFO] [1523215570.085848763]: Possible Directions:[0m
+[0m[ INFO] [1523215570.085945026]: STRAIGHT[0m
+[0m[ INFO] [1523215570.085995557]: LEFT[0m
+[0m[ INFO] [1523215570.086037713]: RIGHT[0m
+[0m[ INFO] [1523215570.237825634]: Possible Directions:[0m
+[0m[ INFO] [1523215570.237862254]: STRAIGHT[0m
+[0m[ INFO] [1523215570.237875642]: LEFT[0m
+[0m[ INFO] [1523215570.237899714]: RIGHT[0m
+[0m[ INFO] [1523215570.557797398]: Possible Directions:[0m
+[0m[ INFO] [1523215570.557833714]: STRAIGHT[0m
+[0m[ INFO] [1523215570.557853356]: LEFT[0m
+[0m[ INFO] [1523215570.557873257]: RIGHT[0m
+[0m[ INFO] [1523215570.726507884]: Possible Directions:[0m
+[0m[ INFO] [1523215570.726551129]: STRAIGHT[0m
+[0m[ INFO] [1523215570.726569744]: LEFT[0m
+[0m[ INFO] [1523215570.726587089]: RIGHT[0m
+[0m[ INFO] [1523215570.873847068]: Possible Directions:[0m
+[0m[ INFO] [1523215570.873883178]: STRAIGHT[0m
+[0m[ INFO] [1523215570.873896172]: LEFT[0m
+[0m[ INFO] [1523215570.873911090]: RIGHT[0m
+[0m[ INFO] [1523215571.035327794]: Possible Directions:[0m
+[0m[ INFO] [1523215571.035391271]: STRAIGHT[0m
+[0m[ INFO] [1523215571.035426075]: LEFT[0m
+[0m[ INFO] [1523215571.035461227]: RIGHT[0m
+[0m[ INFO] [1523215571.356241148]: Possible Directions:[0m
+[0m[ INFO] [1523215571.356289288]: STRAIGHT[0m
+[0m[ INFO] [1523215571.356384318]: LEFT[0m
+[0m[ INFO] [1523215571.356405783]: RIGHT[0m
+[0m[ INFO] [1523215571.515602181]: Possible Directions:[0m
+[0m[ INFO] [1523215571.515639493]: STRAIGHT[0m
+[0m[ INFO] [1523215571.515652837]: LEFT[0m
+[0m[ INFO] [1523215571.515667693]: RIGHT[0m
+[0m[ INFO] [1523215571.675064106]: Possible Directions:[0m
+[0m[ INFO] [1523215571.675110213]: STRAIGHT[0m
+[0m[ INFO] [1523215571.675133679]: LEFT[0m
+[0m[ INFO] [1523215571.675158716]: RIGHT[0m
+[0m[ INFO] [1523215571.835538952]: Possible Directions:[0m
+[0m[ INFO] [1523215571.835576073]: STRAIGHT[0m
+[0m[ INFO] [1523215571.835598474]: LEFT[0m
+[0m[ INFO] [1523215571.835624335]: RIGHT[0m
+[0m[ INFO] [1523215571.997686873]: Possible Directions:[0m
+[0m[ INFO] [1523215571.997735418]: STRAIGHT[0m
+[0m[ INFO] [1523215571.997761626]: LEFT[0m
+[0m[ INFO] [1523215571.997792587]: RIGHT[0m
+[0m[ INFO] [1523215572.149730567]: Possible Directions:[0m
+[0m[ INFO] [1523215572.149764862]: STRAIGHT[0m
+[0m[ INFO] [1523215572.149779669]: LEFT[0m
+[0m[ INFO] [1523215572.149794137]: RIGHT[0m
+[0m[ INFO] [1523215572.314252127]: Possible Directions:[0m
+[0m[ INFO] [1523215572.314294780]: STRAIGHT[0m
+[0m[ INFO] [1523215572.314308319]: LEFT[0m
+[0m[ INFO] [1523215572.314326488]: RIGHT[0m
+[0m[ INFO] [1523215572.469816048]: Possible Directions:[0m
+[0m[ INFO] [1523215572.469849424]: STRAIGHT[0m
+[0m[ INFO] [1523215572.469861749]: LEFT[0m
+[0m[ INFO] [1523215572.469878977]: RIGHT[0m
+[0m[ INFO] [1523215572.635734789]: Possible Directions:[0m
+[0m[ INFO] [1523215572.635806704]: STRAIGHT[0m
+[0m[ INFO] [1523215572.635847685]: LEFT[0m
+[0m[ INFO] [1523215572.635889811]: RIGHT[0m
+[0m[ INFO] [1523215572.789779675]: Possible Directions:[0m
+[0m[ INFO] [1523215572.789813650]: STRAIGHT[0m
+[0m[ INFO] [1523215572.789834746]: LEFT[0m
+[0m[ INFO] [1523215572.789860127]: RIGHT[0m
+[0m[ INFO] [1523215572.956151590]: Possible Directions:[0m
+[0m[ INFO] [1523215572.956219910]: STRAIGHT[0m
+[0m[ INFO] [1523215572.956255353]: LEFT[0m
+[0m[ INFO] [1523215572.956287800]: RIGHT[0m
+[0m[ INFO] [1523215573.105791541]: Possible Directions:[0m
+[0m[ INFO] [1523215573.105824308]: STRAIGHT[0m
+[0m[ INFO] [1523215573.105840722]: LEFT[0m
+[0m[ INFO] [1523215573.105867608]: RIGHT[0m
+[0m[ INFO] [1523215573.274490410]: Possible Directions:[0m
+[0m[ INFO] [1523215573.274565950]: STRAIGHT[0m
+[0m[ INFO] [1523215573.274635640]: LEFT[0m
+[0m[ INFO] [1523215573.274699717]: RIGHT[0m
+[0m[ INFO] [1523215573.425743648]: Possible Directions:[0m
+[0m[ INFO] [1523215573.425791939]: STRAIGHT[0m
+[0m[ INFO] [1523215573.425816661]: LEFT[0m
+[0m[ INFO] [1523215573.425843877]: RIGHT[0m
+[0m[ INFO] [1523215573.593748016]: Possible Directions:[0m
+[0m[ INFO] [1523215573.593780083]: STRAIGHT[0m
+[0m[ INFO] [1523215573.593792278]: LEFT[0m
+[0m[ INFO] [1523215573.593808259]: RIGHT[0m
+[0m[ INFO] [1523215573.747411621]: Possible Directions:[0m
+[0m[ INFO] [1523215573.747447721]: STRAIGHT[0m
+[0m[ INFO] [1523215573.747465958]: LEFT[0m
+[0m[ INFO] [1523215573.747491337]: RIGHT[0m
+[0m[ INFO] [1523215573.913018849]: Possible Directions:[0m
+[0m[ INFO] [1523215573.913058538]: STRAIGHT[0m
+[0m[ INFO] [1523215573.913074129]: LEFT[0m
+[0m[ INFO] [1523215573.913098070]: RIGHT[0m
+[0m[ INFO] [1523215574.067092830]: Possible Directions:[0m
+[0m[ INFO] [1523215574.067140869]: STRAIGHT[0m
+[0m[ INFO] [1523215574.067166095]: LEFT[0m
+[0m[ INFO] [1523215574.067193249]: RIGHT[0m
+[0m[ INFO] [1523215574.228785501]: Possible Directions:[0m
+[0m[ INFO] [1523215574.228834295]: STRAIGHT[0m
+[0m[ INFO] [1523215574.228867170]: LEFT[0m
+[0m[ INFO] [1523215574.228896738]: RIGHT[0m
+[0m[ INFO] [1523215574.383360474]: Possible Directions:[0m
+[0m[ INFO] [1523215574.383394075]: STRAIGHT[0m
+[0m[ INFO] [1523215574.383408593]: LEFT[0m
+[0m[ INFO] [1523215574.383423301]: RIGHT[0m
+[0m[ INFO] [1523215574.548863559]: Possible Directions:[0m
+[0m[ INFO] [1523215574.548901470]: STRAIGHT[0m
+[0m[ INFO] [1523215574.548918744]: LEFT[0m
+[0m[ INFO] [1523215574.548940415]: RIGHT[0m
+[0m[ INFO] [1523215574.871922240]: Possible Directions:[0m
+[0m[ INFO] [1523215574.871967430]: STRAIGHT[0m
+[0m[ INFO] [1523215574.871992095]: LEFT[0m
+[0m[ INFO] [1523215574.872019053]: RIGHT[0m
+[0m[ INFO] [1523215575.186750993]: Possible Directions:[0m
+[0m[ INFO] [1523215575.186791380]: STRAIGHT[0m
+[0m[ INFO] [1523215575.186808383]: LEFT[0m
+[0m[ INFO] [1523215575.186833855]: RIGHT[0m
+[0m[ INFO] [1523215575.338938197]: Possible Directions:[0m
+[0m[ INFO] [1523215575.338982947]: STRAIGHT[0m
+[0m[ INFO] [1523215575.339007826]: LEFT[0m
+[0m[ INFO] [1523215575.339036125]: RIGHT[0m
+[0m[ INFO] [1523215575.502332824]: Possible Directions:[0m
+[0m[ INFO] [1523215575.502370938]: STRAIGHT[0m
+[0m[ INFO] [1523215575.502383748]: LEFT[0m
+[0m[ INFO] [1523215575.502398140]: RIGHT[0m
+[0m[ INFO] [1523215575.659727059]: Possible Directions:[0m
+[0m[ INFO] [1523215575.659826392]: STRAIGHT[0m
+[0m[ INFO] [1523215575.659880039]: LEFT[0m
+[0m[ INFO] [1523215575.659930372]: RIGHT[0m
+[0m[ INFO] [1523215575.817930742]: Possible Directions:[0m
+[0m[ INFO] [1523215575.817966676]: STRAIGHT[0m
+[0m[ INFO] [1523215575.817979698]: LEFT[0m
+[0m[ INFO] [1523215575.817991468]: RIGHT[0m
+[0m[ INFO] [1523215575.983916451]: Possible Directions:[0m
+[0m[ INFO] [1523215575.983973535]: STRAIGHT[0m
+[0m[ INFO] [1523215575.984002452]: LEFT[0m
+[0m[ INFO] [1523215575.984030559]: RIGHT[0m
+[0m[ INFO] [1523215576.141401441]: Possible Directions:[0m
+[0m[ INFO] [1523215576.141457864]: STRAIGHT[0m
+[0m[ INFO] [1523215576.141479258]: LEFT[0m
+[0m[ INFO] [1523215576.141503971]: RIGHT[0m
+[0m[ INFO] [1523215576.298099073]: Possible Directions:[0m
+[0m[ INFO] [1523215576.298137342]: STRAIGHT[0m
+[0m[ INFO] [1523215576.298150640]: LEFT[0m
+[0m[ INFO] [1523215576.298175399]: RIGHT[0m
+[0m[ INFO] [1523215576.454326188]: Possible Directions:[0m
+[0m[ INFO] [1523215576.454362331]: STRAIGHT[0m
+[0m[ INFO] [1523215576.454378467]: LEFT[0m
+[0m[ INFO] [1523215576.454403931]: RIGHT[0m
+[0m[ INFO] [1523215576.622286794]: Possible Directions:[0m
+[0m[ INFO] [1523215576.622338811]: STRAIGHT[0m
+[0m[ INFO] [1523215576.622374852]: LEFT[0m
+[0m[ INFO] [1523215576.622404883]: RIGHT[0m
+[0m[ INFO] [1523215576.779292953]: Possible Directions:[0m
+[0m[ INFO] [1523215576.779325199]: STRAIGHT[0m
+[0m[ INFO] [1523215576.779337758]: LEFT[0m
+[0m[ INFO] [1523215576.779356049]: RIGHT[0m
+[0m[ INFO] [1523215576.935408685]: Possible Directions:[0m
+[0m[ INFO] [1523215576.935455844]: STRAIGHT[0m
+[0m[ INFO] [1523215576.935488613]: LEFT[0m
+[0m[ INFO] [1523215576.935509004]: RIGHT[0m
+[0m[ INFO] [1523215577.093694091]: Possible Directions:[0m
+[0m[ INFO] [1523215577.093733518]: STRAIGHT[0m
+[0m[ INFO] [1523215577.093749545]: LEFT[0m
+[0m[ INFO] [1523215577.093763554]: RIGHT[0m
+[0m[ INFO] [1523215577.262769572]: Possible Directions:[0m
+[0m[ INFO] [1523215577.262815216]: STRAIGHT[0m
+[0m[ INFO] [1523215577.262832868]: LEFT[0m
+[0m[ INFO] [1523215577.262848654]: RIGHT[0m
+[0m[ INFO] [1523215577.414811950]: Possible Directions:[0m
+[0m[ INFO] [1523215577.414875132]: STRAIGHT[0m
+[0m[ INFO] [1523215577.414914506]: LEFT[0m
+[0m[ INFO] [1523215577.414943652]: RIGHT[0m
+[0m[ INFO] [1523215577.578119341]: Possible Directions:[0m
+[0m[ INFO] [1523215577.578153817]: STRAIGHT[0m
+[0m[ INFO] [1523215577.578166399]: LEFT[0m
+[0m[ INFO] [1523215577.578185336]: RIGHT[0m
+[0m[ INFO] [1523215577.729831686]: Possible Directions:[0m
+[0m[ INFO] [1523215577.729864908]: STRAIGHT[0m
+[0m[ INFO] [1523215577.729877287]: LEFT[0m
+[0m[ INFO] [1523215577.729897815]: RIGHT[0m
+[0m[ INFO] [1523215577.903598388]: Possible Directions:[0m
+[0m[ INFO] [1523215577.903690006]: STRAIGHT[0m
+[0m[ INFO] [1523215577.903762031]: LEFT[0m
+[0m[ INFO] [1523215577.903797555]: RIGHT[0m
+[0m[ INFO] [1523215578.051189207]: Possible Directions:[0m
+[0m[ INFO] [1523215578.051235768]: STRAIGHT[0m
+[0m[ INFO] [1523215578.051259562]: LEFT[0m
+[0m[ INFO] [1523215578.051283769]: RIGHT[0m
+[0m[ INFO] [1523215578.370163298]: Possiing-13] restarting process
+[1mprocess[networking-13]: started with pid [10591][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [10653][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [10715][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [10777][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [10849][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [10911][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [10974][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [11091][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [11180][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [11242][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [11304][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [11366][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [11428][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [11498][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [11560][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [11623][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [11685][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [11747][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [11809][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [11894][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [12073][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [12170][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [12283][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [12345][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [12407][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [12469][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [12539][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [12602][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [12664][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [12726][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [12788][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [12850][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [12912][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [12974][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [13083][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [13181][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [13245][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [13307][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [13370][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [13440][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [13503][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [13565][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [13627][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [13689][0m
+[networking-13] restarting process
+[1mprocess[networkinble Directions:[0m
+[0m[ INFO] [1523215578.370272454]: STRAIGHT[0m
+[0m[ INFO] [1523215578.370301165]: LEFT[0m
+[0m[ INFO] [1523215578.370324540]: RIGHT[0m
+[0m[ INFO] [1523215578.538150590]: Possible Directions:[0m
+[0m[ INFO] [1523215578.538197597]: STRAIGHT[0m
+[0m[ INFO] [1523215578.538214694]: LEFT[0m
+[0m[ INFO] [1523215578.538229596]: RIGHT[0m
+[0m[ INFO] [1523215578.685732399]: Possible Directions:[0m
+[0m[ INFO] [1523215578.685770218]: STRAIGHT[0m
+[0m[ INFO] [1523215578.685790732]: LEFT[0m
+[0m[ INFO] [1523215578.685804628]: RIGHT[0m
+[0m[ INFO] [1523215578.849058774]: Possible Directions:[0m
+[0m[ INFO] [1523215578.849096193]: STRAIGHT[0m
+[0m[ INFO] [1523215578.849117395]: LEFT[0m
+[0m[ INFO] [1523215578.849145323]: RIGHT[0m
+[0m[ INFO] [1523215579.168219467]: Possible Directions:[0m
+[0m[ INFO] [1523215579.168264587]: STRAIGHT[0m
+[0m[ INFO] [1523215579.168288026]: LEFT[0m
+[0m[ INFO] [1523215579.168309672]: RIGHT[0m
+[0m[ INFO] [1523215579.327645979]: Possible Directions:[0m
+[0m[ INFO] [1523215579.327690450]: STRAIGHT[0m
+[0m[ INFO] [1523215579.327713211]: LEFT[0m
+[0m[ INFO] [1523215579.327738820]: RIGHT[0m
+[0m[ INFO] [1523215579.487064512]: Possible Directions:[0m
+[0m[ INFO] [1523215579.487131909]: STRAIGHT[0m
+[0m[ INFO] [1523215579.487177100]: LEFT[0m
+[0m[ INFO] [1523215579.487220655]: RIGHT[0m
+[0m[ INFO] [1523215579.646619064]: Possible Directions:[0m
+[0m[ INFO] [1523215579.646657170]: STRAIGHT[0m
+[0m[ INFO] [1523215579.646672184]: LEFT[0m
+[0m[ INFO] [1523215579.646697914]: RIGHT[0m
+[0m[ INFO] [1523215579.803774245]: Possible Directions:[0m
+[0m[ INFO] [1523215579.803825932]: STRAIGHT[0m
+[0m[ INFO] [1523215579.803852240]: LEFT[0m
+[0m[ INFO] [1523215579.803872544]: RIGHT[0m
+[0m[ INFO] [1523215579.962943003]: Possible Directions:[0m
+[0m[ INFO] [1523215579.962990582]: STRAIGHT[0m
+[0m[ INFO] [1523215579.963014671]: LEFT[0m
+[0m[ INFO] [1523215579.963051534]: RIGHT[0m
+[0m[ INFO] [1523215580.126729304]: Possible Directions:[0m
+[0m[ INFO] [1523215580.126771579]: STRAIGHT[0m
+[0m[ INFO] [1523215580.126792232]: LEFT[0m
+[0m[ INFO] [1523215580.126815517]: RIGHT[0m
+[0m[ INFO] [1523215580.283421034]: Possible Directions:[0m
+[0m[ INFO] [1523215580.283466830]: STRAIGHT[0m
+[0m[ INFO] [1523215580.283495323]: LEFT[0m
+[0m[ INFO] [1523215580.283523416]: RIGHT[0m
+[0m[ INFO] [1523215580.445491601]: Possible Directions:[0m
+[0m[ INFO] [1523215580.445531995]: STRAIGHT[0m
+[0m[ INFO] [1523215580.445549123]: LEFT[0m
+[0m[ INFO] [1523215580.445575515]: RIGHT[0m
+[0m[ INFO] [1523215580.601846462]: Possible Directions:[0m
+[0m[ INFO] [1523215580.601890219]: STRAIGHT[0m
+[0m[ INFO] [1523215580.601911898]: LEFT[0m
+[0m[ INFO] [1523215580.601932914]: RIGHT[0m
+[0m[ INFO] [1523215580.770140633]: Possible Directions:[0m
+[0m[ INFO] [1523215580.770228500]: STRAIGHT[0m
+[0m[ INFO] [1523215580.770294089]: LEFT[0m
+[0m[ INFO] [1523215580.770337548]: RIGHT[0m
+[0m[ INFO] [1523215580.918092151]: Possible Directions:[0m
+[0m[ INFO] [1523215580.918128569]: STRAIGHT[0m
+[0m[ INFO] [1523215580.918141176]: LEFT[0m
+[0m[ INFO] [1523215580.918153117]: RIGHT[0m
+[0m[ INFO] [1523215581.080285052]: Possible Directions:[0m
+[0m[ INFO] [1523215581.080319825]: STRAIGHT[0m
+[0m[ INFO] [1523215581.080332799]: LEFT[0m
+[0m[ INFO] [1523215581.080347448]: RIGHT[0m
+[0m[ INFO] [1523215581.238177760]: Possible Directions:[0m
+[0m[ INFO] [1523215581.238240408]: STRAIGHT[0m
+[0m[ INFO] [1523215581.238294403]: LEFT[0m
+[0m[ INFO] [1523215581.238330567]: RIGHT[0m
+[0m[ INFO] [1523215581.403327471]: Possible Directions:[0m
+[0m[ INFO] [1523215581.403372691]: STRAIGHT[0m
+[0m[ INFO] [1523215581.403394447]: LEFT[0m
+[0m[ INFO] [1523215581.403409552]: RIGHT[0m
+[0m[ INFO] [1523215581.559630931]: Possible Directions:[0m
+[0m[ INFO] [1523215581.559669575]: STRAIGHT[0m
+[0m[ INFO] [1523215581.559695869]: LEFT[0m
+[0m[ INFO] [1523215581.559718182]: RIGHT[0m
+[0m[ INFO] [1523215581.721739026]: Possible Directions:[0m
+[0m[ INFO] [1523215581.721800794]: STRAIGHT[0m
+[0m[ INFO] [1523215581.721839559]: LEFT[0m
+[0m[ INFO] [1523215581.721934254]: RIGHT[0m
+[0m[ INFO] [1523215581.880721308]: Possible Directions:[0m
+[0m[ INFO] [1523215581.880780874]: STRAIGHT[0m
+[0m[ INFO] [1523215581.880819822]: LEFT[0m
+[0m[ INFO] [1523215581.880854962]: RIGHT[0m
+[0m[ INFO] [1523215582.040876721]: Possible Directions:[0m
+[0m[ INFO] [1523215582.040957247]: STRAIGHT[0m
+[0m[ INFO] [1523215582.041019483]: LEFT[0m
+[0m[ INFO] [1523215582.041067349]: RIGHT[0m
+[0m[ INFO] [1523215582.193891912]: Possible Directions:[0m
+[0m[ INFO] [1523215582.193935230]: STRAIGHT[0m
+[0m[ INFO] [1523215582.193956216]: LEFT[0m
+[0m[ INFO] [1523215582.193976586]: RIGHT[0m
+[0m[ INFO] [1523215582.356978948]: Possible Directions:[0m
+[0m[ INFO] [1523215582.357031618]: STRAIGHT[0m
+[0m[ INFO] [1523215582.357066066]: LEFT[0m
+[0m[ INFO] [1523215582.357100504]: RIGHT[0m
+[0m[ INFO] [1523215582.516267283]: Possible Directions:[0m
+[0m[ INFO] [1523215582.516323351]: STRAIGHT[0m
+[0m[ INFO] [1523215582.516367284]: LEFT[0m
+[0m[ INFO] [1523215582.516390074]: RIGHT[0m
+[0m[ INFO] [1523215582.677314788]: Possible Directions:[0m
+[0m[ INFO] [1523215582.677357186]: STRAIGHT[0m
+[0m[ INFO] [1523215582.677393698]: LEFT[0m
+[0m[ INFO] [1523215582.677453680]: RIGHT[0m
+[0m[ INFO] [1523215582.836347519]: Possible Directions:[0m
+[0m[ INFO] [1523215582.836385325]: STRAIGHT[0m
+[0m[ INFO] [1523215582.836401798]: LEFT[0m
+[0m[ INFO] [1523215582.836416153]: RIGHT[0m
+[0m[ INFO] [1523215582.994131276]: Possible Directions:[0m
+[0m[ INFO] [1523215582.994183675]: STRAIGHT[0m
+[0m[ INFO] [1523215582.994213679]: LEFT[0m
+[0m[ INFO] [1523215582.994234906]: RIGHT[0m
+[0m[ INFO] [1523215583.155147690]: Possible Directions:[0m
+[0m[ INFO] [1523215583.155191130]: STRAIGHT[0m
+[0m[ INFO] [1523215583.155217370]: LEFT[0m
+[0m[ INFO] [1523215583.155238439]: RIGHT[0m
+[0m[ INFO] [1523215583.310795077]: Possible Directions:[0m
+[0m[ INFO] [1523215583.310829723]: STRAIGHT[0m
+[0m[ INFO] [1523215583.310843458]: LEFT[0m
+[0m[ INFO] [1523215583.310868086]: RIGHT[0m
+[0m[ INFO] [1523215583.474666182]: Possible Directions:[0m
+[0m[ INFO] [1523215583.474733626]: STRAIGHT[0m
+[0m[ INFO] [1523215583.474762918]: LEFT[0m
+[0m[ INFO] [1523215583.474805418]: RIGHT[0m
+[0m[ INFO] [1523215583.629959693]: Possible Directions:[0m
+[0m[ INFO] [1523215583.630000225]: STRAIGHT[0m
+[0m[ INFO] [1523215583.630023710]: LEFT[0m
+[0m[ INFO] [1523215583.630044940]: RIGHT[0m
+[0m[ INFO] [1523215583.798766196]: Possible Directions:[0m
+[0m[ INFO] [1523215583.798824191]: STRAIGHT[0m
+[0m[ INFO] [1523215583.798851329]: LEFT[0m
+[0m[ INFO] [1523215583.798872062]: RIGHT[0m
+[0m[ INFO] [1523215583.951323877]: Possible Directions:[0m
+[0m[ INFO] [1523215583.951369800]: STRAIGHT[0m
+[0m[ INFO] [1523215583.951397727]: LEFT[0m
+[0m[ INFO] [1523215583.951421706]: RIGHT[0m
+[0m[ INFO] [1523215584.114411606]: Possible Directions:[0m
+[0m[ INFO] [1523215584.114447150]: STRAIGHT[0m
+[0m[ INFO] [1523215584.114459501]: LEFT[0m
+[0m[ INFO] [1523215584.114475036]: RIGHT[0m
+[0m[ INFO] [1523215584.270405055]: Possible Directions:[0m
+[0m[ INFO] [1523215584.270447857]: STRAIGHT[0m
+[0m[ INFO] [1523215584.270475430]: LEFT[0m
+[0m[ INFO] [1523215584.270487960]: RIGHT[0m
+[0m[ INFO] [1523215584.435200008]: Possible Directions:[0m
+[0m[ INFO] [1523215584.435254406]: STRAIGHT[0m
+[0m[ INFO] [1523215584.435268265]: LEFT[0m
+[0m[ INFO] [1523215584.435280205]: RIGHT[0m
+[0m[ INFO] [1523215584.586198806]: Possible Directions:[0m
+[0m[ INFO] [1523215584.586235801]: STRAIGHT[0m
+[0m[ INFO] [1523215584.586250457]: LEFT[0m
+[0m[ INFO] [1523215584.586264987]: RIGHT[0m
+[0m[ INFO] [1523215584.753228494]: Possible Directions:[0m
+[0m[ INFO] [1523215584.753292159]: STRAIGHT[0m
+[0m[ INFO] [1523215584.753322581]: LEFT[0m
+[0m[ INFO] [1523215584.753363303]: RIGHT[0m
+[0m[ INFO] [1523215584.905774951]: Possible Directions:[0m
+[0m[ INFO] [1523215584.905810942]: STRAIGHT[0m
+[0m[ INFO] [1523215584.905824301]: LEFT[0m
+[0m[ INFO] [1523215584.905835785]: RIGHT[0m
+[0m[ INFO] [1523215585.073507559]: Possible Directions:[0m
+[0m[ INFO] [1523215585.073561777]: STRAIGHT[0m
+[0m[ INFO] [1523215585.073584353]: LEFT[0m
+[0m[ INFO] [1523215585.073615321]: RIGHT[0m
+[0m[ INFO] [1523215585.227217755]: Possible Directions:[0m
+[0m[ INFO] [1523215585.227267106]: STRAIGHT[0m
+[0m[ INFO] [1523215585.227298804]: LEFT[0m
+[0m[ INFO] [1523215585.227326573]: RIGHT[0m
+[0m[ INFO] [1523215585.395606684]: Possible Directions:[0m
+[0m[ INFO] [1523215585.395654903]: STRAIGHT[0m
+[0m[ INFO] [1523215585.395672508]: LEFT[0m
+[0m[ INFO] [1523215585.395698530]: RIGHT[0m
+[0m[ INFO] [1523215585.541650789]: Possible Directions:[0m
+[0m[ INFO] [1523215585.541686882]: STRAIGHT[0m
+[0m[ INFO] [1523215585.541701314]: LEFT[0m
+[0m[ INFO] [1523215585.541715856]: RIGHT[0m
+[0m[ INFO] [1523215585.709801864]: Possible Directions:[0m
+[0m[ INFO] [1523215585.709856472]: STRAIGHT[0m
+[0m[ INFO] [1523215585.709878267]: LEFT[0m
+[0m[ INFO] [1523215585.709904058]: RIGHT[0m
+[0m[ INFO] [1523215585.863955558]: Possible Directions:[0m
+[0m[ INFO] [1523215585.864001210]: STRAIGHT[0m
+[0m[ INFO] [1523215585.864023296]: LEFT[0m
+[0m[ INFO] [1523215585.864048907]: RIGHT[0m
+[0m[ INFO] [1523215586.026328491]: Possible Directions:[0m
+[0m[ INFO] [1523215586.026364441]: STRAIGHT[0m
+[0m[ INFO] [1523215586.026381548]: LEFT[0m
+[0m[ INFO] [1523215586.026406892]: RIGHT[0m
+[0m[ INFO] [1523215586.181855675]: Possible Directions:[0m
+[0m[ INFO] [1523215586.181892240]: STRAIGHT[0m
+[0m[ INFO] [1523215586.181913972]: LEFT[0m
+[0m[ INFO] [1523215586.181937065]: RIGHT[0m
+[0m[ INFO] [1523215586.345392117]: Possible Directions:[0m
+[0m[ INFO] [1523215586.345465571]: STRAIGHT[0m
+[0m[ INFO] [1523215586.345497397]: LEFT[0m
+[0m[ INFO] [1523215586.345532592]: RIGHT[0m
+[0m[ INFO] [1523215586.501872394]: Possible Directions:[0m
+[0m[ INFO] [1523215586.501914994]: STRAIGHT[0m
+[0m[ INFO] [1523215586.501928278]: LEFT[0m
+[0m[ INFO] [1523215586.501951753]: RIGHT[0m
+[0m[ INFO] [1523215586.660107565]: Possible Directions:[0m
+[0m[ INFO] [1523215586.660146256]: STRAIGHT[0m
+[0m[ INFO] [1523215586.660158869]: LEFT[0m
+[0m[ INFO] [1523215586.660179746]: RIGHT[0m
+[0m[ INFO] [1523215586.817774446]: Possible Directions:[0m
+[0m[ INFO] [1523215586.817810721]: STRAIGHT[0m
+[0m[ INFO] [1523215586.817823539]: LEFT[0m
+[0m[ INFO] [1523215586.817834610]: RIGHT[0m
+[0m[ INFO] [1523215586.984041735]: Possible Directions:[0m
+[0m[ INFO] [1523215586.984102916]: STRAIGHT[0m
+[0m[ INFO] [1523215586.984145110]: LEFT[0m
+[0m[ INFO] [1523215586.984184486]: RIGHT[0m
+[0m[ INFO] [1523215587.138505727]: Possible Directions:[0m
+[0m[ INFO] [1523215587.138541527]: STRAIGHT[0m
+[0m[ INFO] [1523215587.138554479]: LEFT[0m
+[0m[ INFO] [1523215587.138569198]: RIGHT[0m
+[0m[ INFO] [1523215587.299506561]: Possible Directions:[0m
+[0m[ INFO] [1523215587.299555496]: STRAIGHT[0m
+[0m[ INFO] [1523215587.299588921]: LEFT[0m
+[0m[ INFO] [1523215587.299617875]: RIGHT[0m
+[0m[ INFO] [1523215587.457692308]: Possible Directions:[0m
+[0m[ INFO] [1523215587.457729783]: STRAIGHT[0m
+[0m[ INFO] [1523215587.457742460]: LEFT[0m
+[0m[ INFO] [1523215587.457758512]: RIGHT[0m
+[0m[ INFO] [1523215587.619901231]: Possible Directions:[0m
+[0m[ INFO] [1523215587.619946178]: STRAIGHT[0m
+[0m[ INFO] [1523215587.619973477]: LEFT[0m
+[0m[ INFO] [1523215587.620000578]: RIGHT[0m
+[0m[ INFO] [1523215587.776001600]: Possible Directions:[0m
+[0m[ INFO] [1523215587.776048923]: STRAIGHT[0m
+[0m[ INFO] [1523215587.776083967]: LEFT[0m
+[0m[ INFO] [1523215587.776109515]: RIGHT[0m
+[0m[ INFO] [1523215587.935881701]: Possible Directions:[0m
+[0m[ INFO] [1523215587.935926529]: STRAIGHT[0m
+[0m[ INFO] [1523215587.935947661]: LEFT[0m
+[0m[ INFO] [1523215587.935966237]: RIGHT[0m
+[0m[ INFO] [1523215588.095179879]: Possible Directions:[0m
+[0m[ INFO] [1523215588.095226670]: STRAIGHT[0m
+[0m[ INFO] [1523215588.095259764]: LEFT[0m
+[0m[ INFO] [1523215588.095286208]: RIGHT[0m
+[0m[ INFO] [1523215588.254317286]: Possible Directions:[0m
+[0m[ INFO] [1523215588.254362123]: STRAIGHT[0m
+[0m[ INFO] [1523215588.254429669]: LEFT[0m
+[0m[ INFO] [1523215588.254456003]: RIGHT[0m
+[0m[ INFO] [1523215588.414653021]: Possible Directions:[0m
+[0m[ INFO] [1523215588.414703530]: STRAIGHT[0m
+[0m[ INFO] [1523215588.414721887]: LEFT[0m
+[0m[ INFO] [1523215588.414746840]: RIGHT[0m
+[0m[ INFO] [1523215588.573997850]: Possible Directions:[0m
+[0m[ INFO] [1523215588.574030782]: STRAIGHT[0m
+[0m[ INFO] [1523215588.574048175]: LEFT[0m
+[0m[ INFO] [1523215588.574074367]: RIGHT[0m
+[0m[ INFO] [1523215588.739866956]: Possible Directions:[0m
+[0m[ INFO] [1523215588.739949062]: STRAIGHT[0m
+[0m[ INFO] [1523215588.739998597]: LEFT[0m
+[0m[ INFO] [1523215588.740039588]: RIGHT[0m
+[0m[ INFO] [1523215588.791534084]: Reconfigure Request: 0.300000 4.000000 15.000000[0m
+[0m[ INFO] [1523215588.791741390]: velocity is 0.300000 
+[0m
+[0m[ INFO] [1523215588.791763819]: max_turn_rate_ is 4.000000 
+[0m
+[0m[ INFO] [1523215588.791783456]: line_row_location_ is 230 
+[0m
+[0m[ INFO] [1523215588.791797399]: LF_k_p_ is 0.320000 
+[0m
+[0m[ INFO] [1523215588.791812254]: LF_k_i_ is 0.002000 
+[0m
+[0m[ INFO] [1523215588.791826200]: LF_k_d_ is 0.090000 
+[0m
+[0m[ INFO] [1523215588.791839397]: LF_windup_limit_ is 0.800000 
+[0m
+[0m[ INFO] [1523215588.791853503]: BD_k_p_ is 0.030000 
+[0m
+[0m[ INFO] [1523215588.791865447]: BD_k_i_ is 0.000160 
+[0m
+[0m[ INFO] [1523215588.791886820]: BD_k_d_ is 0.001300 
+[0m
+[0m[ INFO] [1523215588.791898736]: BD_windup_limit_ is 1.500000 
+[0m
+[0m[ INFO] [1523215588.791914535]: BD_deadzone_ is 0.030000 
+[0m
+[0m[ INFO] [1523215588.891380189]: Possible Directions:[0m
+[0m[ INFO] [1523215588.891426344]: STRAIGHT[0m
+[0m[ INFO] [1523215588.891457362]: LEFT[0m
+[0m[ INFO] [1523215588.891478769]: RIGHT[0m
+[0m[ INFO] [1523215589.055577918]: Possible Directions:[0m
+[0m[ INFO] [1523215589.055620487]: STRAIGHT[0m
+[0m[ INFO] [1523215589.055633476]: LEFT[0m
+[0m[ INFO] [1523215589.055649018]: RIGHT[0m
+[0m[ INFO] [1523215589.209772590]: Possible Directions:[0m
+[0m[ INFO] [1523215589.209809242]: STRAIGHT[0m
+[0m[ INFO] [1523215589.209822483]: LEFT[0m
+[0m[ INFO] [1523215589.209840962]: RIGHT[0m
+[0m[ INFO] [1523215589.374913687]: Possible Directions:[0m
+[0m[ INFO] [1523215589.374978282]: STRAIGHT[0m
+[0m[ INFO] [1523215589.375011266]: LEFT[0m
+[0m[ INFO] [1523215589.375037666]: RIGHT[0m
+[0m[ INFO] [1523215589.529743993]: Possible Directions:[0m
+[0m[ INFO] [1523215589.529776601]: STRAIGHT[0m
+[0m[ INFO] [1523215589.529789148]: LEFT[0m
+[0m[ INFO] [1523215589.529801891]: RIGHT[0m
+[0m[ INFO] [1523215589.698386936]: Possible Directions:[0m
+[0m[ INFO] [1523215589.698451902]: STRAIGHT[0m
+[0m[ INFO] [1523215589.698491553]: LEFT[0m
+[0m[ INFO] [1523215589.698520915]: RIGHT[0m
+[0m[ INFO] [1523215589.851113964]: Possible Directions:[0m
+[0m[ INFO] [1523215589.851160985]: STRAIGHT[0m
+[0m[ INFO] [1523215589.851186262]: LEFT[0m
+[0m[ INFO] [1523215589.851209256]: RIGHT[0m
+[0m[ INFO] [1523215590.008188075]: Possible Directions:[0m
+[0m[ INFO] [1523215590.008226351]: STRAIGHT[0m
+[0m[ INFO] [1523215590.008263290]: LEFT[0m
+[0m[ INFO] [1523215590.008287154]: RIGHT[0m
+[0m[ INFO] [1523215590.166734693]: Possible Directions:[0m
+[0m[ INFO] [1523215590.166774735]: STRAIGHT[0m
+[0m[ INFO] [1523215590.166790944]: LEFT[0m
+[0m[ INFO] [1523215590.166804874]: RIGHT[0m
+[0m[ INFO] [1523215590.325953130]: Possible Directions:[0m
+[0m[ INFO] [1523215590.325988216]: STRAIGHT[0m
+[0m[ INFO] [1523215590.326000814]: LEFT[0m
+[0m[ INFO] [1523215590.326012459]: RIGHT[0m
+[0m[ INFO] [1523215590.487447463]: Possible Directions:[0m
+[0m[ INFO] [1523215590.487492755]: STRAIGHT[0m
+[0m[ INFO] [1523215590.487524637]: LEFT[0m
+[0m[ INFO] [1523215590.487550169]: RIGHT[0m
+[0m[ INFO] [1523215590.646365416]: Possible Directions:[0m
+[0m[ INFO] [1523215590.646401524]: STRAIGHT[0m
+[0m[ INFO] [1523215590.646414242]: LEFT[0m
+[0m[ INFO] [1523215590.646425392]: RIGHT[0m
+[0m[ INFO] [1523215590.812268962]: Possible Directions:[0m
+[0m[ INFO] [1523g-13]: started with pid [13767][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [13888][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [13950][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [14060][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [14155][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [14217][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [14279][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [14342][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [14411][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [14474][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [14536][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [14598][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [14660][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [14725][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [14814][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [14931][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [14994][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [15109][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [15195][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [15257][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [15319][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [15381][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [15443][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [15506][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [15576][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [15639][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [15701][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [15804][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [15916][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [16089][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [16152][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [16216][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [16280][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [16373][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [16435][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [16497][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [16560][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [16629][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [16692][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [16754][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [16818][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [16953][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [17041][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [17152][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [17214][0m
+[networking-215590.812306716]: STRAIGHT[0m
+[0m[ INFO] [1523215590.812378024]: LEFT[0m
+[0m[ INFO] [1523215590.812402774]: RIGHT[0m
+[0m[ INFO] [1523215590.966980334]: Possible Directions:[0m
+[0m[ INFO] [1523215590.967019888]: STRAIGHT[0m
+[0m[ INFO] [1523215590.967037285]: LEFT[0m
+[0m[ INFO] [1523215590.967062336]: RIGHT[0m
+[0m[ INFO] [1523215591.127056502]: Possible Directions:[0m
+[0m[ INFO] [1523215591.127100637]: STRAIGHT[0m
+[0m[ INFO] [1523215591.127121047]: LEFT[0m
+[0m[ INFO] [1523215591.127135254]: RIGHT[0m
+[0m[ INFO] [1523215591.281890647]: Possible Directions:[0m
+[0m[ INFO] [1523215591.281926190]: STRAIGHT[0m
+[0m[ INFO] [1523215591.281939181]: LEFT[0m
+[0m[ INFO] [1523215591.281959516]: RIGHT[0m
+[0m[ INFO] [1523215591.443735128]: Possible Directions:[0m
+[0m[ INFO] [1523215591.443789726]: STRAIGHT[0m
+[0m[ INFO] [1523215591.443819954]: LEFT[0m
+[0m[ INFO] [1523215591.443845226]: RIGHT[0m
+[0m[ INFO] [1523215591.602083512]: Possible Directions:[0m
+[0m[ INFO] [1523215591.602121361]: STRAIGHT[0m
+[0m[ INFO] [1523215591.602135364]: LEFT[0m
+[0m[ INFO] [1523215591.602147262]: RIGHT[0m
+[0m[ INFO] [1523215591.765872783]: Possible Directions:[0m
+[0m[ INFO] [1523215591.765922932]: STRAIGHT[0m
+[0m[ INFO] [1523215591.765946509]: LEFT[0m
+[0m[ INFO] [1523215591.765961543]: RIGHT[0m
+[0m[ INFO] [1523215591.923354222]: Possible Directions:[0m
+[0m[ INFO] [1523215591.923394324]: STRAIGHT[0m
+[0m[ INFO] [1523215591.923419042]: LEFT[0m
+[0m[ INFO] [1523215591.923438770]: RIGHT[0m
+[0m[ INFO] [1523215592.084632297]: Possible Directions:[0m
+[0m[ INFO] [1523215592.084686552]: STRAIGHT[0m
+[0m[ INFO] [1523215592.084717058]: LEFT[0m
+[0m[ INFO] [1523215592.084748313]: RIGHT[0m
+[0m[ INFO] [1523215592.241720614]: Possible Directions:[0m
+[0m[ INFO] [1523215592.241756128]: STRAIGHT[0m
+[0m[ INFO] [1523215592.241768743]: LEFT[0m
+[0m[ INFO] [1523215592.241782789]: RIGHT[0m
+[0m[ INFO] [1523215592.402311778]: Possible Directions:[0m
+[0m[ INFO] [1523215592.402364375]: STRAIGHT[0m
+[0m[ INFO] [1523215592.402390936]: LEFT[0m
+[0m[ INFO] [1523215592.402418911]: RIGHT[0m
+[0m[ INFO] [1523215592.559245951]: Possible Directions:[0m
+[0m[ INFO] [1523215592.559318951]: STRAIGHT[0m
+[0m[ INFO] [1523215592.559361313]: LEFT[0m
+[0m[ INFO] [1523215592.559395106]: RIGHT[0m
+[0m[ INFO] [1523215592.879304287]: Possible Directions:[0m
+[0m[ INFO] [1523215592.879338842]: STRAIGHT[0m
+[0m[ INFO] [1523215592.879353543]: LEFT[0m
+[0m[ INFO] [1523215592.879367404]: RIGHT[0m
+[0m[ INFO] [1523215593.044323226]: Possible Directions:[0m
+[0m[ INFO] [1523215593.044371225]: STRAIGHT[0m
+[0m[ INFO] [1523215593.044387971]: LEFT[0m
+[0m[ INFO] [1523215593.044402813]: RIGHT[0m
+[0m[ INFO] [1523215593.199243505]: Possible Directions:[0m
+[0m[ INFO] [1523215593.199288738]: STRAIGHT[0m
+[0m[ INFO] [1523215593.199310961]: LEFT[0m
+[0m[ INFO] [1523215593.199346887]: RIGHT[0m
+[0m[ INFO] [1523215593.363074166]: Possible Directions:[0m
+[0m[ INFO] [1523215593.363128424]: STRAIGHT[0m
+[0m[ INFO] [1523215593.363146863]: LEFT[0m
+[0m[ INFO] [1523215593.363162636]: RIGHT[0m
+[0m[ INFO] [1523215593.514915711]: Possible Directions:[0m
+[0m[ INFO] [1523215593.514959697]: STRAIGHT[0m
+[0m[ INFO] [1523215593.514980655]: LEFT[0m
+[0m[ INFO] [1523215593.514999584]: RIGHT[0m
+[0m[ INFO] [1523215593.676548339]: Possible Directions:[0m
+[0m[ INFO] [1523215593.676591224]: STRAIGHT[0m
+[0m[ INFO] [1523215593.676609938]: LEFT[0m
+[0m[ INFO] [1523215593.676631441]: RIGHT[0m
+[0m[ INFO] [1523215593.835231255]: Possible Directions:[0m
+[0m[ INFO] [1523215593.835275369]: STRAIGHT[0m
+[0m[ INFO] [1523215593.835306711]: LEFT[0m
+[0m[ INFO] [1523215593.835327188]: RIGHT[0m
+[0m[ INFO] [1523215593.997820350]: Possible Directions:[0m
+[0m[ INFO] [1523215593.997864097]: STRAIGHT[0m
+[0m[ INFO] [1523215593.997896501]: LEFT[0m
+[0m[ INFO] [1523215593.997926522]: RIGHT[0m
+[0m[ INFO] [1523215595.110066547]: Possible Directions:[0m
+[0m[ INFO] [1523215595.110115553]: STRAIGHT[0m
+[0m[ INFO] [1523215595.110169375]: LEFT[0m
+[0m[ INFO] [1523215595.110250813]: RIGHT[0m
+[0m[ INFO] [1523215595.272165030]: Possible Directions:[0m
+[0m[ INFO] [1523215595.272210688]: STRAIGHT[0m
+[0m[ INFO] [1523215595.272243790]: LEFT[0m
+[0m[ INFO] [1523215595.272269307]: RIGHT[0m
+[0m[ INFO] [1523215595.431349698]: Possible Directions:[0m
+[0m[ INFO] [1523215595.431392980]: STRAIGHT[0m
+[0m[ INFO] [1523215595.431418850]: LEFT[0m
+[0m[ INFO] [1523215595.431443969]: RIGHT[0m
+[0m[ INFO] [1523215595.591448526]: Possible Directions:[0m
+[0m[ INFO] [1523215595.591487746]: STRAIGHT[0m
+[0m[ INFO] [1523215595.591514786]: LEFT[0m
+[0m[ INFO] [1523215595.591539345]: RIGHT[0m
+[0m[ INFO] [1523215595.759197005]: Possible Directions:[0m
+[0m[ INFO] [1523215595.759240123]: STRAIGHT[0m
+[0m[ INFO] [1523215595.759257695]: LEFT[0m
+[0m[ INFO] [1523215595.759273620]: RIGHT[0m
+[0m[ INFO] [1523215595.905765616]: Possible Directions:[0m
+[0m[ INFO] [1523215595.905802794]: STRAIGHT[0m
+[0m[ INFO] [1523215595.905815648]: LEFT[0m
+[0m[ INFO] [1523215595.905836067]: RIGHT[0m
+[0m[ INFO] [1523215596.076390189]: Possible Directions:[0m
+[0m[ INFO] [1523215596.076436773]: STRAIGHT[0m
+[0m[ INFO] [1523215596.076458795]: LEFT[0m
+[0m[ INFO] [1523215596.076483484]: RIGHT[0m
+[0m[ INFO] [1523215596.226224444]: Possible Directions:[0m
+[0m[ INFO] [1523215596.226259209]: STRAIGHT[0m
+[0m[ INFO] [1523215596.226272237]: LEFT[0m
+[0m[ INFO] [1523215596.226291393]: RIGHT[0m
+[0m[ INFO] [1523215596.395113416]: Possible Directions:[0m
+[0m[ INFO] [1523215596.395148259]: STRAIGHT[0m
+[0m[ INFO] [1523215596.395161010]: LEFT[0m
+[0m[ INFO] [1523215596.395172426]: RIGHT[0m
+[0m[ INFO] [1523215596.546170927]: Possible Directions:[0m
+[0m[ INFO] [1523215596.546214345]: STRAIGHT[0m
+[0m[ INFO] [1523215596.546227259]: LEFT[0m
+[0m[ INFO] [1523215596.546241789]: RIGHT[0m
+[0m[ INFO] [1523215596.707643051]: Possible Directions:[0m
+[0m[ INFO] [1523215596.707686363]: STRAIGHT[0m
+[0m[ INFO] [1523215596.707717232]: LEFT[0m
+[0m[ INFO] [1523215596.707742179]: RIGHT[0m
+[0m[ INFO] [1523215596.861830454]: Possible Directions:[0m
+[0m[ INFO] [1523215596.861874893]: STRAIGHT[0m
+[0m[ INFO] [1523215596.861895731]: LEFT[0m
+[0m[ INFO] [1523215596.861917620]: RIGHT[0m
+[0m[ INFO] [1523215597.029351285]: Possible Directions:[0m
+[0m[ INFO] [1523215597.029384058]: STRAIGHT[0m
+[0m[ INFO] [1523215597.029400389]: LEFT[0m
+[0m[ INFO] [1523215597.029437119]: RIGHT[0m
+[0m[ INFO] [1523215597.348767267]: Possible Directions:[0m
+[0m[ INFO] [1523215597.348819251]: STRAIGHT[0m
+[0m[ INFO] [1523215597.348848800]: LEFT[0m
+[0m[ INFO] [1523215597.348878756]: RIGHT[0m
+[0m[ INFO] [1523215597.503204880]: Possible Directions:[0m
+[0m[ INFO] [1523215597.503253442]: STRAIGHT[0m
+[0m[ INFO] [1523215597.503284358]: LEFT[0m
+[0m[ INFO] [1523215597.503314100]: RIGHT[0m
+[0m[ INFO] [1523215597.667548831]: Possible Directions:[0m
+[0m[ INFO] [1523215597.667599867]: STRAIGHT[0m
+[0m[ INFO] [1523215597.667624127]: LEFT[0m
+[0m[ INFO] [1523215597.667649742]: RIGHT[0m
+[0m[ INFO] [1523215597.821802070]: Possible Directions:[0m
+[0m[ INFO] [1523215597.821891878]: STRAIGHT[0m
+[0m[ INFO] [1523215597.821934353]: LEFT[0m
+[0m[ INFO] [1523215597.821960109]: RIGHT[0m
+[0m[ INFO] [1523215598.939522944]: Possible Directions:[0m
+[0m[ INFO] [1523215598.939573210]: STRAIGHT[0m
+[0m[ INFO] [1523215598.939601623]: LEFT[0m
+[0m[ INFO] [1523215598.939627707]: RIGHT[0m
+[0m[ INFO] [1523215599.574264878]: Possible Directions:[0m
+[0m[ INFO] [1523215599.574308285]: STRAIGHT[0m
+[0m[ INFO] [1523215599.574326415]: LEFT[0m
+[0m[ INFO] [1523215599.574350783]: RIGHT[0m
+[0m[ INFO] [1523215599.815481423]: Reconfigure Request: 0.560000 4.000000 15.000000[0m
+[0m[ INFO] [1523215599.815828293]: velocity is 0.560000 
+[0m
+[0m[ INFO] [1523215599.815881083]: max_turn_rate_ is 4.000000 
+[0m
+[0m[ INFO] [1523215599.815924138]: line_row_location_ is 230 
+[0m
+[0m[ INFO] [1523215599.815972821]: LF_k_p_ is 0.320000 
+[0m
+[0m[ INFO] [1523215599.816005466]: LF_k_i_ is 0.002000 
+[0m
+[0m[ INFO] [1523213] restarting process
+[1mprocess[networking-13]: started with pid [17276][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [17338][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [17400][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [17462][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [17532][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [17594][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [17657][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [17769][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [17859][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [17962][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [18056][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [18118][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [18180][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [18243][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [18312][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [18375][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [18437][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [18499][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [18561][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [18623][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [18719][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [18781][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [18891][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [18994][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [19076][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [19138][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [19200][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [19270][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [19332][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [19396][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [19477][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [19555][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [19619][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [19683][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [19775][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [19909][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [19974][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [20036][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [20098][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [20161][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [20231][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [20294][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [20356][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [20418][0m
+[networking-13] restarting process
+[1mprocess[networking-1315599.816034447]: LF_k_d_ is 0.090000 
+[0m
+[0m[ INFO] [1523215599.816113898]: LF_windup_limit_ is 0.800000 
+[0m
+[0m[ INFO] [1523215599.816147893]: BD_k_p_ is 0.030000 
+[0m
+[0m[ INFO] [1523215599.816179325]: BD_k_i_ is 0.000160 
+[0m
+[0m[ INFO] [1523215599.816210934]: BD_k_d_ is 0.001300 
+[0m
+[0m[ INFO] [1523215599.816245573]: BD_windup_limit_ is 1.500000 
+[0m
+[0m[ INFO] [1523215599.816277937]: BD_deadzone_ is 0.030000 
+[0m
+[0m[ INFO] [1523215599.902910378]: Possible Directions:[0m
+[0m[ INFO] [1523215599.902953812]: STRAIGHT[0m
+[0m[ INFO] [1523215599.902977104]: LEFT[0m
+[0m[ INFO] [1523215599.903000930]: RIGHT[0m
+[0m[ INFO] [1523215600.057199204]: Possible Directions:[0m
+[0m[ INFO] [1523215600.057246740]: STRAIGHT[0m
+[0m[ INFO] [1523215600.057265485]: LEFT[0m
+[0m[ INFO] [1523215600.057295318]: RIGHT[0m
+[0m[ INFO] [1523215600.209850824]: Possible Directions:[0m
+[0m[ INFO] [1523215600.209886615]: STRAIGHT[0m
+[0m[ INFO] [1523215600.209900028]: LEFT[0m
+[0m[ INFO] [1523215600.209911238]: RIGHT[0m
+[0m[ INFO] [1523215600.383227726]: Possible Directions:[0m
+[0m[ INFO] [1523215600.383276392]: STRAIGHT[0m
+[0m[ INFO] [1523215600.383310436]: LEFT[0m
+[0m[ INFO] [1523215600.383336697]: RIGHT[0m
+[0m[ INFO] [1523215600.698696358]: Possible Directions:[0m
+[0m[ INFO] [1523215600.698743032]: STRAIGHT[0m
+[0m[ INFO] [1523215600.698761951]: LEFT[0m
+[0m[ INFO] [1523215600.698785336]: RIGHT[0m
+[0m[ INFO] [1523215603.010650608]: Reconfigure Request: 0.560000 4.000000 15.000000[0m
+[0m[ INFO] [1523215603.010853772]: velocity is 0.560000 
+[0m
+[0m[ INFO] [1523215603.010875897]: max_turn_rate_ is 4.000000 
+[0m
+[0m[ INFO] [1523215603.010893532]: line_row_location_ is 230 
+[0m
+[0m[ INFO] [1523215603.010908582]: LF_k_p_ is 0.320000 
+[0m
+[0m[ INFO] [1523215603.010936946]: LF_k_i_ is 0.002000 
+[0m
+[0m[ INFO] [1523215603.010962606]: LF_k_d_ is 0.090000 
+[0m
+[0m[ INFO] [1523215603.010989641]: LF_windup_limit_ is 0.800000 
+[0m
+[0m[ INFO] [1523215603.011017959]: BD_k_p_ is 0.030000 
+[0m
+[0m[ INFO] [1523215603.011051477]: BD_k_i_ is 0.000160 
+[0m
+[0m[ INFO] [1523215603.011078503]: BD_k_d_ is 0.001300 
+[0m
+[0m[ INFO] [1523215603.011102504]: BD_windup_limit_ is 1.500000 
+[0m
+[0m[ INFO] [1523215603.011122956]: BD_deadzone_ is 0.030000 
+[0m
+[0m[ INFO] [1523215603.879094374]: Possible Directions:[0m
+[0m[ INFO] [1523215603.879140070]: STRAIGHT[0m
+[0m[ INFO] [1523215603.879163691]: LEFT[0m
+[0m[ INFO] [1523215603.879190916]: RIGHT[0m
+[0m[ INFO] [1523215604.367047398]: Possible Directions:[0m
+[0m[ INFO] [1523215604.367094519]: STRAIGHT[0m
+[0m[ INFO] [1523215604.367117425]: LEFT[0m
+[0m[ INFO] [1523215604.367144744]: RIGHT[0m
+[0m[ INFO] [1523215604.684142606]: Possible Directions:[0m
+[0m[ INFO] [1523215604.684178218]: STRAIGHT[0m
+[0m[ INFO] [1523215604.684190245]: LEFT[0m
+[0m[ INFO] [1523215604.684201280]: RIGHT[0m
+[0m[ INFO] [1523215605.955679504]: Possible Directions:[0m
+[0m[ INFO] [1523215605.955736465]: STRAIGHT[0m
+[0m[ INFO] [1523215605.955769283]: LEFT[0m
+[0m[ INFO] [1523215605.955803710]: RIGHT[0m
+[0m[ INFO] [1523215606.111112136]: Possible Directions:[0m
+[0m[ INFO] [1523215606.111153180]: STRAIGHT[0m
+[0m[ INFO] [1523215606.111180689]: LEFT[0m
+[0m[ INFO] [1523215606.111204739]: RIGHT[0m
+[0m[ INFO] [1523215606.270945226]: Possible Directions:[0m
+[0m[ INFO] [1523215606.270988665]: STRAIGHT[0m
+[0m[ INFO] [1523215606.271013331]: LEFT[0m
+[0m[ INFO] [1523215606.271034519]: RIGHT[0m
+[0m[ INFO] [1523215606.431381049]: Possible Directions:[0m
+[0m[ INFO] [1523215606.431428523]: STRAIGHT[0m
+[0m[ INFO] [1523215606.431459316]: LEFT[0m
+[0m[ INFO] [1523215606.431483695]: RIGHT[0m
+[0m[ INFO] [1523215606.593001776]: Possible Directions:[0m
+[0m[ INFO] [1523215606.593042861]: STRAIGHT[0m
+[0m[ INFO] [1523215606.593065176]: LEFT[0m
+[0m[ INFO] [1523215606.593084656]: RIGHT[0m
+[0m[ INFO] [1523215606.751486850]: Possible Directions:[0m
+[0m[ INFO] [1523215606.751537628]: STRAIGHT[0m
+[0m[ INFO] [1523215606.751561586]: LEFT[0m
+[0m[ INFO] [1523215606.751589639]: RIGHT[0m
+[0m[ INFO] [1523215606.913526181]: Possible Directions:[0m
+[0m[ INFO] [1523215606.913590750]: STRAIGHT[0m
+[0m[ INFO] [1523215606.913620867]: LEFT[0m
+[0m[ INFO] [1523215606.913654499]: RIGHT[0m
+[0m[ INFO] [1523215607.065976325]: Possible Directions:[0m
+[0m[ INFO] [1523215607.066011522]: STRAIGHT[0m
+[0m[ INFO] [1523215607.066025353]: LEFT[0m
+[0m[ INFO] [1523215607.066039331]: RIGHT[0m
+[0m[ INFO] [1523215607.230941484]: Possible Directions:[0m
+[0m[ INFO] [1523215607.230989455]: STRAIGHT[0m
+[0m[ INFO] [1523215607.231008879]: LEFT[0m
+[0m[ INFO] [1523215607.231026507]: RIGHT[0m
+[0m[ INFO] [1523215607.389911571]: Possible Directions:[0m
+[0m[ INFO] [1523215607.389968964]: STRAIGHT[0m
+[0m[ INFO] [1523215607.390011701]: LEFT[0m
+[0m[ INFO] [1523215607.390048484]: RIGHT[0m
+[0m[ INFO] [1523215607.554153966]: Possible Directions:[0m
+[0m[ INFO] [1523215607.554194065]: STRAIGHT[0m
+[0m[ INFO] [1523215607.554209904]: LEFT[0m
+[0m[ INFO] [1523215607.554240036]: RIGHT[0m
+[0m[ INFO] [1523215607.706976381]: Possible Directions:[0m
+[0m[ INFO] [1523215607.707021291]: STRAIGHT[0m
+[0m[ INFO] [1523215607.707042365]: LEFT[0m
+[0m[ INFO] [1523215607.707068782]: RIGHT[0m
+[0m[ INFO] [1523215607.873759625]: Possible Directions:[0m
+[0m[ INFO] [1523215607.873794026]: STRAIGHT[0m
+[0m[ INFO] [1523215607.873807632]: LEFT[0m
+[0m[ INFO] [1523215607.873822374]: RIGHT[0m
+[0m[ INFO] [1523215608.028077002]: Possible Directions:[0m
+[0m[ INFO] [1523215608.028126158]: STRAIGHT[0m
+[0m[ INFO] [1523215608.028145570]: LEFT[0m
+[0m[ INFO] [1523215608.028165377]: RIGHT[0m
+[0m[ INFO] [1523215608.183462705]: Possible Directions:[0m
+[0m[ INFO] [1523215608.183498364]: STRAIGHT[0m
+[0m[ INFO] [1523215608.183524634]: LEFT[0m
+[0m[ INFO] [1523215608.183548159]: RIGHT[0m
+[0m[ INFO] [1523215608.343624042]: Possible Directions:[0m
+[0m[ INFO] [1523215608.343663015]: STRAIGHT[0m
+[0m[ INFO] [1523215608.343685964]: LEFT[0m
+[0m[ INFO] [1523215608.343711489]: RIGHT[0m
+[0m[ INFO] [1523215608.503785202]: Possible Directions:[0m
+[0m[ INFO] [1523215608.503839726]: STRAIGHT[0m
+[0m[ INFO] [1523215608.503863118]: LEFT[0m
+[0m[ INFO] [1523215608.503887317]: RIGHT[0m
+[0m[ INFO] [1523215608.671946332]: Possible Directions:[0m
+[0m[ INFO] [1523215608.672040506]: STRAIGHT[0m
+[0m[ INFO] [1523215608.672114314]: LEFT[0m
+[0m[ INFO] [1523215608.672182630]: RIGHT[0m
+[0m[ INFO] [1523215608.822063081]: Possible Directions:[0m
+[0m[ INFO] [1523215608.822106046]: STRAIGHT[0m
+[0m[ INFO] [1523215608.822127768]: LEFT[0m
+[0m[ INFO] [1523215608.822156044]: RIGHT[0m
+[0m[ INFO] [1523215608.994837192]: Possible Directions:[0m
+[0m[ INFO] [1523215608.994882192]: STRAIGHT[0m
+[0m[ INFO] [1523215608.994903437]: LEFT[0m
+[0m[ INFO] [1523215608.994921131]: RIGHT[0m
+[0m[ INFO] [1523215609.143418249]: Possible Directions:[0m
+[0m[ INFO] [1523215609.143453813]: STRAIGHT[0m
+[0m[ INFO] [1523215609.143467166]: LEFT[0m
+[0m[ INFO] [1523215609.143484334]: RIGHT[0m
+[0m[ INFO] [1523215609.306503079]: Possible Directions:[0m
+[0m[ INFO] [1523215609.306567378]: STRAIGHT[0m
+[0m[ INFO] [1523215609.306594954]: LEFT[0m
+[0m[ INFO] [1523215609.306640532]: RIGHT[0m
+[0m[ INFO] [1523215609.459913241]: Possible Directions:[0m
+[0m[ INFO] [1523215609.459964786]: STRAIGHT[0m
+[0m[ INFO] [1523215609.459992211]: LEFT[0m
+[0m[ INFO] [1523215609.460019225]: RIGHT[0m
+[0m[ INFO] [1523215609.627526824]: Possible Directions:[0m
+[0m[ INFO] [1523215609.627616864]: STRAIGHT[0m
+[0m[ INFO] [1523215609.627657782]: LEFT[0m
+[0m[ INFO] [1523215609.627727831]: RIGHT[0m
+[0m[ INFO] [1523215609.779552133]: Possible Directions:[0m
+[0m[ INFO] [1523215609.779590579]: STRAIGHT[0m
+[0m[ INFO] [1523215609.779612519]: LEFT[0m
+[0m[ INFO] [1523215609.779634145]: RIGHT[0m
+[0m[ INFO] [1523215609.946704484]: Possible Directions:[0m
+[0m[ INFO] [1523215609.946763933]: STRAIGHT[0m
+[0m[ INFO] [1523215609.946796417]: LEFT[0m
+[0m[ INFO] [1523215609.946824573]: RIGHT[0m
+[0m[ INFO] [1523215610.097775427]: Possible Directions:[0m
+[0m[ INFO] [1523215610.097856139]: STRAIGHT[0m
+[0m[ INFO] [1523215610.097870461]: LEFT[0m
+[0m[ INFO] [1523215610.097881880]: RIGHT[0m
+[0m[ INFO] [1523215610.269363308]: Possible Directions:[0m
+[0m[ INFO] [1523215610.269466551]: STRAIGHT[0m
+[0m[ INFO] [1523215610.269505527]: LEFT[0m
+[0m[ INFO] [1523215610.269525614]: RIGHT[0m
+[0m[ INFO] [1523215610.417889927]: Possible Directions:[0m
+[0m[ INFO] [1523215610.417927355]: STRAIGHT[0m
+[0m[ INFO] [1523215610.417949378]: LEFT[0m
+[0m[ INFO] [1523215610.417970096]: RIGHT[0m
+[0m[ INFO] [1523215610.586092740]: Possible Directions:[0m
+[0m[ INFO] [1523215610.586135138]: STRAIGHT[0m
+[0m[ INFO] [1523215610.586158815]: LEFT[0m
+[0m[ INFO] [1523215610.586180437]: RIGHT[0m
+[0m[ INFO] [1523215610.734080518]: Possible Directions:[0m
+[0m[ INFO] [1523215610.734129333]: STRAIGHT[0m
+[0m[ INFO] [1523215610.734160349]: LEFT[0m
+[0m[ INFO] [1523215610.734185113]: RIGHT[0m
+[0m[ INFO] [1523215610.906291140]: Possible Directions:[0m
+[0m[ INFO] [1523215610.906357679]: STRAIGHT[0m
+[0m[ INFO] [1523215610.906411275]: LEFT[0m
+[0m[ INFO] [1523215610.906449585]: RIGHT[0m
+[0m[ INFO] [1523215611.054676138]: Possible Directions:[0m
+[0m[ INFO] [1523215611.054712457]: STRAIGHT[0m
+[0m[ INFO] [1523215611.054727585]: LEFT[0m
+[0m[ INFO] [1523215611.054741959]: RIGHT[0m
+[0m[ INFO] [1523215611.214962741]: Possible Directions:[0m
+[0m[ INFO] [1523215611.215006736]: STRAIGHT[0m
+[0m[ INFO] [1523215611.215027407]: LEFT[0m
+[0m[ INFO] [1523215611.215048070]: RIGHT[0m
+[0m[ INFO] [1523215611.373758673]: Possible Directions:[0m
+[0m[ INFO] [1523215611.373805755]: STRAIGHT[0m
+[0m[ INFO] [1523215611.373863426]: LEFT[0m
+[0m[ INFO] [1523215611.373883492]: RIGHT[0m
+[0m[ INFO] [1523215611.533856821]: Possible Directions:[0m
+[0m[ INFO] [1523215611.533898893]: STRAIGHT[0m
+[0m[ INFO] [1523215611.533925611]: LEFT[0m
+[0m[ INFO] [1523215611.533948296]: RIGHT[0m
+[0m[ INFO] [1523215611.700543735]: Possible Directions:[0m
+[0m[ INFO] [1523215611.700592097]: STRAIGHT[0m
+[0m[ INFO] [1523215611.700612236]: LEFT[0m
+[0m[ INFO] [1523215611.700639039]: RIGHT[0m
+[0m[ INFO] [1523215611.851343193]: Possible Directions:[0m
+[0m[ INFO] [1523215611.851382070]: STRAIGHT[0m
+[0m[ INFO] [1523215611.851413837]: LEFT[0m
+[0m[ INFO] [1523215611.851433546]: RIGHT[0m
+[0m[ INFO] [1523215612.018693141]: Possible Directions:[0m
+[0m[ INFO] [1523215612.018758453]: STRAIGHT[0m
+[0m[ INFO] [1523215612.018786844]: LEFT[0m
+[0m[ INFO] [1523215612.018821857]: RIGHT[0m
+[0m[ INFO] [1523215612.169767212]: Possible Directions:[0m
+[0m[ INFO] [1523215612.169802083]: STRAIGHT[0m
+[0m[ INFO] [1523215612.169814553]: LEFT[0m
+[0m[ INFO] [1523215612.169825433]: RIGHT[0m
+[0m[ INFO] [1523215612.338882380]: Possible Directions:[0m
+[0m[ INFO] [1523215612.338958480]: STRAIGHT[0m
+[0m[ INFO] [1523215612.338997268]: LEFT[0m
+[0m[ INFO] [1523215612.339032959]: RIGHT[0m
+[0m[ INFO] [1523215612.489926973]: Possible Directions:[0m
+[0m[ INFO] [1523215612.489965106]: STRAIGHT[0m
+[0m[ INFO] [1523215612.489988231]: LEFT[0m
+[0m[ INFO] [1523215612.490009775]: RIGHT[0m
+[0m[ INFO] [1523215612.659316553]: Possible Directions:[0m
+[0m[ INFO] [1523215612.659378327]: STRAIGHT[0m
+[0m[ INFO] [1523215612.659403519]: LEFT[0m
+[0m[ INFO] [1523215612.659444496]: RIGHT[0m
+[0m[ INFO] [1523215612.805638220]: Possible Directions:[0m
+[0m[ INFO] [1523215612.805681525]: STRAIGHT[0m
+[0m[ INFO] [1523215612.805710207]: LEFT[0m
+[0m[ INFO] [1523215612.805731472]: RIGHT[0m
+[0m[ INFO] [1523215612.974813970]: Possible Directions:[0m
+[0m[ INFO] [1523215612.974872543]: STRAIGHT[0m
+[0m[ INFO] [1523215612.974899741]: LEFT[0m
+[0m[ INFO] [1523215612.974927956]: RIGHT[0m
+[0m[ INFO] [1523215613.126253384]: Possible Directions:[0m
+[0m[ INFO] [1523215613.126299638]: STRAIGHT[0m
+[0m[ INFO] [1523215613.126328353]: LEFT[0m
+[0m[ INFO] [1523215613.126356312]: RIGHT[0m
+[0m[ INFO] [1523215613.296630923]: Possible Directions:[0m
+[0m[ INFO] [1523215613.296682328]: STRAIGHT[0m
+[0m[ INFO] [15]: started with pid [20480][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [20581][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [20685][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [20819][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [20882][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [20944][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [21006][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [21076][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [21138][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [21201][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [21263][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [21325][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [21389][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [21451][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [21513][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [21575][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [21710][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [21780][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [21842][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [21904][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [21967][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [22036][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [22099][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [22161][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [22223][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [22285][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [22347][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [22417][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [22479][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [22542][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [22605][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [22712][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [22803][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [22865][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [22927][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [22990][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [23059][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [23122][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [23184][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [23246][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [23308][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [23370][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [23433][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [23569][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [23631][0m
+[networking-13] 23215613.296706295]: LEFT[0m
+[0m[ INFO] [1523215613.296792405]: RIGHT[0m
+[0m[ INFO] [1523215613.445644163]: Possible Directions:[0m
+[0m[ INFO] [1523215613.445677705]: STRAIGHT[0m
+[0m[ INFO] [1523215613.445691440]: LEFT[0m
+[0m[ INFO] [1523215613.445714965]: RIGHT[0m
+[0m[ INFO] [1523215613.613402817]: Possible Directions:[0m
+[0m[ INFO] [1523215613.613467466]: STRAIGHT[0m
+[0m[ INFO] [1523215613.613484365]: LEFT[0m
+[0m[ INFO] [1523215613.613509569]: RIGHT[0m
+[0m[ INFO] [1523215613.767127857]: Possible Directions:[0m
+[0m[ INFO] [1523215613.767175001]: STRAIGHT[0m
+[0m[ INFO] [1523215613.767205689]: LEFT[0m
+[0m[ INFO] [1523215613.767232060]: RIGHT[0m
+[0m[ INFO] [1523215613.929552908]: Possible Directions:[0m
+[0m[ INFO] [1523215613.929586131]: STRAIGHT[0m
+[0m[ INFO] [1523215613.929605380]: LEFT[0m
+[0m[ INFO] [1523215613.929629720]: RIGHT[0m
+[0m[ INFO] [1523215614.083144528]: Possible Directions:[0m
+[0m[ INFO] [1523215614.083193972]: STRAIGHT[0m
+[0m[ INFO] [1523215614.083218505]: LEFT[0m
+[0m[ INFO] [1523215614.083240656]: RIGHT[0m
+[0m[ INFO] [1523215614.245236287]: Possible Directions:[0m
+[0m[ INFO] [1523215614.245268361]: STRAIGHT[0m
+[0m[ INFO] [1523215614.245281571]: LEFT[0m
+[0m[ INFO] [1523215614.245308043]: RIGHT[0m
+[0m[ INFO] [1523215614.402040129]: Possible Directions:[0m
+[0m[ INFO] [1523215614.402075646]: STRAIGHT[0m
+[0m[ INFO] [1523215614.402092454]: LEFT[0m
+[0m[ INFO] [1523215614.402119448]: RIGHT[0m
+[0m[ INFO] [1523215614.565857741]: Possible Directions:[0m
+[0m[ INFO] [1523215614.565894712]: STRAIGHT[0m
+[0m[ INFO] [1523215614.565925009]: LEFT[0m
+[0m[ INFO] [1523215614.883139286]: Possible Directions:[0m
+[0m[ INFO] [1523215614.883175236]: STRAIGHT[0m
+[0m[ INFO] [1523215614.883201704]: LEFT[0m
+[0m[ INFO] [1523215615.358707739]: Possible Directions:[0m
+[0m[ INFO] [1523215615.358747628]: STRAIGHT[0m
+[0m[ INFO] [1523215615.358761417]: LEFT[0m
+[0m[ INFO] [1523215615.524173938]: Possible Directions:[0m
+[0m[ INFO] [1523215615.524215500]: STRAIGHT[0m
+[0m[ INFO] [1523215615.524231096]: LEFT[0m
+[0m[ INFO] [1523215615.677982932]: Possible Directions:[0m
+[0m[ INFO] [1523215615.678023839]: STRAIGHT[0m
+[0m[ INFO] [1523215615.678049415]: LEFT[0m
+[0m[ INFO] [1523215615.678070426]: RIGHT[0m
+[0m[ INFO] [1523215615.998906881]: Possible Directions:[0m
+[0m[ INFO] [1523215615.998983615]: STRAIGHT[0m
+[0m[ INFO] [1523215615.999018772]: LEFT[0m
+[0m[ INFO] [1523215615.999047144]: RIGHT[0m
+[0m[ INFO] [1523215616.158056331]: Possible Directions:[0m
+[0m[ INFO] [1523215616.158112005]: STRAIGHT[0m
+[0m[ INFO] [1523215616.158132482]: LEFT[0m
+[0m[ INFO] [1523215616.158160915]: RIGHT[0m
+[0m[ INFO] [1523215616.313882619]: Possible Directions:[0m
+[0m[ INFO] [1523215616.313921514]: STRAIGHT[0m
+[0m[ INFO] [1523215616.313948328]: LEFT[0m
+[0m[ INFO] [1523215616.313972782]: RIGHT[0m
+[0m[ INFO] [1523215618.071331233]: Possible Directions:[0m
+[0m[ INFO] [1523215618.071378043]: STRAIGHT[0m
+[0m[ INFO] [1523215618.071401815]: LEFT[0m
+[0m[ INFO] [1523215618.071426894]: RIGHT[0m
+[0m[ INFO] [1523215618.552760805]: Possible Directions:[0m
+[0m[ INFO] [1523215618.552812747]: STRAIGHT[0m
+[0m[ INFO] [1523215618.552842963]: LEFT[0m
+[0m[ INFO] [1523215618.552879042]: RIGHT[0m
+[0m[ INFO] [1523215618.706329194]: Possible Directions:[0m
+[0m[ INFO] [1523215618.706375630]: STRAIGHT[0m
+[0m[ INFO] [1523215618.706402203]: LEFT[0m
+[0m[ INFO] [1523215618.706424079]: RIGHT[0m
+[0m[ INFO] [1523215618.871370742]: Possible Directions:[0m
+[0m[ INFO] [1523215618.871404952]: STRAIGHT[0m
+[0m[ INFO] [1523215618.871418361]: LEFT[0m
+[0m[ INFO] [1523215618.871432843]: RIGHT[0m
+[0m[ INFO] [1523215619.662948500]: Possible Directions:[0m
+[0m[ INFO] [1523215619.662997311]: STRAIGHT[0m
+[0m[ INFO] [1523215619.663022251]: LEFT[0m
+[0m[ INFO] [1523215619.663049692]: RIGHT[0m
+[0m[ INFO] [1523215620.629089266]: Possible Directions:[0m
+[0m[ INFO] [1523215620.629152530]: STRAIGHT[0m
+[0m[ INFO] [1523215620.629191609]: LEFT[0m
+[0m[ INFO] [1523215620.629221289]: RIGHT[0m
+[0m[ INFO] [1523215620.786453286]: Possible Directions:[0m
+[0m[ INFO] [1523215620.786523090]: STRAIGHT[0m
+[0m[ INFO] [1523215620.786580067]: LEFT[0m
+[0m[ INFO] [1523215620.786623019]: RIGHT[0m
+[0m[ INFO] [1523215620.940794788]: Possible Directions:[0m
+[0m[ INFO] [1523215620.940850868]: STRAIGHT[0m
+[0m[ INFO] [1523215620.940874797]: LEFT[0m
+[0m[ INFO] [1523215621.104019584]: Possible Directions:[0m
+[0m[ INFO] [1523215621.104062044]: STRAIGHT[0m
+[0m[ INFO] [1523215621.104082820]: LEFT[0m
+[0m[ INFO] [1523215621.104098191]: RIGHT[0m
+[0m[ INFO] [1523215621.259837473]: Possible Directions:[0m
+[0m[ INFO] [1523215621.259873233]: STRAIGHT[0m
+[0m[ INFO] [1523215621.259886196]: LEFT[0m
+[0m[ INFO] [1523215621.421306810]: Possible Directions:[0m
+[0m[ INFO] [1523215621.421353687]: STRAIGHT[0m
+[0m[ INFO] [1523215621.421378872]: LEFT[0m
+[0m[ INFO] [1523215621.585288643]: Possible Directions:[0m
+[0m[ INFO] [1523215621.585335911]: STRAIGHT[0m
+[0m[ INFO] [1523215621.585360276]: LEFT[0m
+[0m[ INFO] [1523215621.739367079]: Possible Directions:[0m
+[0m[ INFO] [1523215621.739416790]: STRAIGHT[0m
+[0m[ INFO] [1523215621.739444576]: LEFT[0m
+[0m[ INFO] [1523215621.739471056]: RIGHT[0m
+[0m[ INFO] [1523215622.059413560]: Possible Directions:[0m
+[0m[ INFO] [1523215622.059459743]: STRAIGHT[0m
+[0m[ INFO] [1523215622.059486960]: LEFT[0m
+[0m[ INFO] [1523215622.059508435]: RIGHT[0m
+[0m[ INFO] [1523215622.373621274]: Possible Directions:[0m
+[0m[ INFO] [1523215622.373657980]: STRAIGHT[0m
+[0m[ INFO] [1523215622.373670737]: LEFT[0m
+[0m[ INFO] [1523215622.373697041]: RIGHT[0m
+[0m[ INFO] [1523215623.009781067]: Possible Directions:[0m
+[0m[ INFO] [1523215623.009818193]: STRAIGHT[0m
+[0m[ INFO] [1523215623.009831966]: LEFT[0m
+[0m[ INFO] [1523215623.009846273]: RIGHT[0m
+[0m[ INFO] [1523215623.170996188]: Possible Directions:[0m
+[0m[ INFO] [1523215623.171029756]: STRAIGHT[0m
+[0m[ INFO] [1523215623.171042090]: LEFT[0m
+[0m[ INFO] [1523215623.171053661]: RIGHT[0m
+[0m[ INFO] [1523215623.329725188]: Possible Directions:[0m
+[0m[ INFO] [1523215623.329759614]: STRAIGHT[0m
+[0m[ INFO] [1523215623.329772042]: LEFT[0m
+[0m[ INFO] [1523215623.329783323]: RIGHT[0m
+[0m[ INFO] [1523215623.502446601]: Possible Directions:[0m
+[0m[ INFO] [1523215623.502495117]: STRAIGHT[0m
+[0m[ INFO] [1523215623.502514810]: LEFT[0m
+[0m[ INFO] [1523215623.502531806]: RIGHT[0m
+[0m[ INFO] [1523215623.649725109]: Possible Directions:[0m
+[0m[ INFO] [1523215623.649761966]: STRAIGHT[0m
+[0m[ INFO] [1523215623.649819640]: LEFT[0m
+[0m[ INFO] [1523215623.649840832]: RIGHT[0m
+[0m[ INFO] [1523215624.139156578]: Possible Directions:[0m
+[0m[ INFO] [1523215624.139211962]: STRAIGHT[0m
+[0m[ INFO] [1523215624.139247602]: RIGHT[0m
+[0m[ INFO] [1523215624.285798814]: Possible Directions:[0m
+[0m[ INFO] [1523215624.285841363]: STRAIGHT[0m
+[0m[ INFO] [1523215624.285854605]: LEFT[0m
+[0m[ INFO] [1523215624.285870631]: RIGHT[0m
+[0m[ INFO] [1523215624.605357865]: Possible Directions:[0m
+[0m[ INFO] [1523215624.605394818]: STRAIGHT[0m
+[0m[ INFO] [1523215624.605429418]: RIGHT[0m
+[0m[ INFO] [1523215625.090984078]: Possible Directions:[0m
+[0m[ INFO] [1523215625.091017230]: STRAIGHT[0m
+[0m[ INFO] [1523215625.091032522]: RIGHT[0m
+[0m[ INFO] [1523215625.241665307]: Possible Directions:[0m
+[0m[ INFO] [1523215625.241719886]: STRAIGHT[0m
+[0m[ INFO] [1523215625.241747030]: RIGHT[0m
+[0m[ INFO] [1523215625.404037792]: Possible Directions:[0m
+[0m[ INFO] [1523215625.404077704]: STRAIGHT[0m
+[0m[ INFO] [1523215625.404104647]: LEFT[0m
+[0m[ INFO] [1523215625.404129603]: RIGHT[0m
+[0m[ INFO] [1523215626.201576671]: Possible Directions:[0m
+[0m[ INFO] [1523215626.201611799]: STRAIGHT[0m
+[0m[ INFO] [1523215626.201624540]: LEFT[0m
+[0m[ INFO] [1523215626.201642901]: RIGHT[0m
+[0m[ INFO] [1523215626.681089252]: Possible Directions:[0m
+[0m[ INFO] [1523215626.681141074]: STRAIGHT[0m
+[0m[ INFO] [1523215626.681175323]: LEFT[0m
+[0m[ INFO] [1523215626.681200838]: RIGHT[0m
+[0m[ INFO] [15232156restarting process
+[1mprocess[networking-13]: started with pid [23693][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [23755][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [23817][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [23880][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [23942][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [24004][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [24076][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [24138][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [24201][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [24263][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [24400][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [24462][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [24524][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [24586][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [24656][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [24718][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [24781][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [24868][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [24980][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [25042][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [25104][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [25166][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [25248][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [25373][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [25470][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [25534][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [25598][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [25699][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [25761][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [25823][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [25925][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [26030][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [26092][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [26154][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [26217][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [26298][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [26427][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [26489][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [26551][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [26613][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [26683][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [26745][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [26838][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [26952][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: s27.000390595]: Possible Directions:[0m
+[0m[ INFO] [1523215627.000458608]: STRAIGHT[0m
+[0m[ INFO] [1523215627.000482406]: LEFT[0m
+[0m[ INFO] [1523215627.000507647]: RIGHT[0m
+[0m[ INFO] [1523215627.158994567]: Possible Directions:[0m
+[0m[ INFO] [1523215627.159035495]: STRAIGHT[0m
+[0m[ INFO] [1523215627.159060495]: LEFT[0m
+[0m[ INFO] [1523215627.159087037]: RIGHT[0m
+[0m[ INFO] [1523215628.342605847]: Reconfigure Request: 0.800000 4.000000 15.000000[0m
+[0m[ INFO] [1523215628.342831050]: velocity is 0.800000 
+[0m
+[0m[ INFO] [1523215628.342852908]: max_turn_rate_ is 4.000000 
+[0m
+[0m[ INFO] [1523215628.342869579]: line_row_location_ is 230 
+[0m
+[0m[ INFO] [1523215628.342895825]: LF_k_p_ is 0.320000 
+[0m
+[0m[ INFO] [1523215628.342928328]: LF_k_i_ is 0.002000 
+[0m
+[0m[ INFO] [1523215628.342957195]: LF_k_d_ is 0.090000 
+[0m
+[0m[ INFO] [1523215628.342986287]: LF_windup_limit_ is 0.800000 
+[0m
+[0m[ INFO] [1523215628.343013588]: BD_k_p_ is 0.030000 
+[0m
+[0m[ INFO] [1523215628.343044040]: BD_k_i_ is 0.000160 
+[0m
+[0m[ INFO] [1523215628.343071170]: BD_k_d_ is 0.001300 
+[0m
+[0m[ INFO] [1523215628.343098501]: BD_windup_limit_ is 1.500000 
+[0m
+[0m[ INFO] [1523215628.343126265]: BD_deadzone_ is 0.030000 
+[0m
+[0m[ INFO] [1523215628.434772757]: Possible Directions:[0m
+[0m[ INFO] [1523215628.434829107]: STRAIGHT[0m
+[0m[ INFO] [1523215628.434866509]: RIGHT[0m
+[0m[ INFO] [1523215628.591058293]: Possible Directions:[0m
+[0m[ INFO] [1523215628.591093511]: STRAIGHT[0m
+[0m[ INFO] [1523215628.591105879]: LEFT[0m
+[0m[ INFO] [1523215628.591117003]: RIGHT[0m
+[0m[ INFO] [1523215628.909618286]: Possible Directions:[0m
+[0m[ INFO] [1523215628.909657275]: STRAIGHT[0m
+[0m[ INFO] [1523215628.909670072]: RIGHT[0m
+[0m[ INFO] [1523215629.082868729]: Possible Directions:[0m
+[0m[ INFO] [1523215629.082970071]: STRAIGHT[0m
+[0m[ INFO] [1523215629.083026319]: LEFT[0m
+[0m[ INFO] [1523215629.083073776]: RIGHT[0m
+[0m[ INFO] [1523215629.229809207]: Possible Directions:[0m
+[0m[ INFO] [1523215629.229842885]: STRAIGHT[0m
+[0m[ INFO] [1523215629.229856622]: RIGHT[0m
+[0m[ INFO] [1523215629.721501797]: Possible Directions:[0m
+[0m[ INFO] [1523215629.721577414]: STRAIGHT[0m
+[0m[ INFO] [1523215629.721636428]: RIGHT[0m
+[0m[ INFO] [1523215629.865545906]: Possible Directions:[0m
+[0m[ INFO] [1523215629.865584293]: STRAIGHT[0m
+[0m[ INFO] [1523215629.865599042]: RIGHT[0m
+[0m[ INFO] [1523215630.039523555]: Possible Directions:[0m
+[0m[ INFO] [1523215630.039579278]: STRAIGHT[0m
+[0m[ INFO] [1523215630.039615424]: RIGHT[0m
+[0m[ INFO] [1523215630.185827042]: Possible Directions:[0m
+[0m[ INFO] [1523215630.185880013]: STRAIGHT[0m
+[0m[ INFO] [1523215630.185892774]: RIGHT[0m
+[0m[ INFO] [1523215630.507199992]: Possible Directions:[0m
+[0m[ INFO] [1523215630.507239670]: STRAIGHT[0m
+[0m[ INFO] [1523215630.507268231]: RIGHT[0m
+[0m[ INFO] [1523215630.668345652]: Possible Directions:[0m
+[0m[ INFO] [1523215630.668391177]: STRAIGHT[0m
+[0m[ INFO] [1523215630.668417227]: RIGHT[0m
+[0m[ INFO] [1523215632.417543964]: Possible Directions:[0m
+[0m[ INFO] [1523215632.417581616]: STRAIGHT[0m
+[0m[ INFO] [1523215632.417596714]: RIGHT[0m
+[0m[ INFO] [1523215633.058789555]: Possible Directions:[0m
+[0m[ INFO] [1523215633.058834204]: STRAIGHT[0m
+[0m[ INFO] [1523215633.058859895]: RIGHT[0m
+[0m[ INFO] [1523215633.375177431]: Possible Directions:[0m
+[0m[ INFO] [1523215633.375220456]: STRAIGHT[0m
+[0m[ INFO] [1523215633.375236350]: RIGHT[0m
+[0m[ INFO] [1523215634.025678936]: Possible Directions:[0m
+[0m[ INFO] [1523215634.025716793]: STRAIGHT[0m
+[0m[ INFO] [1523215634.025729772]: RIGHT[0m
+[0m[ INFO] [1523215634.126790499]: Reconfigure Request: 1.060000 4.000000 15.000000[0m
+[0m[ INFO] [1523215634.127132668]: velocity is 1.060000 
+[0m
+[0m[ INFO] [1523215634.127162454]: max_turn_rate_ is 4.000000 
+[0m
+[0m[ INFO] [1523215634.127197950]: line_row_location_ is 230 
+[0m
+[0m[ INFO] [1523215634.127236648]: LF_k_p_ is 0.320000 
+[0m
+[0m[ INFO] [1523215634.127279319]: LF_k_i_ is 0.002000 
+[0m
+[[0m[ INFO] [1523215555.867154544]: Loaded tag config: 0, size: 0.1, frame_name: tag0size10[0m
+[0m[ INFO] [1523215555.867341289]: Loaded tag config: 1, size: 0.1, frame_name: tag1size10[0m
+[33m[ WARN] [1523215643.805405689]: Shutdown request received.[0m
+[33m[ WARN] [1523215643.805453241]: Reason given for shutdown: [user request][0m
+tarted with pid [27044][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [27118][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [27201][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [27263][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [27350][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [27464][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [27526][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [27588][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [27650][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [27720][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [27814][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [27880][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [27945][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [28081][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [28175][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [28238][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [28301][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [28363][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [28484][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [28570][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [28632][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [28694][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [28760][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [28826][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [28889][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [28951][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [29064][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [29150][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [29212][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [29274][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [29343][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [29449][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [29544][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [29636][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [29733][0m
+[1m[apriltags2_ros_continuous_node-7] process has finished cleanly
+log file: /home/amjad/.ros/log/a80dc1b0-3b62-11e8-ac1b-ec55f98341bd/apriltags2_ros_continuous_node-7*.log[0m
+[1m[camera-5] process has finished cleanly
+log file: /home/amjad/.ros/log/a80dc1b0-3b62-11e8-ac1b-ec55f98341bd/camera-5*.log[0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [29818][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [29880][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [29949][0m
+[1m[distance_sensor_controller_spawner-11] process has finished cleanly
+log file: /home/amjad/.ros/log/a80dc1b0-3b62-11e8-ac1b-ec55f98341bd/distance_sensor_controller_spawner-11*.log[0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [30012][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with 0m[ INFO] [1523215634.127317544]: LF_k_d_ is 0.090000 
+[0m
+[0m[ INFO] [1523215634.127393220]: LF_windup_limit_ is 0.800000 
+[0m
+[0m[ INFO] [1523215634.127432918]: BD_k_p_ is 0.030000 
+[0m
+[0m[ INFO] [1523215634.127472327]: BD_k_i_ is 0.000160 
+[0m
+[0m[ INFO] [1523215634.127512332]: BD_k_d_ is 0.001300 
+[0m
+[0m[ INFO] [1523215634.127550617]: BD_windup_limit_ is 1.500000 
+[0m
+[0m[ INFO] [1523215634.127599989]: BD_deadzone_ is 0.030000 
+[0m
+[0m[ INFO] [1523215634.177657023]: Possible Directions:[0m
+[0m[ INFO] [1523215634.177713258]: STRAIGHT[0m
+[0m[ INFO] [1523215634.177749705]: RIGHT[0m
+[0m[ INFO] [1523215634.659845974]: Possible Directions:[0m
+[0m[ INFO] [1523215634.659882226]: STRAIGHT[0m
+[0m[ INFO] [1523215634.659895199]: RIGHT[0m
+[0m[ INFO] [1523215634.812124583]: Possible Directions:[0m
+[0m[ INFO] [1523215634.812170070]: STRAIGHT[0m
+[0m[ INFO] [1523215634.812198142]: RIGHT[0m
+[0m[ INFO] [1523215635.298253221]: Possible Directions:[0m
+[0m[ INFO] [1523215635.298319890]: STRAIGHT[0m
+[0m[ INFO] [1523215635.298358100]: LEFT[0m
+[0m[ INFO] [1523215635.298389388]: RIGHT[0m
+[0m[ INFO] [1523215637.677620254]: Possible Directions:[0m
+[0m[ INFO] [1523215637.677657318]: STRAIGHT[0m
+[0m[ INFO] [1523215637.677670116]: RIGHT[0m
+[0m[ INFO] [1523215637.728634755]: Reconfigure Request: 0.440000 4.000000 15.000000[0m
+[0m[ INFO] [1523215637.728872546]: velocity is 0.440000 
+[0m
+[0m[ INFO] [1523215637.728907775]: max_turn_rate_ is 4.000000 
+[0m
+[0m[ INFO] [1523215637.728938283]: line_row_location_ is 230 
+[0m
+[0m[ INFO] [1523215637.728968951]: LF_k_p_ is 0.320000 
+[0m
+[0m[ INFO] [1523215637.728999218]: LF_k_i_ is 0.002000 
+[0m
+[0m[ INFO] [1523215637.729028015]: LF_k_d_ is 0.090000 
+[0m
+[0m[ INFO] [1523215637.729055717]: LF_windup_limit_ is 0.800000 
+[0m
+[0m[ INFO] [1523215637.729086985]: BD_k_p_ is 0.030000 
+[0m
+[0m[ INFO] [1523215637.729115598]: BD_k_i_ is 0.000160 
+[0m
+[0m[ INFO] [1523215637.729141558]: BD_k_d_ is 0.001300 
+[0m
+[0m[ INFO] [1523215637.729167983]: BD_windup_limit_ is 1.500000 
+[0m
+[0m[ INFO] [1523215637.729194675]: BD_deadzone_ is 0.030000 
+[0m
+[0m[ INFO] [1523215638.639716654]: Possible Directions:[0m
+[0m[ INFO] [1523215638.639772948]: STRAIGHT[0m
+[0m[ INFO] [1523215638.639798980]: RIGHT[0m
+[33m[ WARN] [1523215645.963012913]: Shutdown request received.[0m
+[33m[ WARN] [1523215645.963042867]: Reason given for shutdown: [user request][0m
+pid [30121][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [30248][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [30338][0m
+[1m[rosout-1] process has finished cleanly
+log file: /home/amjad/.ros/log/a80dc1b0-3b62-11e8-ac1b-ec55f98341bd/rosout-1*.log[0m
+[1m[nodelet_manager-3] process has finished cleanly
+log file: /home/amjad/.ros/log/a80dc1b0-3b62-11e8-ac1b-ec55f98341bd/nodelet_manager-3*.log[0m
+[1m[robot_state_publisher-4] process has finished cleanly
+log file: /home/amjad/.ros/log/a80dc1b0-3b62-11e8-ac1b-ec55f98341bd/robot_state_publisher-4*.log[0m
+[1m[feature_extractor-6] process has finished cleanly
+log file: /home/amjad/.ros/log/a80dc1b0-3b62-11e8-ac1b-ec55f98341bd/feature_extractor-6*.log[0m
+[rosout-1] restarting process
+[1mprocess[rosout-1]: started with pid [30457][0m
+[networking-13] restarting process
+[1mprocess[networking-13]: started with pid [30458][0m
+[networking-13] killing on exit
+[drive_controller_spawner-10] killing on exit
+[robot-9] killing on exit
+[reflekte-8] killing on exit
+[rosout-1] killing on exit
+[master] killing on exit
+shutting down processing monitor...
+... shutting down processing monitor complete
+[1mdone[0m
